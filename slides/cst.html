@@ -1,0 +1,175 @@
+<style>
+.sheet[data-key="cst"]{height:1013px;padding:0;overflow:hidden;background:#EEF3FB;position:relative;border-radius:0}
+.sheet[data-key="cst"] .vs{position:absolute;left:0;top:0;width:1920px;height:1080px;transform:scale(.9375);transform-origin:0 0}
+
+
+
+@property --g0{syntax:'<integer>';inherits:false;initial-value:0}
+@property --g1{syntax:'<integer>';inherits:false;initial-value:0}
+@property --f{syntax:'<integer>';inherits:false;initial-value:0}
+@counter-style cst2p3{system:numeric;symbols:"0" "1" "2" "3" "4" "5" "6" "7" "8" "9";pad:3 "0"}
+@counter-style cst2p2{system:numeric;symbols:"0" "1" "2" "3" "4" "5" "6" "7" "8" "9";pad:2 "0"}
+.cst,.cst *{box-sizing:border-box}
+.cst{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#EEF3FB;font-family:Sarabun,sans-serif;color:#14203A;overflow:hidden;line-height:1.4}
+.cst .scr{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.cst .cn{display:inline-block;counter-reset:g0 var(--g0) g1 var(--g1) f var(--f);font-variant-numeric:tabular-nums}
+.cst .cn.d1::before{content:counter(g0) "." counter(f,cst2p2)}
+.cst .cn.d2::before{content:counter(g0) "," counter(g1,cst2p3) "." counter(f,cst2p2)}
+.cst .cn.i2::before{content:counter(g0) "," counter(g1,cst2p3)}
+.cst .tag{display:inline-block;font:700 20px Sarabun;border-radius:9px;padding:2px 12px;margin-right:12px;color:#fff;vertical-align:middle}
+.cst .tdm{background:#1466DE}.cst .tdl{background:#1B9E8B}.cst .toh{background:#7A5AF8}
+.cst .hdr{position:absolute;left:40px;top:22px;width:1840px;height:166px}
+.cst .band{height:84px;border-radius:20px;background:linear-gradient(90deg,#0E4CA8,#1466DE);display:flex;align-items:center;padding:0 32px;gap:22px;color:#fff;box-shadow:0 14px 34px -18px rgba(10,60,160,.7)}
+.cst .band .bk{font:700 54px Sarabun;line-height:1;margin-top:-8px}
+.cst .band h3{margin:0;flex:1;font:700 40px Sarabun}.cst .band h3 small{font:500 26px Sarabun;opacity:.8;margin-left:14px}
+.cst .rp{border:2px solid rgba(255,255,255,.7);border-radius:12px;padding:4px 22px;font:600 24px Sarabun}
+.cst .chips{display:flex;gap:16px;margin-top:20px;align-items:center}
+.cst .chip{background:#fff;border-radius:14px;padding:8px 24px;font:700 28px Sarabun;box-shadow:0 6px 18px -10px rgba(20,60,140,.5);white-space:nowrap}
+.cst .chip em{font:500 22px Sarabun;color:#7A8499;margin-right:12px;font-style:normal}
+.cst .run{background:#1466DE;color:#fff;border-radius:14px;padding:8px 34px;font:700 28px Sarabun;display:inline-block}
+.cst .hero{position:absolute;left:40px;top:204px;width:560px;height:276px;border-radius:24px;background:linear-gradient(135deg,#0E4CA8,#1466DE);color:#fff;padding:20px 32px;box-shadow:0 20px 40px -22px rgba(10,60,160,.8)}
+.cst .hero .k{font:700 24px Sarabun;letter-spacing:.06em;opacity:.9}
+.cst .hero .big{font:800 100px/1.05 Sarabun}.cst .hero .big small{font:600 44px Sarabun;margin-left:10px;opacity:.85}
+.cst .hero .sub{display:block;font:500 24px Sarabun;position:absolute;left:32px;right:32px;bottom:16px;line-height:1.25}.cst .hero .sub>span{display:block}
+.cst .hero .sub b{display:block;white-space:nowrap;font:800 36px Sarabun;color:#DDF956}
+.cst .mix{position:absolute;left:624px;top:204px;width:1256px;height:276px;background:#fff;border-radius:24px;padding:20px 32px;box-shadow:0 14px 40px -24px rgba(20,60,140,.5)}
+.cst .mh{display:flex;justify-content:space-between;align-items:baseline}.cst .mh h4{margin:0;font:700 32px Sarabun}.cst .mh span{font:500 22px Sarabun;color:#7A8499}
+.cst .trk{position:relative;height:76px;margin-top:30px;background:#E8EDF6;border-radius:18px;overflow:hidden}
+.cst .sg{position:absolute;top:0;height:100%;display:block}
+.cst .sdm{background:#1466DE}.cst .sdl{background:#1B9E8B}.cst .soh{background:#7A5AF8}
+.cst .lg{display:flex;justify-content:space-between;margin-top:34px;font:600 28px Sarabun}.cst .lg b{font:800 34px Sarabun;margin-left:8px}
+.cst .cd{position:absolute;top:500px;height:410px;background:#fff;border-radius:24px;box-shadow:0 14px 40px -24px rgba(20,60,140,.5);padding:18px 28px;border-top:8px solid}
+.cst .dmc{left:40px;width:880px;border-color:#1466DE}.cst .dlc{left:942px;width:468px;border-color:#1B9E8B}.cst .ohc{left:1432px;width:448px;border-color:#7A5AF8}
+.cst .ch{display:flex;justify-content:space-between;align-items:center}
+.cst .nm{font:700 34px Sarabun}.cst .ch small{display:block;font:500 21px Sarabun;color:#7A8499;margin-top:2px}
+.cst .am{font:800 56px Sarabun}
+.cst .th{display:grid;grid-template-columns:1fr 250px 130px;margin-top:10px;padding:6px 0;border-bottom:2px solid #E3E8F2;font:600 20px Sarabun;color:#7A8499}.cst .th span:nth-child(n+2){text-align:right}
+.cst .ln{display:grid;grid-template-columns:1fr 250px 130px;align-items:center;height:60px;border-bottom:1.5px solid #EDF0F6}
+.cst .ln .a b{display:block;font:600 24px Sarabun;line-height:1.2}.cst .ln .a small{font:500 18px Sarabun;color:#8A93A6;display:block;margin:0;line-height:1.2}
+.cst .ln .q{text-align:right;font:500 22px Sarabun;color:#4A5468}.cst .ln .v{text-align:right;font:800 28px Sarabun}
+.cst .one{margin-top:26px;background:#F3F6FC;border-radius:16px;padding:16px 20px}.cst .one b{display:block;font:700 26px Sarabun}.cst .one span{display:block;font:500 25px Sarabun;color:#4A5468;margin-top:6px}
+.cst .gr{position:absolute;left:40px;top:924px;width:1840px;height:60px;border-radius:18px;background:#E6F5EC;border:2px solid #9BD5B5;color:#17653D;display:flex;align-items:center;gap:20px;padding:0 30px;font:600 27px Sarabun}
+.cst .gr .ar{font:800 38px Sarabun}
+/* screen 2 */
+.cst .cl{position:absolute;left:40px;top:204px;width:780px}
+.cst .cmpr{height:180px;margin-bottom:16px;background:#fff;border-radius:22px;padding:14px 26px;box-shadow:0 14px 40px -24px rgba(20,60,140,.5);border-left:10px solid}
+.cst .cmpr.bad{border-color:#D92D20}.cst .cmpr.good{border-color:#12A150}
+.cst .r1{display:flex;justify-content:space-between;align-items:center}
+.cst .dl{font:800 24px Sarabun;border-radius:99px;padding:2px 18px}
+.cst .dl.bad{background:#FDECEA;color:#C0281C}.cst .dl.good{background:#E3F6EA;color:#0C7A3C}
+.cst .r2{display:flex;align-items:baseline;gap:18px;margin-top:2px}
+.cst .r2 em{font:600 20px Sarabun;font-style:normal;color:#7A8499;margin-right:10px}
+.cst .r2 .s{font:600 30px Sarabun;color:#6C7586}.cst .r2 .ar{font:700 30px Sarabun;color:#9AA3B5}
+.cst .r2 .a{font:800 50px Sarabun}.cst .r2 .a.bad{color:#C0281C}.cst .r2 .a.good{color:#0C7A3C}
+.cst .bars{margin-top:6px}.cst .bb{height:12px;background:#EEF1F7;border-radius:6px;margin-top:6px;overflow:hidden}.cst .bb i{display:block;height:100%;border-radius:6px}.cst .bb i.gy{background:#B8C2D6}
+.cst .mc{position:absolute;left:844px;top:204px;width:1036px;height:592px;background:#fff;border-radius:24px;padding:18px 28px;box-shadow:0 14px 40px -24px rgba(20,60,140,.5)}
+.cst .mt{display:flex;justify-content:space-between;align-items:baseline}.cst .mt h4{margin:0;font:700 32px Sarabun}.cst .mt span{font:500 20px Sarabun;color:#7A8499}
+.cst .mh2,.cst .mc .mh{display:grid;grid-template-columns:1fr 150px 120px 150px;padding:8px 14px 6px;border-bottom:2px solid #E3E8F2;font:600 21px Sarabun;color:#7A8499;margin-top:6px}
+.cst .mc .mh{display:grid}
+.cst .n{text-align:right}
+.cst .mg{display:flex;justify-content:space-between;align-items:baseline;background:#EAF1FD;border-radius:10px;padding:5px 14px;margin-top:10px;font:700 23px Sarabun;color:#0E4CA8}
+.cst .mg.ret{background:#FFF4E5;color:#B54708}.cst .mg span{font:500 20px Sarabun}
+.cst .mr{display:grid;grid-template-columns:1fr 150px 120px 150px;align-items:center;height:56px;border-bottom:1.5px solid #EDF0F6;font:500 23px Sarabun;padding:0 14px}
+.cst .mr .n:last-child{font-weight:800;font-size:26px}
+.cst .mr.ret{animation:none}
+.cst .sum{display:flex;justify-content:space-between;align-items:center;margin-top:10px;background:#0E4CA8;color:#fff;border-radius:14px;padding:8px 20px;font:600 24px Sarabun}.cst .sum b{font:800 36px Sarabun;color:#DDF956}
+.cst .bn{position:absolute;left:40px;top:810px;width:1840px;height:176px;background:#fff;border-radius:24px;border-left:12px solid #D92D20;box-shadow:0 14px 40px -24px rgba(20,60,140,.5);display:flex;align-items:stretch;padding:12px 20px 12px 28px;gap:24px}
+.cst .bn>div{padding:6px 24px;border-radius:18px}.cst .b1{flex:1.15}.cst .b2{flex:1.05;background:#FDECEA;color:#C0281C}.cst .b3{flex:.9}
+.cst .bn .k{font:600 24px Sarabun;color:#6C7586}.cst .b2 .k{color:#C0281C}
+.cst .bn .v{font:800 58px/1.15 Sarabun}.cst .bn .v small{font:700 28px Sarabun}
+.cst .bn .m{font:500 24px Sarabun;color:#6C7586}.cst .b2 .m{color:#C0281C;font-weight:700}
+.cst .stw{position:relative;display:inline-block;width:190px;height:44px}.cst .stw .st{position:absolute;left:0;top:0;border:2px solid #CBD3E1;border-radius:99px;padding:2px 22px;font:700 26px Sarabun;color:#6C7586;background:#fff;white-space:nowrap}
+.cst .stw .st.ok{background:#E3F6EA;color:#0C7A3C;border-color:#12A150}
+.cst #lbl{position:absolute;left:40px;bottom:22px;background:#0E4CA8;color:#fff;border-radius:99px;padding:5px 20px;font:700 22px Sarabun;z-index:46}
+@keyframes cst2_a1{0.000%{opacity:0;transform:translateX(-20px)}16.429%{opacity:0;transform:translateX(-20px)}18.036%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a2{0.000%{opacity:0;transform:translateX(-20px)}16.786%{opacity:0;transform:translateX(-20px)}18.393%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a3{0.000%{opacity:0;transform:translateX(-20px)}17.143%{opacity:0;transform:translateX(-20px)}18.750%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a4{0.000%{opacity:0;transform:translateX(-20px)}17.500%{opacity:0;transform:translateX(-20px)}19.107%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_w5{0.000%{width:0}12.143%{width:0}15.714%{width:58.0%}100.000%{width:58.0%}}
+@keyframes cst2_w6{0.000%{width:0}21.429%{width:0}25.000%{width:5.1%}100.000%{width:5.1%}}
+@keyframes cst2_w7{0.000%{width:0}25.714%{width:0}29.286%{width:36.9%}100.000%{width:36.9%}}
+@keyframes cst2_a8{0.000%{opacity:0;transform:translateY(18px)}2.857%{opacity:0;transform:translateY(18px)}4.643%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a9{0.000%{opacity:0;transform:translateY(18px)}7.143%{opacity:0;transform:translateY(18px)}8.929%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a10{0.000%{opacity:0;transform:translateY(18px)}30.714%{opacity:0;transform:translateY(18px)}32.500%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_c11{0.000%{--g0:0;--g1:0;--f:0}7.143%{--g0:0;--g1:0;--f:0}12.500%{--g0:281;--g1:0;--f:60}100.000%{--g0:281;--g1:0;--f:60}}
+@keyframes cst2_c12{0.000%{--g0:0;--g1:0;--f:0}30.714%{--g0:0;--g1:0;--f:0}35.000%{--g0:281;--g1:600;--f:0}100.000%{--g0:281;--g1:600;--f:0}}
+@keyframes cst2_a13{0.000%{opacity:0;transform:translateY(18px)}12.143%{opacity:0;transform:translateY(18px)}13.929%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a14{0.000%{opacity:0;transform:translateY(18px)}21.429%{opacity:0;transform:translateY(18px)}23.214%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a15{0.000%{opacity:0;transform:translateY(18px)}25.714%{opacity:0;transform:translateY(18px)}27.500%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a16{0.000%{opacity:0;transform:translateY(18px)}12.143%{opacity:0;transform:translateY(18px)}13.929%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a17{0.000%{opacity:0;transform:translateY(18px)}21.429%{opacity:0;transform:translateY(18px)}23.214%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a18{0.000%{opacity:0;transform:translateY(18px)}25.714%{opacity:0;transform:translateY(18px)}27.500%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_c19{0.000%{--g0:0;--g1:0;--f:0}12.143%{--g0:0;--g1:0;--f:0}15.714%{--g0:163;--g1:0;--f:20}100.000%{--g0:163;--g1:0;--f:20}}
+@keyframes cst2_c20{0.000%{--g0:0;--g1:0;--f:0}21.429%{--g0:0;--g1:0;--f:0}24.643%{--g0:14;--g1:0;--f:40}100.000%{--g0:14;--g1:0;--f:40}}
+@keyframes cst2_c21{0.000%{--g0:0;--g1:0;--f:0}25.714%{--g0:0;--g1:0;--f:0}29.286%{--g0:104;--g1:0;--f:0}100.000%{--g0:104;--g1:0;--f:0}}
+@keyframes cst2_a22{0.000%{opacity:0;transform:translateY(18px)}35.714%{opacity:0;transform:translateY(18px)}37.500%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_s1{0.000%{opacity:1}42.143%{opacity:1}43.929%{opacity:0}100.000%{opacity:0}}
+@keyframes cst2_a23{0.000%{opacity:0;transform:translateY(18px)}52.143%{opacity:0;transform:translateY(18px)}53.929%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_c24{0.000%{--g0:0;--g1:0;--f:0}52.143%{--g0:0;--g1:0;--f:0}56.429%{--g0:164;--g1:731;--f:0}100.000%{--g0:164;--g1:731;--f:0}}
+@keyframes cst2_a25{0.000%{opacity:0;transform:translateY(18px)}57.143%{opacity:0;transform:translateY(18px)}58.929%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_c26{0.000%{--g0:0;--g1:0;--f:0}57.143%{--g0:0;--g1:0;--f:0}61.429%{--g0:14;--g1:900;--f:0}100.000%{--g0:14;--g1:900;--f:0}}
+@keyframes cst2_a27{0.000%{opacity:0;transform:translateY(18px)}62.143%{opacity:0;transform:translateY(18px)}63.929%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_c28{0.000%{--g0:0;--g1:0;--f:0}62.143%{--g0:0;--g1:0;--f:0}66.429%{--g0:103;--g1:200;--f:0}100.000%{--g0:103;--g1:200;--f:0}}
+@keyframes cst2_a29{0.000%{opacity:0;transform:translateX(-20px)}68.214%{opacity:0;transform:translateX(-20px)}69.643%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a30{0.000%{opacity:0;transform:translateX(-20px)}68.571%{opacity:0;transform:translateX(-20px)}70.000%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a31{0.000%{opacity:0;transform:translateX(-20px)}68.929%{opacity:0;transform:translateX(-20px)}70.357%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a32{0.000%{opacity:0;transform:translateX(-20px)}69.286%{opacity:0;transform:translateX(-20px)}70.714%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_ret{0.000%{background:#FFF4E5;box-shadow:none}72.857%{background:#FFF4E5;box-shadow:none}73.571%{background:#FFE2B8;box-shadow:inset 0 0 0 3px #F59E0B}78.571%{background:#FFF4E5;box-shadow:none}100.000%{background:#FFF4E5;box-shadow:none}}
+@keyframes cst2_stA{0.000%{opacity:1}47.143%{opacity:1}48.214%{opacity:0}100.000%{opacity:0}}
+@keyframes cst2_stB{0.000%{opacity:0}47.143%{opacity:0}48.571%{opacity:1}100.000%{opacity:1}}
+@keyframes cst2_btn{0.000%{transform:none}46.786%{transform:none}47.143%{transform:scale(.93)}48.214%{transform:none}100.000%{transform:none}}
+@keyframes cst2_vg{0.000%{box-shadow:0 0 0 0 rgba(217,45,32,0)}86.071%{box-shadow:0 0 0 0 rgba(217,45,32,0)}87.500%{box-shadow:0 0 0 8px rgba(217,45,32,.35)}91.429%{box-shadow:0 0 0 0 rgba(217,45,32,0)}100.000%{box-shadow:0 0 0 0 rgba(217,45,32,0)}}
+@keyframes cst2_a33{0.000%{opacity:0;transform:translateY(18px)}42.143%{opacity:0;transform:translateY(18px)}43.929%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a34{0.000%{opacity:0;transform:translateY(18px)}67.857%{opacity:0;transform:translateY(18px)}69.643%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a35{0.000%{opacity:0;transform:translateY(18px)}72.857%{opacity:0;transform:translateY(18px)}74.643%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a36{0.000%{opacity:0;transform:translateY(18px)}72.857%{opacity:0;transform:translateY(18px)}74.643%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a37{0.000%{opacity:0;transform:translateY(18px)}77.143%{opacity:0;transform:translateY(18px)}78.929%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a38{0.000%{opacity:0;transform:translateY(18px)}81.429%{opacity:0;transform:translateY(18px)}83.214%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a39{0.000%{opacity:0;transform:translateY(18px)}86.071%{opacity:0;transform:translateY(18px)}87.857%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_a40{0.000%{opacity:0;transform:translateY(18px)}90.714%{opacity:0;transform:translateY(18px)}92.500%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes cst2_c41{0.000%{--g0:0;--g1:0;--f:0}81.429%{--g0:0;--g1:0;--f:0}86.071%{--g0:282;--g1:831;--f:0}100.000%{--g0:282;--g1:831;--f:0}}
+@keyframes cst2_c42{0.000%{--g0:0;--g1:0;--f:0}90.714%{--g0:0;--g1:0;--f:0}93.929%{--g0:282;--g1:0;--f:83}100.000%{--g0:282;--g1:0;--f:83}}
+@keyframes cst2_w43{0.000%{width:0}52.857%{width:0}56.429%{width:99.1%}100.000%{width:99.1%}}
+@keyframes cst2_w44{0.000%{width:0}52.857%{width:0}56.429%{width:100.0%}100.000%{width:100.0%}}
+@keyframes cst2_w45{0.000%{width:0}57.857%{width:0}61.429%{width:96.6%}100.000%{width:96.6%}}
+@keyframes cst2_w46{0.000%{width:0}57.857%{width:0}61.429%{width:100.0%}100.000%{width:100.0%}}
+@keyframes cst2_w47{0.000%{width:0}62.857%{width:0}66.429%{width:100.0%}100.000%{width:100.0%}}
+@keyframes cst2_w48{0.000%{width:0}62.857%{width:0}66.429%{width:99.2%}100.000%{width:99.2%}}
+@keyframes cst2_s2{0.000%{opacity:0}42.143%{opacity:0}42.179%{opacity:1}100.000%{opacity:1}}
+</style><div class="slidewrap"><div class="sheet" data-key="cst"><div class="vs"><div class="cst"><div class="scr" style="animation:cst2_s1 28s linear both">
+<div class="hdr" style="animation:cst2_a8 28s linear both"><div class="band"><span class="bk">‹</span><h3>Cost Sheet Report — Standard</h3><span class="rp">Report</span></div>
+ <div class="chips"><span class="chip"><em>เล่ม</em>SC2610-001</span><span class="chip"><em>งวด</em>202610</span><span class="chip wide"><em>สินค้า</em>FG-BP-1103 แผงพื้นห้องโดยสาร</span><span class="run">Run</span></div></div>
+<div class="hero" style="animation:cst2_a9 28s linear both"><div class="k">TOTAL STANDARD / ชิ้น</div><div class="big"><span class="cn d1" style="animation:cst2_c11 28s linear both"></span><small>฿</small></div>
+ <div class="sub" style="animation:cst2_a10 28s linear both"><span>× 1,000 ชิ้น (W2610-052)</span><b>= <span class="cn d2" style="animation:cst2_c12 28s linear both"></span> ฿</b></div></div>
+<div class="mix"><div class="mh"><h4>สัดส่วนต้นทุนต่อชิ้น</h4><span>ลูกค้า OEM-A · เครื่องปั๊ม PR-1000T</span></div>
+ <div class="trk"><i class="sg sdm" style="left:0%;--w:58.0%;animation:cst2_w5 28s linear both"></i><i class="sg sdl" style="left:58.0%;--w:5.1%;animation:cst2_w6 28s linear both"></i><i class="sg soh" style="left:63.1%;--w:36.9%;animation:cst2_w7 28s linear both"></i></div>
+ <div class="lg"><span style="animation:cst2_a13 28s linear both"><span class="tag tdm">DM</span> วัตถุดิบ <b>58.0%</b></span><span style="animation:cst2_a14 28s linear both"><span class="tag tdl">DL</span> ค่าแรง <b>5.1%</b></span><span style="animation:cst2_a15 28s linear both"><span class="tag toh">OH</span> ค่าโสหุ้ย <b>36.9%</b></span></div></div>
+<div class="cd dmc" style="animation:cst2_a16 28s linear both"><div class="ch"><div><span class="tag tdm">DM</span><b class="nm">วัตถุดิบ</b><small>Direct Material · ตามสูตร (BOM)</small></div><div class="am" style="color:#1466DE"><span class="cn d1" style="animation:cst2_c19 28s linear both"></span></div></div>
+ <div class="th"><span>วัตถุดิบ</span><span>ปริมาณ × ราคา</span><span>บาท</span></div><div class="ln" style="animation:cst2_a1 28s linear both"><div class="a"><b>เหล็กแผ่นรีดเย็น JSC270C 0.8 มม.</b><small>RM-JSC270C-08</small></div><div class="q">3.185 KG × 32.00</div><div class="v">101.92</div></div><div class="ln" style="animation:cst2_a2 28s linear both"><div class="a"><b>เหล็กกล้าแรงดึงสูง JSC590R 1.4 มม.</b><small>RM-JSC590R-14</small></div><div class="q">1.450 KG × 38.00</div><div class="v">55.10</div></div><div class="ln" style="animation:cst2_a3 28s linear both"><div class="a"><b>น็อตเชื่อม WN-M8</b><small>RM-WN-M8</small></div><div class="q">2.400 PCS × 1.80</div><div class="v">4.32</div></div><div class="ln" style="animation:cst2_a4 28s linear both"><div class="a"><b>น็อตเชื่อม WN-M6</b><small>RM-WN-M6</small></div><div class="q">1.200 PCS × 1.55</div><div class="v">1.86</div></div></div>
+<div class="cd dlc" style="animation:cst2_a17 28s linear both"><div class="ch"><div><span class="tag tdl">DL</span><b class="nm">ค่าแรง</b><small>Labour</small></div><div class="am" style="color:#1B9E8B"><span class="cn d1" style="animation:cst2_c20 28s linear both"></span></div></div>
+ <div class="one"><b>ค่าแรงทางตรง</b><span>0.0600 ชม. × 240.00 บาท</span></div></div>
+<div class="cd ohc" style="animation:cst2_a18 28s linear both"><div class="ch"><div><span class="tag toh">OH</span><b class="nm">ค่าโสหุ้ย</b><small>Machine Overhead</small></div><div class="am" style="color:#7A5AF8"><span class="cn d1" style="animation:cst2_c21 28s linear both"></span></div></div>
+ <div class="one"><b>เครื่องปั๊ม Tandem Line 1,000T</b><span>0.0832 ชม. × 1,250.00 บาท</span></div></div>
+<div class="gr" style="animation:cst2_a22 28s linear both"><span class="ar">↩</span><span>รับผลผลิต PD-2610-0231 (28/10) ใช้ต้นทุนนี้ · SAP Goods Receipt 261000513 · THB 281,600.00</span></div>
+</div><div class="scr" style="opacity:0;animation:cst2_s2 28s linear both">
+<div class="hdr" style="animation:cst2_a33 28s linear both"><div class="band"><span class="bk">‹</span><h3>ปันต้นทุนจริงรายเดือน <small>Month-end Cost Allocation</small></h3><span class="rp">รายงาน</span></div>
+ <div class="chips"><span class="chip"><em>งวด</em>2026-10</span><span class="chip"><em>ใบสั่งงาน</em>W2610-052</span><span class="chip wide"><em>สินค้า</em>FG-BP-1103 แผงพื้นห้องโดยสาร · ของดี 1,000 ชิ้น</span>
+ <span class="stw"><span class="st" style="animation:cst2_stA 28s linear both">ร่าง</span><span class="st ok" style="animation:cst2_stB 28s linear both">คำนวณแล้ว</span></span>
+ <span class="run" style="animation:cst2_btn 28s linear both">คำนวณ</span></div></div>
+<div class="cl"><div class="cmpr bad" style="animation:cst2_a23 28s linear both"><div class="r1"><div><span class="tag tdm">DM</span><b class="nm">วัตถุดิบ</b></div><span class="dl bad">▲ +1,531 แพงกว่า</span></div>
+ <div class="r2"><span class="s"><em>STD</em>163,200</span><span class="ar">→</span><span class="a bad"><em>จริง</em><span class="cn i2" style="animation:cst2_c24 28s linear both"></span></span></div>
+ <div class="bars"><div class="bb"><i class="gy" style="animation:cst2_w43 28s linear both"></i></div><div class="bb"><i style="background:#1466DE;animation:cst2_w44 28s linear both"></i></div></div></div><div class="cmpr bad" style="animation:cst2_a25 28s linear both"><div class="r1"><div><span class="tag tdl">DL</span><b class="nm">ค่าแรง</b></div><span class="dl bad">▲ +500 แพงกว่า</span></div>
+ <div class="r2"><span class="s"><em>STD</em>14,400</span><span class="ar">→</span><span class="a bad"><em>จริง</em><span class="cn i2" style="animation:cst2_c26 28s linear both"></span></span></div>
+ <div class="bars"><div class="bb"><i class="gy" style="animation:cst2_w45 28s linear both"></i></div><div class="bb"><i style="background:#1B9E8B;animation:cst2_w46 28s linear both"></i></div></div></div><div class="cmpr good" style="animation:cst2_a27 28s linear both"><div class="r1"><div><span class="tag toh">OH</span><b class="nm">ค่าโสหุ้ย</b></div><span class="dl good">▼ −800 ถูกกว่า</span></div>
+ <div class="r2"><span class="s"><em>STD</em>104,000</span><span class="ar">→</span><span class="a good"><em>จริง</em><span class="cn i2" style="animation:cst2_c28 28s linear both"></span></span></div>
+ <div class="bars"><div class="bb"><i class="gy" style="animation:cst2_w47 28s linear both"></i></div><div class="bb"><i style="background:#7A5AF8;animation:cst2_w48 28s linear both"></i></div></div></div></div>
+<div class="mc" style="animation:cst2_a34 28s linear both"><div class="mt"><h4>วัตถุดิบที่เบิก</h4><span>วัตถุดิบ DM = เบิกสุทธิ (ใบเบิก หักใบคืน · ราคา FIFO)</span></div>
+ <div class="mh"><span>วัตถุดิบ (รหัส · ชื่อ)</span><span class="n">ปริมาณ</span><span class="n">ราคา/หน่วย</span><span class="n">มูลค่า (บาท)</span></div>
+ <div class="mg"><b>ใบเบิก MI-2610-0412</b></div><div class="mr" style="animation:cst2_a29 28s linear both"><span>RM-JSC270C-08 เหล็กแผ่นรีดเย็น JSC270C</span><span class="n">3,185.00 KG</span><span class="n">32.40</span><span class="n">103,194.00</span></div><div class="mr" style="animation:cst2_a30 28s linear both"><span>RM-JSC590R-14 เหล็กกล้าแรงดึงสูง JSC590R</span><span class="n">1,450.00 KG</span><span class="n">38.50</span><span class="n">55,825.00</span></div><div class="mr" style="animation:cst2_a31 28s linear both"><span>RM-WN-M8 น็อตเชื่อม WN-M8</span><span class="n">2,400.00 PCS</span><span class="n">1.85</span><span class="n">4,440.00</span></div><div class="mr" style="animation:cst2_a32 28s linear both"><span>RM-WN-M6 น็อตเชื่อม WN-M6</span><span class="n">1,200.00 PCS</span><span class="n">1.60</span><span class="n">1,920.00</span></div>
+ <div class="mg ret" style="animation:cst2_a35 28s linear both;background:#FFF4E5"><b>ใบคืน MR-2610-0031</b><span>หักออกจากวัตถุดิบ</span></div>
+ <div class="mr ret" style="animation:cst2_a36 28s linear both"><span>RM-JSC270C-08 คืนวัตถุดิบ (หักออก)</span><span class="n">−20.00 KG</span><span class="n">32.40</span><span class="n" style="color:#B54708;font-weight:800">−648.00</span></div>
+ <div class="sum" style="animation:cst2_a37 28s linear both"><span>รวม DM (เบิก 165,379.00 หักคืน 648.00)</span><b>164,731.00</b></div></div>
+<div class="bn" style="animation:cst2_a38 28s linear both"><div class="b1"><div class="k">ต้นทุนจริงรวม</div><div class="v"><span class="cn d2" style="animation:cst2_c41 28s linear both"></span> <small>฿</small></div><div class="m">เทียบ STD 281,600.00 ฿</div></div>
+ <div class="b2" style="animation:cst2_a39 28s linear both,cst2_vg 28s linear both"><div class="k">ส่วนต่าง</div><div class="v">+1,231.00 <small>(+0.44%)</small></div><div class="m">แพงกว่ามาตรฐาน</div></div>
+ <div class="b3" style="animation:cst2_a40 28s linear both"><div class="k">ต้นทุนต่อชิ้น</div><div class="v"><span class="cn d1" style="animation:cst2_c42 28s linear both"></span> <small>฿</small></div><div class="m">เทียบ 281.60 ฿</div></div></div>
+</div><div id="lbl">Beside Enterprise · ต้นทุนจริง</div></div></div></div></div>

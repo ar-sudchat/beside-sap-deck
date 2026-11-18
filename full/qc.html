@@ -1,0 +1,285 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><title>qc · ตรวจคุณภาพ (QC)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap">
+<style>html,body{margin:0;height:100%;overflow:hidden;font-family:Sarabun,sans-serif;background:#EEF3FB}
+#fit{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+
+
+
+
+
+.qc .dev{position:absolute;top:18px;font:700 19px Sarabun;color:#1466DE;background:#fff;border:1.5px solid #C9DCFA;border-radius:99px;padding:3px 16px 3px 12px;display:inline-flex;align-items:center;gap:8px}
+.qc #q_pc{position:absolute;left:24px;top:62px;width:1468px;height:850px;background:#fff;border-radius:24px;box-shadow:0 18px 50px -22px rgba(20,60,140,.4);padding:20px 26px;box-sizing:border-box}
+.qc .top{display:flex;align-items:center;gap:12px;height:56px}
+.qc .top h3{margin:0;font:800 30px Sarabun;color:#0E4CA8;flex:1}
+.qc .pb{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 18px;border-radius:12px;font:700 19px Sarabun;border:1.5px solid #CBD3E1;background:#fff;color:#1466DE;box-shadow:0 2px 6px -2px rgba(20,60,140,.18)}
+.qc .pb.pri{background:#1466DE;border-color:#1466DE;color:#fff;box-shadow:0 6px 16px -6px rgba(20,102,222,.7)}
+.qc .body{display:flex;gap:22px;margin-top:14px}
+.qc #q_left{width:360px;flex:none}
+.qc .sec{display:flex;align-items:center;gap:10px;background:#EEF4FF;border-left:5px solid #1466DE;border-radius:12px;padding:8px 14px;font:800 21px Sarabun;color:#0E4CA8}
+.qc .sec .ic{width:34px;height:34px;border-radius:50%;background:#1466DE;display:grid;place-items:center;flex:none}
+.qc .sec .st{margin-left:auto;font:700 16px Sarabun;color:#B26B00;background:#FFF3D6;border-radius:99px;padding:1px 12px}
+.qc .sec .st.done{color:#1B7F4B;background:#E6F5EC}
+.qc .lf{margin-top:8px}
+.qc .lf label{display:block;font:600 16px Sarabun;color:#5B6577;margin-bottom:3px}
+.qc .lf .v{height:42px;border-radius:10px;background:#EEF1F6;display:flex;align-items:center;padding:0 12px;font:500 18px Sarabun;white-space:nowrap;overflow:hidden}
+.qc .lf2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qc .hist{margin-top:10px}
+.qc .hr{display:flex;align-items:center;gap:12px;height:56px;padding:0 14px;border-radius:12px;font:700 20px Sarabun;margin-top:6px}
+.qc .hr .d{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:17px;flex:none}
+.qc .hr.r1 .d{background:#FDE7E3;color:#D9472B}
+.qc .hr.r1 b{margin-left:auto;color:#D9472B}
+.qc .hr.r2{background:#EEF4FF;border-left:5px solid #1466DE}
+.qc .hr.r2 .d{background:#FFF3D6;color:#B26B00}
+.qc .hr.r2 b{margin-left:auto;color:#B26B00}
+.qc .coa{display:flex;align-items:center;gap:10px;margin:8px 0 0 14px;font:700 19px Sarabun;color:#14203A;height:46px;padding:0 14px;border:1.5px dashed #9DB8E6;border-radius:12px;width:max-content}
+.qc .cb{width:26px;height:26px;border-radius:7px;border:2px solid #8A93A6;display:grid;place-items:center;background:#fff}
+.qc .coa.on{border-style:solid;border-color:#1B7F4B;background:#E6F5EC;color:#14532D}
+.qc .coa.on .cb{background:#1B7F4B;border-color:#1B7F4B}
+.qc #q_right{flex:1;min-width:0}
+.qc .prog{display:flex;align-items:center;gap:12px}
+.qc .rd{font:800 18px Sarabun;color:#fff;background:#1466DE;border-radius:99px;padding:2px 14px}
+.qc .prog .t{font:700 20px Sarabun}
+.qc .prog .ok{margin-left:auto;font:700 18px Sarabun;color:#1B7F4B;background:#E6F5EC;border-radius:99px;padding:2px 14px}
+.qc .segs{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:8px}
+.qc .segs i{height:9px;border-radius:9px;background:#E1E7F0}
+.qc .segs i.on{background:#1B7F4B}
+.qc table{border-collapse:separate;border-spacing:0;width:100%;margin-top:12px;font-family:Sarabun}
+.qc th{background:linear-gradient(180deg,#1166E0,#0A58D6);color:#fff;font:600 18px Sarabun;height:50px;padding:0 8px;text-align:left;white-space:nowrap}
+.qc th:first-child{border-top-left-radius:14px}
+.qc th:last-child{border-top-right-radius:14px}
+.qc td{height:76px;border-bottom:1.5px solid #EAEEF5;padding:0 8px;font:500 20px Sarabun;white-space:nowrap}
+.qc td.n,.qc th.n{text-align:right}
+.qc td.c,.qc th.c{text-align:center}
+.qc td .cd{color:#1466DE;font-weight:700;font-size:18px}
+.qc td .nm{font-weight:700;font-size:20px;white-space:normal;line-height:1.2}
+.qc td .sb{display:block;font:400 15px Sarabun;color:#6C7180}
+.qc td.r1{font-weight:700}
+.qc .red{color:#D92D20}
+.qc .grn{color:#1B7F4B}
+.qc .ib{display:flex;align-items:center;justify-content:flex-end;width:132px;height:46px;border:1.5px solid #C7D3E8;border-radius:10px;padding:0 12px;box-sizing:border-box;font:700 21px Sarabun;background:#fff}
+.qc .ib.act{border-color:#1466DE;box-shadow:0 0 0 3px rgba(20,102,222,.2)}
+.qc .ib.okx{color:#1B7F4B;border-color:#9ED3B4;background:#F3FBF6}
+.qc .yn{display:inline-flex;gap:6px}
+.qc .yn i{font-style:normal;height:42px;padding:0 10px;border:1.5px solid #D5DBE7;border-radius:10px;display:inline-flex;align-items:center;font:700 17px Sarabun;color:#4A5160;background:#fff}
+.qc .yn i.on{background:#E6F5EC;border-color:#1B7F4B;color:#1B7F4B}
+.qc .res{display:inline-block;font:700 17px Sarabun;border-radius:99px;padding:2px 12px;opacity:0;color:#1B7F4B;background:#E6F5EC}
+.qc #q_empty{position:absolute;left:0;right:0;top:0;bottom:0;display:grid;place-items:center;color:#8A93A6;font:500 24px Sarabun;background:#fff;text-align:center}
+.qc #q_ph{position:absolute;left:1518px;top:62px;width:384px;height:850px;border-radius:60px;background:#1F2C4A;box-shadow:0 30px 60px -24px rgba(14,30,70,.6),inset 0 0 0 3px #3A4A6E}
+.qc #q_scr{position:absolute;left:12px;top:12px;right:12px;bottom:12px;border-radius:50px;background:#F3F6FB;overflow:hidden;font-family:Sarabun}
+.qc .notch{position:absolute;left:50%;top:11px;width:104px;height:30px;border-radius:20px;background:#1F2C4A;transform:translateX(-50%)}
+.qc .sbar{height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 30px;font:700 18px Sarabun}
+.qc .ptl{display:flex;align-items:center;gap:8px;padding:2px 18px 8px;font:800 22px Sarabun;color:#0E4CA8;border-bottom:1.5px solid #E1E7F0}
+.qc .pcard{margin:10px 12px 0;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:0 2px 8px -4px rgba(20,60,140,.3)}
+.qc .pseg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:8px}
+.qc .pseg i{height:8px;border-radius:8px;background:#E1E7F0}
+.qc .pseg i.on{background:#1B7F4B}
+.qc .pseg i.cur{background:#1466DE}
+.qc .qhd{display:flex;justify-content:space-between;align-items:center;font:600 16px Sarabun;color:#5B6577}
+.qc .qnm{font:800 27px Sarabun;margin-top:2px}
+.qc .qsb{font:400 16px Sarabun;color:#6C7180}
+.qc .spec{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.qc .spec div{border:1.5px solid #E1E7F0;border-radius:10px;text-align:center;padding:4px 0}
+.qc .spec small{display:block;font:600 14px Sarabun;color:#5B6577}
+.qc .spec b{font:800 18px Sarabun}
+.qc #q_bigin{margin-top:10px;height:86px;border:2.5px solid #1466DE;border-radius:16px;display:flex;align-items:center;justify-content:center;font:800 46px Sarabun;color:#14203A;letter-spacing:.5px}
+.qc #q_bigin.ok{color:#1B7F4B;border-color:#1B7F4B;background:#F3FBF6}
+.qc .pres{font:700 16px Sarabun;border-radius:99px;padding:1px 12px;color:#1B7F4B;background:#E6F5EC;opacity:0}
+.qc .cmp div{display:flex;justify-content:space-between;align-items:center;font:600 18px Sarabun;margin-top:6px}
+.qc .cmp .tag{font:700 15px Sarabun;border-radius:99px;padding:1px 10px}
+.qc .nav{display:grid;grid-template-columns:1fr 60px 1fr;gap:8px;margin:10px 12px 0}
+.qc .nav i{font-style:normal;height:52px;border:1.5px solid #D5DBE7;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;font:700 19px Sarabun;color:#14203A}
+.qc #q_psave{margin:10px 12px 0;height:60px;border-radius:16px;background:#1466DE;color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font:800 23px Sarabun;box-shadow:0 6px 16px -6px rgba(20,102,222,.7)}
+.qc .ptoast{position:absolute;left:18px;right:18px;top:62px;background:#1B7F4B;color:#fff;border-radius:14px;padding:10px 14px;font:700 18px Sarabun;opacity:0}
+.qc #q_veil{position:absolute;inset:0;background:rgba(14,30,70,.45);opacity:0}
+.qc #q_coa{position:absolute;left:330px;top:40px;width:1260px;height:860px;background:#fff;border-radius:20px;box-shadow:0 30px 70px -20px rgba(10,25,60,.6);padding:30px 44px;box-sizing:border-box;opacity:0;font-family:Sarabun}
+.qc #q_coa .hd{display:flex;align-items:flex-start;justify-content:space-between;border-bottom:3px solid #0A58D6;padding-bottom:12px}
+.qc #q_coa h2{margin:0;font:800 36px Sarabun;color:#0E4CA8}
+.qc #q_coa h2 small{display:block;font:600 22px Sarabun;color:#4A5160}
+.qc #q_coa .co{text-align:right;font:600 18px Sarabun;color:#4A5160}
+.qc #q_coa .co b{display:block;font:800 21px Sarabun;color:#14203A}
+.qc #q_coa .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 30px;margin-top:16px;font:500 22px Sarabun}
+.qc #q_coa .meta span{color:#5B6577;display:block;font-size:18px}
+.qc #q_coa table{margin-top:18px}
+.qc #q_coa td{height:56px;font-size:23px}
+.qc #q_coa th{height:50px;font-size:20px}
+.qc #q_stamp{position:absolute;right:60px;bottom:40px;border:5px solid #1B7F4B;color:#1B7F4B;border-radius:16px;padding:6px 26px;font:800 34px Sarabun;transform:rotate(-6deg);background:rgba(230,245,236,.85)}
+.qc #q_coa .sig{position:absolute;left:44px;bottom:40px;font:500 18px Sarabun;color:#4A5160}
+.qc,.qc *{box-sizing:border-box}
+.qc{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#EEF3FB;font-family:Sarabun,sans-serif;color:#14203A;overflow:hidden}
+.qc .wrap{position:absolute;left:0;top:0;width:1920px;height:1080px;opacity:0}
+.qc .cn{display:inline-grid;vertical-align:baseline}
+.qc .cn>span{grid-area:1/1}
+.qc .st.cn{display:inline-grid;place-items:center}
+.qc .d.cn{display:grid;place-items:center}
+.qc .hr b.cn{display:inline-grid;justify-items:end}
+.qc .rg{display:inline-block;padding:0 8px;margin:0 -8px;border-radius:8px}
+.qc .tv{display:inline-block}
+.qc .res{opacity:0}
+.qc .ib{width:150px}
+.qc .pres{opacity:0}
+.qc .tg{font:700 15px Sarabun;border-radius:99px;padding:1px 10px}
+.qc .lf .v{white-space:nowrap}
+.qc .coa .cb{border:2px solid #8A93A6}
+.qc #q_lbl{position:absolute;left:40px;bottom:40px;background:#0E4CA8;color:#fff;border-radius:99px;padding:5px 18px;font:700 22px Sarabun;z-index:46}
+.qc #q_veil{opacity:0}.qc #q_coa{opacity:0}.qc #q_stamp{opacity:0}
+.qc .ptoast{opacity:0}
+.qc #q_empty{opacity:1}
+.qc .coa{border:1.5px dashed #9DB8E6}
+.qc .qt tbody tr{opacity:0}
+@keyframes qc_pn0{0.000%{opacity:1}20.000%{opacity:1}20.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pn1{0.000%{opacity:0}20.000%{opacity:0}20.625%{opacity:1}25.000%{opacity:1}25.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pn2{0.000%{opacity:0}25.000%{opacity:0}25.625%{opacity:1}30.000%{opacity:1}30.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pn3{0.000%{opacity:0}30.000%{opacity:0}30.625%{opacity:1}35.000%{opacity:1}35.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pn4{0.000%{opacity:0}35.000%{opacity:0}35.625%{opacity:1}36.250%{opacity:1}36.875%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pn5{0.000%{opacity:0}36.250%{opacity:0}36.875%{opacity:1}37.500%{opacity:1}38.125%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pn6{0.000%{opacity:0}37.500%{opacity:0}38.125%{opacity:1}60.833%{opacity:1}61.458%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pn7{0.000%{opacity:0}60.833%{opacity:0}61.458%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_pk0{0.000%{opacity:1}20.000%{opacity:1}20.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pk1{0.000%{opacity:0}20.000%{opacity:0}20.625%{opacity:1}25.000%{opacity:1}25.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pk2{0.000%{opacity:0}25.000%{opacity:0}25.625%{opacity:1}30.000%{opacity:1}30.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pk3{0.000%{opacity:0}30.000%{opacity:0}30.625%{opacity:1}35.000%{opacity:1}35.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pk4{0.000%{opacity:0}35.000%{opacity:0}35.625%{opacity:1}36.250%{opacity:1}36.875%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pk5{0.000%{opacity:0}36.250%{opacity:0}36.875%{opacity:1}37.500%{opacity:1}38.125%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pk6{0.000%{opacity:0}37.500%{opacity:0}38.125%{opacity:1}60.833%{opacity:1}61.458%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pk7{0.000%{opacity:0}60.833%{opacity:0}61.458%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_pp0{0.000%{opacity:1}20.000%{opacity:1}20.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pp1{0.000%{opacity:0}20.000%{opacity:0}20.625%{opacity:1}25.000%{opacity:1}25.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pp2{0.000%{opacity:0}25.000%{opacity:0}25.625%{opacity:1}30.000%{opacity:1}30.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pp3{0.000%{opacity:0}30.000%{opacity:0}30.625%{opacity:1}35.000%{opacity:1}35.625%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pp4{0.000%{opacity:0}35.000%{opacity:0}35.625%{opacity:1}36.250%{opacity:1}36.875%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pp5{0.000%{opacity:0}36.250%{opacity:0}36.875%{opacity:1}37.500%{opacity:1}38.125%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pp6{0.000%{opacity:0}37.500%{opacity:0}38.125%{opacity:1}59.167%{opacity:1}59.792%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_pp7{0.000%{opacity:0}59.167%{opacity:0}59.792%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_sg0{0.000%{background:#E1E7F0}20.000%{background:#E1E7F0}21.042%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_sg1{0.000%{background:#E1E7F0}25.000%{background:#E1E7F0}26.042%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_sg2{0.000%{background:#E1E7F0}30.000%{background:#E1E7F0}31.042%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_sg3{0.000%{background:#E1E7F0}35.000%{background:#E1E7F0}36.042%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_sg4{0.000%{background:#E1E7F0}36.250%{background:#E1E7F0}37.292%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_sg5{0.000%{background:#E1E7F0}37.500%{background:#E1E7F0}38.542%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_sg6{0.000%{background:#E1E7F0}60.833%{background:#E1E7F0}61.875%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_ps1{0.000%{background:#E1E7F0}20.000%{background:#E1E7F0}21.042%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_ps2{0.000%{background:#1466DE}59.167%{background:#1466DE}60.208%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_ps3{0.000%{background:#E1E7F0}25.000%{background:#E1E7F0}26.042%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_ps4{0.000%{background:#E1E7F0}30.000%{background:#E1E7F0}31.042%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_ps5{0.000%{background:#E1E7F0}35.000%{background:#E1E7F0}36.042%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_ps6{0.000%{background:#E1E7F0}36.250%{background:#E1E7F0}37.292%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_ps7{0.000%{background:#E1E7F0}37.500%{background:#E1E7F0}38.542%{background:#1B7F4B}100.000%{background:#1B7F4B}}
+@keyframes qc_row1{0.000%{opacity:0}10.000%{opacity:0}11.458%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_rg1{0.000%{box-shadow:0 0 0 0 rgba(217,45,32,0)}43.333%{box-shadow:0 0 0 0 rgba(217,45,32,0)}44.792%{box-shadow:0 0 0 4px rgba(217,45,32,.55)}100.000%{box-shadow:0 0 0 4px rgba(217,45,32,.55)}}
+@keyframes qc_tv1{0.000%{clip-path:inset(0 100% 0 0)}17.917%{clip-path:inset(0 100% 0 0);animation-timing-function:steps(4,end)}19.792%{clip-path:inset(0 0 0 0)}100.000%{clip-path:inset(0 0 0 0)}}
+@keyframes qc_ib1{0.000%{color:#14203A;border-color:#C7D3E8;background:#fff;box-shadow:none}17.500%{color:#14203A;border-color:#C7D3E8;background:#fff;box-shadow:none}17.917%{color:#14203A;border-color:#1466DE;background:#fff;box-shadow:0 0 0 3px rgba(20,102,222,.2)}19.958%{color:#14203A;border-color:#1466DE;background:#fff;box-shadow:0 0 0 3px rgba(20,102,222,.2)}20.833%{color:#1B7F4B;border-color:#9ED3B4;background:#F3FBF6;box-shadow:none}100.000%{color:#1B7F4B;border-color:#9ED3B4;background:#F3FBF6;box-shadow:none}}
+@keyframes qc_res1{0.000%{opacity:0}20.208%{opacity:0}21.250%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_row2{0.000%{opacity:0}10.750%{opacity:0}12.208%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_rg2{0.000%{box-shadow:0 0 0 0 rgba(217,45,32,0)}43.333%{box-shadow:0 0 0 0 rgba(217,45,32,0)}44.792%{box-shadow:0 0 0 4px rgba(217,45,32,.55)}100.000%{box-shadow:0 0 0 4px rgba(217,45,32,.55)}}
+@keyframes qc_tv2{0.000%{clip-path:inset(0 100% 0 0)}59.583%{clip-path:inset(0 100% 0 0);animation-timing-function:steps(8,end)}61.458%{clip-path:inset(0 0 0 0)}100.000%{clip-path:inset(0 0 0 0)}}
+@keyframes qc_ib2{0.000%{color:#14203A;border-color:#C7D3E8;background:#fff;box-shadow:none}59.167%{color:#14203A;border-color:#C7D3E8;background:#fff;box-shadow:none}59.583%{color:#14203A;border-color:#1466DE;background:#fff;box-shadow:0 0 0 3px rgba(20,102,222,.2)}60.792%{color:#14203A;border-color:#1466DE;background:#fff;box-shadow:0 0 0 3px rgba(20,102,222,.2)}61.667%{color:#1B7F4B;border-color:#9ED3B4;background:#F3FBF6;box-shadow:none}100.000%{color:#1B7F4B;border-color:#9ED3B4;background:#F3FBF6;box-shadow:none}}
+@keyframes qc_res2{0.000%{opacity:0}61.042%{opacity:0}62.083%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_row3{0.000%{opacity:0}11.500%{opacity:0}12.958%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_rg3{0.000%{box-shadow:0 0 0 0 rgba(217,45,32,0)}43.333%{box-shadow:0 0 0 0 rgba(217,45,32,0)}44.792%{box-shadow:0 0 0 4px rgba(217,45,32,.55)}100.000%{box-shadow:0 0 0 4px rgba(217,45,32,.55)}}
+@keyframes qc_tv3{0.000%{clip-path:inset(0 100% 0 0)}22.917%{clip-path:inset(0 100% 0 0);animation-timing-function:steps(5,end)}24.792%{clip-path:inset(0 0 0 0)}100.000%{clip-path:inset(0 0 0 0)}}
+@keyframes qc_ib3{0.000%{color:#14203A;border-color:#C7D3E8;background:#fff;box-shadow:none}22.500%{color:#14203A;border-color:#C7D3E8;background:#fff;box-shadow:none}22.917%{color:#14203A;border-color:#1466DE;background:#fff;box-shadow:0 0 0 3px rgba(20,102,222,.2)}24.958%{color:#14203A;border-color:#1466DE;background:#fff;box-shadow:0 0 0 3px rgba(20,102,222,.2)}25.833%{color:#1B7F4B;border-color:#9ED3B4;background:#F3FBF6;box-shadow:none}100.000%{color:#1B7F4B;border-color:#9ED3B4;background:#F3FBF6;box-shadow:none}}
+@keyframes qc_res3{0.000%{opacity:0}25.208%{opacity:0}26.250%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_row4{0.000%{opacity:0}12.250%{opacity:0}13.708%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_rg4{0.000%{box-shadow:0 0 0 0 rgba(217,45,32,0)}43.333%{box-shadow:0 0 0 0 rgba(217,45,32,0)}44.792%{box-shadow:0 0 0 4px rgba(217,45,32,.55)}100.000%{box-shadow:0 0 0 4px rgba(217,45,32,.55)}}
+@keyframes qc_tv4{0.000%{clip-path:inset(0 100% 0 0)}27.917%{clip-path:inset(0 100% 0 0);animation-timing-function:steps(4,end)}29.792%{clip-path:inset(0 0 0 0)}100.000%{clip-path:inset(0 0 0 0)}}
+@keyframes qc_ib4{0.000%{color:#14203A;border-color:#C7D3E8;background:#fff;box-shadow:none}27.500%{color:#14203A;border-color:#C7D3E8;background:#fff;box-shadow:none}27.917%{color:#14203A;border-color:#1466DE;background:#fff;box-shadow:0 0 0 3px rgba(20,102,222,.2)}29.958%{color:#14203A;border-color:#1466DE;background:#fff;box-shadow:0 0 0 3px rgba(20,102,222,.2)}30.833%{color:#1B7F4B;border-color:#9ED3B4;background:#F3FBF6;box-shadow:none}100.000%{color:#1B7F4B;border-color:#9ED3B4;background:#F3FBF6;box-shadow:none}}
+@keyframes qc_res4{0.000%{opacity:0}30.208%{opacity:0}31.250%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_row5{0.000%{opacity:0}13.000%{opacity:0}14.458%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_yn5{0.000%{background:#fff;border-color:#D5DBE7;color:#4A5160}35.000%{background:#fff;border-color:#D5DBE7;color:#4A5160}36.042%{background:#E6F5EC;border-color:#1B7F4B;color:#1B7F4B}100.000%{background:#E6F5EC;border-color:#1B7F4B;color:#1B7F4B}}
+@keyframes qc_res5{0.000%{opacity:0}35.208%{opacity:0}36.250%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_row6{0.000%{opacity:0}13.750%{opacity:0}15.208%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_yn6{0.000%{background:#fff;border-color:#D5DBE7;color:#4A5160}36.250%{background:#fff;border-color:#D5DBE7;color:#4A5160}37.292%{background:#E6F5EC;border-color:#1B7F4B;color:#1B7F4B}100.000%{background:#E6F5EC;border-color:#1B7F4B;color:#1B7F4B}}
+@keyframes qc_res6{0.000%{opacity:0}36.458%{opacity:0}37.500%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_row7{0.000%{opacity:0}14.500%{opacity:0}15.958%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_yn7{0.000%{background:#fff;border-color:#D5DBE7;color:#4A5160}37.500%{background:#fff;border-color:#D5DBE7;color:#4A5160}38.542%{background:#E6F5EC;border-color:#1B7F4B;color:#1B7F4B}100.000%{background:#E6F5EC;border-color:#1B7F4B;color:#1B7F4B}}
+@keyframes qc_res7{0.000%{opacity:0}37.708%{opacity:0}38.750%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_wrap{0.000%{opacity:0}0.833%{opacity:0}3.750%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_wo{0.000%{background:#EEF1F6}8.333%{background:#EEF1F6}9.375%{background:rgba(20,102,222,.28)}13.750%{background:#EEF1F6}100.000%{background:#EEF1F6}}
+@keyframes qc_empty{0.000%{opacity:1}9.583%{opacity:1}11.250%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_h2ring{0.000%{box-shadow:0 0 0 0 rgba(20,102,222,0)}15.417%{box-shadow:0 0 0 0 rgba(20,102,222,0)}16.667%{box-shadow:0 0 0 3px rgba(20,102,222,.35)}100.000%{box-shadow:0 0 0 3px rgba(20,102,222,.35)}}
+@keyframes qc_bigv{0.000%{clip-path:inset(0 100% 0 0)}50.000%{clip-path:inset(0 100% 0 0);animation-timing-function:steps(8,end)}52.500%{clip-path:inset(0 0 0 0)}100.000%{clip-path:inset(0 0 0 0)}}
+@keyframes qc_bigin{0.000%{color:#14203A;border-color:#1466DE;background:#fff}51.458%{color:#14203A;border-color:#1466DE;background:#fff}52.708%{color:#1B7F4B;border-color:#1B7F4B;background:#F3FBF6}100.000%{color:#1B7F4B;border-color:#1B7F4B;background:#F3FBF6}}
+@keyframes qc_pres{0.000%{opacity:0}51.875%{opacity:0}53.125%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_cmpa{0.000%{opacity:1}51.875%{opacity:1}52.917%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_cmpb{0.000%{opacity:0}51.875%{opacity:0}52.917%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_psave{0.000%{transform:none}58.333%{transform:none}58.750%{transform:scale(.95)}59.792%{transform:none}100.000%{transform:none}}
+@keyframes qc_toast{0.000%{opacity:0}59.167%{opacity:0}60.417%{opacity:1}67.917%{opacity:1}69.167%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_h2na{0.000%{opacity:1}61.250%{opacity:1}62.292%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_h2nb{0.000%{opacity:0}61.250%{opacity:0}62.292%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_h2da{0.000%{opacity:1}61.250%{opacity:1}62.292%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_h2db{0.000%{opacity:0}61.250%{opacity:0}62.292%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_h2d{0.000%{background:#FFF3D6;color:#B26B00}61.250%{background:#FFF3D6;color:#B26B00}62.292%{background:#E6F5EC;color:#1B7F4B}100.000%{background:#E6F5EC;color:#1B7F4B}}
+@keyframes qc_coa_pick{0.000%{border-style:dashed;border-color:#9DB8E6;background:#fff;color:#14203A}68.333%{border-style:dashed;border-color:#9DB8E6;background:#fff;color:#14203A}68.334%{border-style:solid;border-color:#9DB8E6;background:#fff;color:#14203A}69.583%{border-style:solid;border-color:#1B7F4B;background:#E6F5EC;color:#14532D}100.000%{border-style:solid;border-color:#1B7F4B;background:#E6F5EC;color:#14532D}}
+@keyframes qc_cb{0.000%{background:#fff;border-color:#8A93A6}68.333%{background:#fff;border-color:#8A93A6}69.583%{background:#1B7F4B;border-color:#1B7F4B}100.000%{background:#1B7F4B;border-color:#1B7F4B}}
+@keyframes qc_bfin{0.000%{box-shadow:0 6px 16px -6px rgba(20,102,222,.7);transform:none}76.250%{box-shadow:0 6px 16px -6px rgba(20,102,222,.7);transform:none}77.083%{box-shadow:0 0 0 5px rgba(20,102,222,.35);transform:scale(.96)}79.167%{box-shadow:0 6px 16px -6px rgba(20,102,222,.7);transform:none}100.000%{box-shadow:0 6px 16px -6px rgba(20,102,222,.7);transform:none}}
+@keyframes qc_stq{0.000%{color:#B26B00;background:#FFF3D6}77.500%{color:#B26B00;background:#FFF3D6}78.750%{color:#1B7F4B;background:#E6F5EC}100.000%{color:#1B7F4B;background:#E6F5EC}}
+@keyframes qc_stqa{0.000%{opacity:1}77.500%{opacity:1}78.542%{opacity:0}100.000%{opacity:0}}
+@keyframes qc_stqb{0.000%{opacity:0}77.500%{opacity:0}78.542%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_veil{0.000%{opacity:0}82.500%{opacity:0}84.167%{opacity:1}100.000%{opacity:1}}
+@keyframes qc_coa{0.000%{opacity:0;transform:translateY(40px) scale(.96)}82.917%{opacity:0;transform:translateY(40px) scale(.96)}85.417%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes qc_stamp{0.000%{opacity:0;transform:rotate(-6deg) scale(1.6)}90.833%{opacity:0;transform:rotate(-6deg) scale(1.6)}92.292%{opacity:1;transform:rotate(-6deg) scale(1)}100.000%{opacity:1;transform:rotate(-6deg) scale(1)}}
+</style><style id="predeck">#fit,#fit *{animation-play-state:paused!important}#fit{opacity:0}</style></head><body>
+<div id="fit"><div class="qc"><div class="wrap" style="animation:qc_wrap 24s linear both">
+ <div class="dev" style="left:36px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>บนคอมพิวเตอร์ · ห้อง QC</div>
+ <div class="dev" style="left:1528px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>บนมือถือ · หน้างาน</div>
+ <div id="q_pc">
+  <div class="top"><h3>Product Inspection</h3>
+   <span class="pb pri" style="animation:qc_bfin 24s linear both"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h11l3 3v15H5z"/><path d="M8 3v6h8V3M8 21v-7h8v7"/></svg>บันทึกและเสร็จสิ้น</span>
+   <span class="pb">☰ สรุป</span><span class="pb">รายงาน</span><span class="pb">รายงาน COA</span><span class="pb" style="color:#4A5160">Clear</span></div>
+  <div class="body">
+   <div id="q_left">
+    <div class="sec"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v17H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg></span>ข้อมูลใบตรวจ<span class="st cn" style="animation:qc_stq 24s linear both"><span style="grid-area:1/1;animation:qc_stqa 24s linear both">กำลังตรวจ</span><span style="grid-area:1/1;animation:qc_stqb 24s linear both">เสร็จสิ้น</span></span></div>
+    <div class="lf"><label>Item</label><div class="lf2" style="grid-template-columns:130px 1fr"><div class="v">FG-BP-1103</div><div class="v">แผงพื้นห้องโดยสาร</div></div></div>
+    <div class="lf"><label>Inspection DocNum</label><div class="v">QC-2610-0066</div></div>
+    <div class="lf2"><div class="lf"><label>Work Order</label><div class="v" style="animation:qc_wo 24s linear both">W2610-052</div></div><div class="lf"><label>Date</label><div class="v">29/10/2026</div></div></div>
+    <div class="lf2"><div class="lf"><label>Department</label><div class="v">STP | ปั๊มขึ้นรูป</div></div><div class="lf"><label>Lot</label><div class="v">LOT-261028-01</div></div></div>
+    <div class="lf"><label>Machine</label><div class="v">PR-1000T | Tandem Line 1,000T</div></div>
+    <div class="sec hist" style="margin-top:14px"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span>ประวัติ</div>
+    <div>
+     <div class="hr r1"><span class="d">✕</span>ครั้งที่ 1<b>ไม่ผ่าน 4 ข้อ</b></div>
+     <div class="hr r2" style="animation:qc_h2ring 24s linear both"><span class="d cn" style="animation:qc_h2d 24s linear both"><span style="grid-area:1/1;animation:qc_h2da 24s linear both">●</span><span style="grid-area:1/1;animation:qc_h2db 24s linear both">✓</span></span>ครั้งที่ 2<b class="cn"><span style="grid-area:1/1;animation:qc_h2na 24s linear both">0/7</span><span style="grid-area:1/1;color:#1B7F4B;animation:qc_h2nb 24s linear both">7/7 ✓</span></b></div>
+     <div class="coa" style="animation:qc_coa_pick 24s linear both"><span class="cb" style="animation:qc_cb 24s linear both"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>ใช้ผลรอบนี้ใน COA</div>
+    </div>
+   </div>
+   <div id="q_right" style="position:relative">
+    <div class="prog"><span class="rd">ครั้งที่ 2</span><span class="t">ตรวจแล้ว <span class="cn"><span style="grid-area:1/1;animation:qc_pn0 24.0s linear both">0</span><span style="grid-area:1/1;animation:qc_pn1 24.0s linear both">1</span><span style="grid-area:1/1;animation:qc_pn2 24.0s linear both">2</span><span style="grid-area:1/1;animation:qc_pn3 24.0s linear both">3</span><span style="grid-area:1/1;animation:qc_pn4 24.0s linear both">4</span><span style="grid-area:1/1;animation:qc_pn5 24.0s linear both">5</span><span style="grid-area:1/1;animation:qc_pn6 24.0s linear both">6</span><span style="grid-area:1/1;animation:qc_pn7 24.0s linear both">7</span></span>/7</span><span class="ok">✓ ผ่าน <span class="cn"><span style="grid-area:1/1;animation:qc_pk0 24.0s linear both">0</span><span style="grid-area:1/1;animation:qc_pk1 24.0s linear both">1</span><span style="grid-area:1/1;animation:qc_pk2 24.0s linear both">2</span><span style="grid-area:1/1;animation:qc_pk3 24.0s linear both">3</span><span style="grid-area:1/1;animation:qc_pk4 24.0s linear both">4</span><span style="grid-area:1/1;animation:qc_pk5 24.0s linear both">5</span><span style="grid-area:1/1;animation:qc_pk6 24.0s linear both">6</span><span style="grid-area:1/1;animation:qc_pk7 24.0s linear both">7</span></span></span></div>
+    <div class="segs"><i style="animation:qc_sg0 24s linear both"></i><i style="animation:qc_sg1 24s linear both"></i><i style="animation:qc_sg2 24s linear both"></i><i style="animation:qc_sg3 24s linear both"></i><i style="animation:qc_sg4 24s linear both"></i><i style="animation:qc_sg5 24s linear both"></i><i style="animation:qc_sg6 24s linear both"></i></div>
+    <table class="qt"><thead><tr><th class="c" style="width:44px">ลำดับ</th><th style="width:76px">รหัส</th><th>หัวข้อตรวจ</th><th class="n">ต่ำสุด</th><th class="n">มาตรฐาน</th><th class="n">สูงสุด</th><th class="n">ครั้งที่ 1</th><th class="c">ครั้งนี้</th><th class="c">หน่วย</th><th class="c">ผล</th></tr></thead>
+     <tbody><tr style="animation:qc_row1 24s linear both"><td class="c">1</td><td><span class="cd">QC001</span></td><td><span class="nm">ความหนาแผ่นเหล็ก</span><span class="sb">ไมโครมิเตอร์</span></td><td class="n">1.38</td><td class="n">1.40</td><td class="n">1.42</td><td class="n r1 red"><span class="rg" style="animation:qc_rg1 24s linear both">1.45</span></td><td class="c"><span class="ib" style="animation:qc_ib1 24s linear both"><span class="tv" style="animation:qc_tv1 24s linear both">1.41</span></span></td><td class="c">มม.</td><td class="c"><span class="res" style="animation:qc_res1 24s linear both">ผ่าน</span></td></tr><tr style="animation:qc_row2 24s linear both"><td class="c">2</td><td><span class="cd">QC002</span></td><td><span class="nm">ความยาวชิ้นงาน</span><span class="sb">เวอร์เนียร์ 300 มม.</span></td><td class="n">1,198.00</td><td class="n">1,200.00</td><td class="n">1,202.00</td><td class="n r1 red"><span class="rg" style="animation:qc_rg2 24s linear both">1,203.50</span></td><td class="c"><span class="ib" style="animation:qc_ib2 24s linear both"><span class="tv" style="animation:qc_tv2 24s linear both">1,200.50</span></span></td><td class="c">มม.</td><td class="c"><span class="res" style="animation:qc_res2 24s linear both">ผ่าน</span></td></tr><tr style="animation:qc_row3 24s linear both"><td class="c">3</td><td><span class="cd">QC003</span></td><td><span class="nm">ตำแหน่งรู</span><span class="sb">เกจวัดตำแหน่ง</span></td><td class="n">49.80</td><td class="n">50.00</td><td class="n">50.20</td><td class="n r1 red"><span class="rg" style="animation:qc_rg3 24s linear both">50.40</span></td><td class="c"><span class="ib" style="animation:qc_ib3 24s linear both"><span class="tv" style="animation:qc_tv3 24s linear both">50.10</span></span></td><td class="c">มม.</td><td class="c"><span class="res" style="animation:qc_res3 24s linear both">ผ่าน</span></td></tr><tr style="animation:qc_row4 24s linear both"><td class="c">4</td><td><span class="cd">QC004</span></td><td><span class="nm">แรงดึงน็อตเชื่อม</span><span class="sb">เครื่องทดสอบแรงดึง</span></td><td class="n">8.00</td><td class="n">8.50</td><td class="n">9.00</td><td class="n r1 red"><span class="rg" style="animation:qc_rg4 24s linear both">7.80</span></td><td class="c"><span class="ib" style="animation:qc_ib4 24s linear both"><span class="tv" style="animation:qc_tv4 24s linear both">8.70</span></span></td><td class="c">kN</td><td class="c"><span class="res" style="animation:qc_res4 24s linear both">ผ่าน</span></td></tr><tr style="animation:qc_row5 24s linear both"><td class="c">5</td><td><span class="cd">QC005</span></td><td><span class="nm">ลักษณะผิว (รอยย่น/ขอบแตก)</span><span class="sb">ตรวจด้วยสายตา</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n r1 grn">ผ่าน</td><td class="c"><span class="yn"><i style="animation:qc_yn5 24s linear both">✓ ผ่าน</i><i>✕ ไม่ผ่าน</i></span></td><td class="c">—</td><td class="c"><span class="res" style="animation:qc_res5 24s linear both">ผ่าน</span></td></tr><tr style="animation:qc_row6 24s linear both"><td class="c">6</td><td><span class="cd">QC006</span></td><td><span class="nm">น็อตเชื่อมแน่น ไม่หลวม</span><span class="sb">ประแจแรงบิด</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n r1 grn">ใช่</td><td class="c"><span class="yn"><i style="animation:qc_yn6 24s linear both">✓ ใช่</i><i>✕ ไม่ใช่</i></span></td><td class="c">—</td><td class="c"><span class="res" style="animation:qc_res6 24s linear both">ผ่าน</span></td></tr><tr style="animation:qc_row7 24s linear both"><td class="c">7</td><td><span class="cd">QC007</span></td><td><span class="nm">สีพื้นผิวเคลือบ ED</span><span class="sb">ตรวจโดยฝ่าย QC</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n r1" style="color:#8A93A6">—</td><td class="c"><span class="yn"><i style="animation:qc_yn7 24s linear both">✓ ผ่าน</i><i>✕ ไม่ผ่าน</i></span></td><td class="c">—</td><td class="c"><span class="res" style="animation:qc_res7 24s linear both">ผ่าน</span></td></tr></tbody></table>
+    <div id="q_empty" style="animation:qc_empty 24s linear both"><div><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#B5BED0" stroke-width="1.6"><path d="M6 4h12v17H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg><br>เลือกใบสั่งงานเพื่อเปิดใบตรวจ</div></div>
+   </div>
+  </div>
+ </div>
+ <div id="q_ph"><div id="q_scr"><div class="notch"></div>
+  <div class="sbar"><span>10:15</span><span>●●● 5G</span></div>
+  <div class="ptl"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E4CA8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>Product Inspection</div>
+  <div class="pcard"><div style="display:flex;align-items:center;gap:8px"><span class="rd" style="font-size:15px">ครั้งที่ 2</span><span style="font:700 17px Sarabun">ตรวจแล้ว <span class="cn"><span style="grid-area:1/1;animation:qc_pp0 24.0s linear both">0</span><span style="grid-area:1/1;animation:qc_pp1 24.0s linear both">1</span><span style="grid-area:1/1;animation:qc_pp2 24.0s linear both">2</span><span style="grid-area:1/1;animation:qc_pp3 24.0s linear both">3</span><span style="grid-area:1/1;animation:qc_pp4 24.0s linear both">4</span><span style="grid-area:1/1;animation:qc_pp5 24.0s linear both">5</span><span style="grid-area:1/1;animation:qc_pp6 24.0s linear both">6</span><span style="grid-area:1/1;animation:qc_pp7 24.0s linear both">7</span></span>/7</span></div>
+   <div class="pseg"><i style="animation:qc_ps1 24s linear both"></i><i style="animation:qc_ps2 24s linear both"></i><i style="animation:qc_ps3 24s linear both"></i><i style="animation:qc_ps4 24s linear both"></i><i style="animation:qc_ps5 24s linear both"></i><i style="animation:qc_ps6 24s linear both"></i><i style="animation:qc_ps7 24s linear both"></i></div></div>
+  <div class="pcard"><div class="qhd"><span>ข้อ 2 / 7 · QC002</span><span class="pres" style="animation:qc_pres 24s linear both">ผ่าน</span></div>
+   <div class="qnm">ความยาวชิ้นงาน</div><div class="qsb">เวอร์เนียร์ 300 มม. · หน่วย มม.</div>
+   <div class="spec"><div><small>ต่ำสุด</small><b>1,198.00</b></div><div><small>มาตรฐาน</small><b>1,200.00</b></div><div><small>สูงสุด</small><b>1,202.00</b></div></div>
+   <div id="q_bigin" style="animation:qc_bigin 24s linear both"><span style="animation:qc_bigv 24s linear both">1,200.50</span></div></div>
+  <div class="pcard cmp"><div style="margin:0;font:700 16px Sarabun;color:#5B6577">เทียบรอบก่อน</div>
+   <div><span>ครั้งที่ 1</span><span>1,203.50 <span class="tg" style="color:#D92D20;background:#FDE7E3">ไม่ผ่าน</span></span></div>
+   <div style="display:grid;grid-template-columns:1fr"><span style="grid-area:1/1;display:flex;justify-content:space-between;animation:qc_cmpa 24s linear both"><span>ครั้งที่ 2</span><span>— <span class="tg" style="color:#8A93A6;background:#EEF1F6">รอกรอก</span></span></span><span style="grid-area:1/1;display:flex;justify-content:space-between;animation:qc_cmpb 24s linear both"><span>ครั้งที่ 2</span><span>1,200.50 <span class="tg" style="color:#1B7F4B;background:#E6F5EC">ผ่าน</span></span></span></div></div>
+  <div class="nav"><i>‹ ก่อนหน้า</i><i>☰</i><i>ถัดไป ›</i></div>
+  <div id="q_psave" style="animation:qc_psave 24s linear both"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h11l3 3v15H5z"/><path d="M8 3v6h8V3M8 21v-7h8v7"/></svg>บันทึก</div>
+  <div class="ptoast" style="animation:qc_toast 24s linear both">✓ บันทึกแล้ว · ครบ 7/7 ข้อ</div>
+ </div></div>
+ <div id="q_veil" style="animation:qc_veil 24s linear both"></div>
+ <div id="q_coa" style="animation:qc_coa 24s linear both">
+  <div class="hd"><div><h2>ใบรับรองผลวิเคราะห์<small>Certificate of Analysis (COA)</small></h2></div><div class="co"><b>โรงงานตัวอย่าง (DEMO)</b>ปั๊มขึ้นรูปและเชื่อมประกอบชิ้นส่วนรถยนต์</div></div>
+  <div class="meta"><div><span>สินค้า</span><b>FG-BP-1103</b> แผงพื้นห้องโดยสาร</div><div><span>ล็อตผลผลิต</span><b>LOT-261028-01</b></div><div><span>จำนวน</span><b>1,000 ชิ้น</b></div>
+   <div><span>ลูกค้า / ใบสั่งขาย</span>OEM-A · SO2610-0014</div><div><span>ใบสั่งงาน / ใบตรวจ</span>W2610-052 · QC-2610-0066</div><div><span>วันที่ตรวจ · ผลที่ใช้</span>29/10/2026 · ครั้งที่ 2</div></div>
+  <table><tr><th class="c" style="width:50px">#</th><th>หัวข้อตรวจ</th><th class="n">ต่ำสุด</th><th class="n">มาตรฐาน</th><th class="n">สูงสุด</th><th class="n">ผลตรวจ</th><th class="c">หน่วย</th><th class="c">ผล</th></tr><tr><td class="c">1</td><td>ความหนาแผ่นเหล็ก</td><td class="n">1.38</td><td class="n">1.40</td><td class="n">1.42</td><td class="n"><b>1.41</b></td><td class="c">มม.</td><td class="c grn"><b>ผ่าน</b></td></tr><tr><td class="c">2</td><td>ความยาวชิ้นงาน</td><td class="n">1,198.00</td><td class="n">1,200.00</td><td class="n">1,202.00</td><td class="n"><b>1,200.50</b></td><td class="c">มม.</td><td class="c grn"><b>ผ่าน</b></td></tr><tr><td class="c">3</td><td>ตำแหน่งรู</td><td class="n">49.80</td><td class="n">50.00</td><td class="n">50.20</td><td class="n"><b>50.10</b></td><td class="c">มม.</td><td class="c grn"><b>ผ่าน</b></td></tr><tr><td class="c">4</td><td>แรงดึงน็อตเชื่อม</td><td class="n">8.00</td><td class="n">8.50</td><td class="n">9.00</td><td class="n"><b>8.70</b></td><td class="c">kN</td><td class="c grn"><b>ผ่าน</b></td></tr><tr><td class="c">5</td><td>ลักษณะผิว (รอยย่น/ขอบแตก)</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n"><b>ผ่าน</b></td><td class="c">—</td><td class="c grn"><b>ผ่าน</b></td></tr><tr><td class="c">6</td><td>น็อตเชื่อมแน่น ไม่หลวม</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n"><b>ใช่</b></td><td class="c">—</td><td class="c grn"><b>ผ่าน</b></td></tr><tr><td class="c">7</td><td>สีพื้นผิวเคลือบ ED</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n"><b>ผ่าน</b></td><td class="c">—</td><td class="c grn"><b>ผ่าน</b></td></tr></table>
+  <div class="sig">ผู้ตรวจ: ฝ่าย QC · ออกจาก Beside Enterprise 29/10/2026</div>
+  <div id="q_stamp" style="animation:qc_stamp 24s linear both">✓ ผ่านทุกข้อ</div>
+ </div>
+ <div id="q_lbl">Beside Enterprise · ตรวจคุณภาพ (QC)</div>
+</div></div></div>
+<script>function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080),f=document.getElementById('fit');f.style.transform='scale('+s+')';f.style.left=(innerWidth-1920*s)/2+'px';f.style.top=(innerHeight-1080*s)/2+'px'}addEventListener('resize',fit);fit()</script>
+<script>var PAGES=['n1','s2','ag','b2','n2','b3','so','sf','sa','sd','pl','bm','mps','wo','mrp','po','buy','m4','iqc','m5','iss','m6','prd','m7','qc','trc','tf','m8','cst','cmp','m9','dlv','m10','dbd','sot','mar','fin'];(function(){var cur=location.pathname.split('/').pop().replace('.html',''),i=PAGES.indexOf(cur);function go(d){var j=i+d;if(j>=0&&j<PAGES.length)location.href=PAGES[j]+'.html'}
+addEventListener('keydown',function(e){if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();go(1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();go(-1)}});
+addEventListener('click',function(e){go(e.clientX<innerWidth*.2?-1:1)})})()</script>
+<script src="ctl.js"></script>
+</body></html>

@@ -1,0 +1,288 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><title>wo · ใบสั่งผลิต Work Order</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap">
+<style>html,body{margin:0;height:100%;overflow:hidden;font-family:Sarabun,sans-serif;background:#EEF3FB}
+#fit{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+
+
+
+
+
+
+.wopg,.wopg *{box-sizing:border-box}
+.wopg{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#EEF3FB;font-family:Sarabun,sans-serif;color:#14203A;overflow:hidden}
+.wopg .wopw{position:absolute;left:0;top:0;width:1920px;height:1080px;opacity:0;animation:wo_in 39.2s linear both}
+.wopg i{font-style:normal}
+.wopg .card{position:absolute;left:40px;top:22px;width:1840px;background:#fff;border-radius:24px;box-shadow:0 18px 50px -22px rgba(20,60,140,.4);padding:22px 36px 24px}
+.wopg .bt{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 22px;border:1.5px solid #CBD3E1;border-radius:12px;background:#fff;font:600 20px Sarabun;color:#1E2A40;box-shadow:0 2px 6px -2px rgba(20,60,140,.18)}
+.wopg .bt.pri{background:#1466DE;border-color:#1466DE;color:#fff;box-shadow:0 6px 16px -6px rgba(20,102,222,.7)}
+.wopg .seg{display:inline-flex;border:1.5px solid #CBD3E1;border-radius:12px;overflow:hidden;background:#fff}
+.wopg .seg span{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 20px;font:600 20px Sarabun;color:#1E2A40;border-right:1.5px solid #E1E6EF}
+.wopg .seg span:last-child{border-right:0}.wopg .seg span.on{background:#1466DE;color:#fff}
+.wopg .vl{font:600 18px Sarabun;color:#4A5160;margin-bottom:6px}
+.wopg .in{height:52px;border:1.5px solid #D5DBE7;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font:400 21px Sarabun;gap:10px}
+.wopg .wbh{display:flex;align-items:center;gap:14px}
+.wopg .wbh h2{margin:0;font:700 34px Sarabun;color:#0E4CA8}
+.wopg .mchip{margin-right:auto;margin-left:10px;background:#F1E9FF;border:1.5px solid #C9B2F5;color:#5B21B6;border-radius:99px;padding:5px 18px;font:600 20px Sarabun;white-space:nowrap;opacity:0;animation:wo_chip 39.2s linear both}
+.wopg .flt{display:grid;grid-template-columns:1fr 1fr 1.25fr .9fr;gap:22px;margin-top:16px}
+.wopg .board{margin-top:24px}
+.wopg .gridw{border:1.5px solid #D5DBE7;border-radius:16px;overflow:hidden;position:relative}
+.wopg .gh{display:grid;grid-template-columns:240px repeat(7,1fr);background:linear-gradient(180deg,#1166E0,#0A58D6);color:#fff}
+.wopg .gh div{height:46px;display:grid;place-items:center;font:600 21px Sarabun;border-left:1px solid rgba(255,255,255,.22)}
+.wopg .gh .mh{grid-row:span 2;border-left:0;justify-content:start;padding-left:18px;font-size:22px;height:auto}
+.wopg .gh .mo{grid-column:span 7;border-bottom:1px solid rgba(255,255,255,.22)}
+.wopg .gh .td{background:#DDF956;color:#0E4CA8}.wopg .gh .we{background:#3D7CE6}
+.wopg .grow{display:grid;grid-template-columns:240px 1fr;height:136px;border-top:1.5px solid #E4E9F2;position:relative}
+.wopg .mc{display:flex;align-items:center;gap:12px;padding:0 14px;border-right:1.5px solid #E4E9F2}
+.wopg .mc .ic{width:44px;height:44px;border-radius:12px;background:#EAF1FF;display:grid;place-items:center;flex:none}
+.wopg .mc b{display:block;font:700 23px Sarabun;color:#0E4CA8}.wopg .mc small{display:block;font:400 16px Sarabun;color:#4A5160;white-space:nowrap}
+.wopg .mc .ct{margin-left:auto;width:32px;height:32px;border-radius:50%;background:#EAF1FF;color:#1466DE;display:grid;place-items:center;font:700 18px Sarabun;position:relative}
+.wopg .ct i{position:absolute;inset:0;display:grid;place-items:center}
+.wopg .lane{position:relative;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(100%/7 - 1px),#E8EDF5 calc(100%/7 - 1px),#E8EDF5 calc(100%/7))}
+.wopg .lane:before{content:"";position:absolute;left:calc(300%/7);top:0;bottom:0;width:calc(100%/7);background:#F3F5F9}
+.wopg .bar{position:absolute;top:14px;height:94px;border-radius:12px;padding:8px 12px;border-left:6px solid;overflow:hidden;white-space:nowrap;box-shadow:0 4px 12px -6px rgba(20,40,80,.35)}
+.wopg .bar b{display:block;font:700 22px Sarabun;line-height:1.3}.wopg .bar small{display:block;font:500 16px Sarabun;overflow:hidden;text-overflow:ellipsis}
+.wopg .bar .tm{display:block;position:relative;height:22px;margin-top:2px;font:600 16px Sarabun;opacity:.85}
+.wopg .tm i{position:absolute;left:0;top:0}
+.wopg .bar.run{background:#FFE7D6;border-color:#E8590C;color:#9A3412}
+.wopg .bar.cf{background:#E5EEFF;border-color:#1466DE;color:#0E4CA8}
+.wopg .bar.rl{background:#FFF4CC;border-color:#D4A100;color:#7A5B00}
+.wopg .bar.dr{background:#F1E9FF;border-color:#7C3AED;color:#5B21B6}
+.wopg .ct.free{width:auto;padding:0 10px;border-radius:99px;background:#DDF3E4;color:#1B7F4B;font-size:15px}
+.wopg .fslot{position:absolute;left:8%;right:2%;top:14px;height:94px;border:3px dashed #A9C4F5;border-radius:12px;display:grid;place-items:center;font:600 20px Sarabun;color:#6B86B8;background:rgba(20,102,222,.04);animation:wo_fs 39.2s linear both}
+.wopg .link{position:absolute;top:47px;width:30px;height:30px;border-radius:50%;background:#fff;border:2.5px solid #0E8F7E;display:grid;place-items:center;z-index:6}
+.wopg .stay.lockt{background:#E5EEFF;border:1.5px solid #1466DE;color:#0E4CA8}
+.wopg .nowl{position:absolute;top:0;bottom:0;width:3px;background:#FF6648;z-index:2}
+.wopg .leg{display:flex;gap:24px;align-items:center;margin-top:14px;font:500 19px Sarabun;color:#4A5160}
+.wopg .leg i{display:inline-block;width:8px;height:22px;border-radius:3px;margin-right:8px;vertical-align:middle}
+
+.wopg .lbl{position:absolute;left:40px;bottom:40px;background:#0E4CA8;color:#fff;border-radius:99px;padding:5px 18px;font:700 22px Sarabun;z-index:19}
+
+.wopg .ct i.c2{animation:wo_c2 39.2s linear both}.wopg .ct i.c3{opacity:0;animation:wo_c3 39.2s linear both}
+.wopg .tb{opacity:0}.wopg .bar.lp{padding-left:22px}
+.wopg .pl{position:absolute;right:10px;bottom:8px;border-radius:99px;padding:2px 12px;font:700 17px Sarabun;color:#fff;opacity:0;white-space:nowrap}
+.wopg .pk{background:#1B7F4B}.wopg .pw{background:#C2410C}
+.wopg .brk{position:absolute;top:9px;height:121px;border-radius:16px;background:rgba(14,143,126,.10);border:2.5px dashed rgba(14,143,126,.7);opacity:0}
+.wopg .brk span{position:absolute;left:14px;bottom:1px;font:700 16px Sarabun;line-height:20px;color:#0B6F61;white-space:nowrap}
+.wopg .stay{position:absolute;left:8px;top:112px;height:22px;display:flex;align-items:center;padding:0 12px;border-radius:99px;background:#F1F3F8;border:1.5px dashed #8892A6;font:700 15px Sarabun;color:#5A6377;white-space:nowrap;opacity:0;z-index:4}
+.wopg .cap{position:absolute;left:8px;top:-18px;height:36px;display:flex;align-items:center;padding:0 18px;border-radius:99px;background:#F1F3F8;border:2.5px solid #8892A6;font:700 21px Sarabun;color:#3A4256;white-space:nowrap;box-shadow:0 8px 20px -10px rgba(40,50,70,.5);z-index:8;opacity:0}
+.wopg .fml{position:absolute;left:35.7%;top:109px;height:24px;display:flex;align-items:center;gap:14px;padding:0 14px;border-radius:99px;background:#fff;border:2px solid #1466DE;font:700 17px Sarabun;color:#0E4CA8;white-space:nowrap;z-index:8;opacity:0;box-shadow:0 6px 14px -8px rgba(20,60,140,.5)}
+.wopg .fml b{font:700 17px Sarabun;color:#14203A}
+.wopg .ct.n8{position:absolute;left:194px;top:52px;margin:0;opacity:0}
+.wopg .tc{opacity:0}
+.wopg .ct i.c2b{opacity:0}
+.wopg .down{position:absolute;top:14px;height:94px;left:17.9%;width:7.1%;border-radius:10px;border:2.5px solid #B7791F;background:repeating-linear-gradient(135deg,#FCE7A6 0 10px,#C9C3B3 10px 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:5;opacity:0;box-shadow:0 8px 18px -8px rgba(90,60,0,.6)}
+.wopg .down b{font:700 17px Sarabun;line-height:1.25;color:#5A3A00;background:rgba(255,255,255,.85);border-radius:6px;padding:0 6px;margin:1px 0;white-space:nowrap}
+.wopg .co{position:absolute;right:50px;bottom:30px;background:#fff;border-left:9px solid #1466DE;border-radius:16px;padding:12px 28px 12px 24px;font:600 24px Sarabun;color:#14203A;white-space:nowrap;box-shadow:0 16px 36px -14px rgba(20,60,140,.5);opacity:0;z-index:30}
+
+.wopg .pbg{position:absolute;inset:0;background:rgba(6,32,96,.38);-webkit-backdrop-filter:blur(16px) saturate(1.1);backdrop-filter:blur(16px) saturate(1.1);opacity:0;z-index:40}
+.wopg .pop{position:absolute;left:150px;top:70px;width:1620px;height:940px;border-radius:40px;background:#fff;color:#0E4CA8;box-shadow:0 50px 100px -30px rgba(0,10,60,.9);opacity:0;z-index:41;overflow:hidden}
+.wopg .pop:before{content:"";position:absolute;left:0;right:0;top:0;height:16px;background:#C6E23A}
+.wopg .pop .ph{padding:50px 56px 0}.wopg .pop .ph b{font:800 46px/1.4 Sarabun}
+.wopg .pop .ps{padding:0 56px;font:500 24px/1.5 Sarabun;color:#4A6FA8}
+.wopg .pop .tbl{margin:22px 56px 0}
+.wopg .pop .tr{display:grid;grid-template-columns:440px 380px 50px 380px 1fr;align-items:center;min-height:96px;border-bottom:1.5px solid #E4E9F2;font:600 26px/1.4 Sarabun;color:#14203A}
+.wopg .pop .tr.th{min-height:52px;background:#EAF1FF;border-radius:12px;font:700 22px Sarabun;color:#0E4CA8;padding:0 0}
+.wopg .pop .tr>span{padding:0 14px}
+.wopg .pop .tr b{display:block;font:800 28px/1.4 Sarabun;color:#0E4CA8}.wopg .pop .tr small{display:block;font:500 18px/1.4 Sarabun;color:#5A6377}
+.wopg .pop .tr .o{color:#6C7180;text-decoration:line-through;text-decoration-color:#B7BECC}
+.wopg .pop .tr .n{color:#C2410C;font-weight:800}
+.wopg .pop .tr .arr{font-size:34px;color:#1466DE;text-align:center;padding:0}
+.wopg .pop .tr em{font-style:normal;background:#FFF1E0;border:2px solid #E8A15C;color:#B34700;border-radius:99px;padding:6px 12px;font:800 22px/1.4 Sarabun;white-space:nowrap}
+.wopg .pop .mini{margin:22px 56px 0;position:relative}
+.wopg .pop .axis{display:grid;grid-template-columns:repeat(7,1fr);margin-left:90px;font:600 19px/1.4 Sarabun;color:#4A5160;text-align:center}
+.wopg .pop .axis i{border-left:1.5px solid #D5DBE7;padding:2px 0}
+.wopg .pop .mr{display:flex;align-items:center;height:84px;border-bottom:1.5px solid #EDF0F6}
+.wopg .pop .ml{width:90px;font:700 22px Sarabun;color:#0E4CA8}
+.wopg .pop .mt{position:relative;flex:1;height:64px}
+.wopg .pop .mb{position:absolute;top:0;height:64px;border-radius:10px;border-left:6px solid;display:flex;align-items:center;padding-left:14px}
+.wopg .pop .mb b{font:800 24px Sarabun}
+.wopg .pop .m1{background:#FFF4CC;border-color:#D4A100;color:#7A5B00}
+.wopg .pop .m2,.wopg .pop .m2n{background:#E5EEFF;border-color:#1466DE;color:#0E4CA8}
+.wopg .pop .mdn{border:2.5px solid #B7791F;border-left-width:2.5px;background:repeating-linear-gradient(135deg,#FCE7A6 0 9px,#C9C3B3 9px 18px);padding:0}
+.wopg .pop .m1b{display:none}
+.wopg .pop .due{position:absolute;top:-6px;bottom:-30px;width:0;border-left:3px dashed #D92D20}
+.wopg .pop .due u{position:absolute;left:8px;bottom:-4px;text-decoration:none;font:700 19px/1.4 Sarabun;color:#D92D20;white-space:nowrap}
+.wopg .pop .wrow{position:absolute;left:56px;right:56px;top:722px;display:flex;align-items:center;gap:28px}
+.wopg .pop .wchip{background:#FEE4E2;border:2.5px solid #D92D20;color:#B42318;border-radius:99px;padding:6px 24px;font:800 26px/1.4 Sarabun;white-space:nowrap}
+.wopg .pop .note{background:#F0F6FF;border-left:6px solid #1466DE;border-radius:12px;padding:8px 22px;font:600 24px/1.4 Sarabun;color:#14203A}
+.wopg .pop .btns{position:absolute;right:56px;bottom:34px;display:flex;gap:22px}
+.wopg .pop .btns span{display:inline-flex;align-items:center;height:70px;padding:0 44px;border-radius:16px;font:700 28px Sarabun}
+.wopg .pop .b1{background:#1466DE;color:#fff}.wopg .pop .b2{background:#fff;border:2px solid #CBD3E1;color:#3A4256}
+.wopg .rp1,.wopg .rp2,.wopg .rp3,.wopg .rp4,.wopg .rp5,.wopg .rp6,.wopg .rp7{opacity:0}
+.wopg .d52{animation:wo_d52 39.2s linear both}
+.wopg .d53{animation:wo_d53 39.2s linear both}
+.wopg .lk1{animation:wo_lk1 39.2s linear both}
+.wopg .brk1{animation:wo_brk1 39.2s linear both}
+.wopg .lockt{animation:wo_tgL 39.2s linear both}
+.wopg .tg1{animation:wo_tg1 39.2s linear both}
+.wopg .tg2{animation:wo_tg2 39.2s linear both}
+.wopg .tc52{animation:wo_tc52 39.2s linear both}
+.wopg .ta52{animation:wo_ta52 39.2s linear both}.wopg .tb52{animation:wo_tb52 39.2s linear both}
+.wopg .tc53{animation:wo_tc53 39.2s linear both}
+.wopg .ta53{animation:wo_ta53 39.2s linear both}.wopg .tb53{animation:wo_tb53 39.2s linear both}
+.wopg .cap{animation:wo_cap 39.2s linear both}
+.wopg .fml{animation:wo_fml 39.2s linear both}
+.wopg .b47{animation:wo_b47 39.2s linear both}
+.wopg .lk2{animation:wo_lk2 39.2s linear both}
+.wopg .brk2{animation:wo_brk2 39.2s linear both}
+.wopg .down{animation:wo_down 39.2s linear both}
+.wopg .b57{animation:wo_b57 39.2s linear both}
+.wopg .b58{animation:wo_b58 39.2s linear both}
+.wopg .lk3{animation:wo_lk3 39.2s linear both}
+.wopg .brk3{animation:wo_brk3 39.2s linear both}
+.wopg .ta57{animation:wo_ta57 39.2s linear both}.wopg .tb57{animation:wo_tb57 39.2s linear both}
+.wopg .ta58{animation:wo_ta58 39.2s linear both}.wopg .tb58{animation:wo_tb58 39.2s linear both}
+.wopg .pw{animation:wo_pw 39.2s linear both}
+.wopg .pk{animation:wo_pk 39.2s linear both}
+.wopg .c2b{animation:wo_c2b 39.2s linear both}
+.wopg .n8{animation:wo_n8 39.2s linear both}
+.wopg .f8{animation:wo_f8 39.2s linear both}
+.wopg .co1{animation:wo_co1 39.2s linear both}
+.wopg .co2{animation:wo_co2 39.2s linear both}
+.wopg .co3{animation:wo_co3 39.2s linear both}
+.wopg .co4{animation:wo_co4 39.2s linear both}
+.wopg .co6{animation:wo_co6 39.2s linear both}
+.wopg .wopw{animation:wo_in 39.2s linear both}
+.wopg .co5{animation:wo_co5 39.2s linear both}
+.wopg .pbg{animation:wo_pbg 39.2s linear both}.wopg .pop{animation:wo_pop 39.2s linear both}
+.wopg .rp1{animation:wo_rp1 39.2s linear both}
+.wopg .rp2{animation:wo_rp2 39.2s linear both}
+.wopg .rp3{animation:wo_rp3 39.2s linear both}
+.wopg .rp4{animation:wo_rp4 39.2s linear both}
+.wopg .rp5{animation:wo_rp5 39.2s linear both}
+.wopg .rp6{animation:wo_rp6 39.2s linear both}
+.wopg .rp7{animation:wo_rp7 39.2s linear both}
+.wopg .pop .go{animation:wo_press 39.2s linear both}
+@keyframes wo_in{0.000%{opacity:0}0.765%{opacity:0}2.551%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_chip{0.000%{opacity:0}5.102%{opacity:0;transform:translateX(-10px)}6.122%{opacity:1;transform:translateX(0)}100.000%{opacity:1;transform:translateX(0)}}
+@keyframes wo_c2{0.000%{opacity:1}9.184%{opacity:1}9.949%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_c3{0.000%{opacity:0}9.439%{opacity:0}10.204%{opacity:1}95.663%{opacity:1}96.429%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_d52{0.000%{left:43.5%;opacity:0;transform:translateY(-12px);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}9.184%{left:43.5%;opacity:0;transform:translateY(-12px);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}10.204%{left:43.5%;opacity:1;transform:translateY(0);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}23.469%{left:43.5%;opacity:1;transform:translateY(0);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}24.235%{left:43.5%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}28.061%{left:43.5%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}30.102%{left:57.8%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}30.357%{left:57.8%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}31.122%{left:57.8%;opacity:1;transform:translateY(0);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}90.561%{left:57.8%;opacity:1;transform:translateY(0);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}91.327%{left:57.8%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}92.092%{left:57.8%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}95.153%{left:2%;opacity:1;transform:translateY(400px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}95.408%{left:2%;opacity:1;transform:translateY(400px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}96.173%{left:2%;opacity:1;transform:translateY(408px);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}100.000%{left:2%;opacity:1;transform:translateY(408px);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}}
+@keyframes wo_d53{0.000%{left:63.5%;opacity:0;transform:translateY(-12px);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}9.184%{left:63.5%;opacity:0;transform:translateY(-12px);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}10.204%{left:63.5%;opacity:1;transform:translateY(0);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}23.469%{left:63.5%;opacity:1;transform:translateY(0);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}24.235%{left:63.5%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}28.061%{left:63.5%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}30.102%{left:77.8%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}30.357%{left:77.8%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}31.122%{left:77.8%;opacity:1;transform:translateY(0);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}90.561%{left:77.8%;opacity:1;transform:translateY(0);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}91.327%{left:77.8%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}92.092%{left:77.8%;opacity:1;transform:translateY(-8px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}95.153%{left:22%;opacity:1;transform:translateY(400px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}95.408%{left:22%;opacity:1;transform:translateY(400px);box-shadow:0 22px 30px -10px rgba(20,40,80,.55);outline:3px solid #7C3AED;z-index:5}96.173%{left:22%;opacity:1;transform:translateY(408px);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}100.000%{left:22%;opacity:1;transform:translateY(408px);box-shadow:0 4px 12px -6px rgba(20,40,80,.35);outline:0 solid transparent;z-index:1}}
+@keyframes wo_lk1{0.000%{left:calc(63.5% - 15px);opacity:0;transform:translateY(0);box-shadow:0 0 0 0 rgba(14,143,126,0)}9.439%{left:calc(63.5% - 15px);opacity:0;transform:translateY(0);box-shadow:0 0 0 0 rgba(14,143,126,0)}10.204%{left:calc(63.5% - 15px);opacity:1;transform:translateY(0);box-shadow:0 0 0 0 rgba(14,143,126,0)}16.837%{left:calc(63.5% - 15px);opacity:1;transform:translateY(0);box-shadow:0 0 0 0 rgba(14,143,126,0)}17.602%{left:calc(63.5% - 15px);opacity:1;transform:translateY(0);box-shadow:0 0 0 6px rgba(14,143,126,.3)}23.469%{left:calc(63.5% - 15px);opacity:1;transform:translateY(0);box-shadow:0 0 0 6px rgba(14,143,126,.3)}24.235%{left:calc(63.5% - 15px);opacity:1;transform:translateY(-8px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}28.061%{left:calc(63.5% - 15px);opacity:1;transform:translateY(-8px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}30.102%{left:calc(77.8% - 15px);opacity:1;transform:translateY(-8px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}30.357%{left:calc(77.8% - 15px);opacity:1;transform:translateY(-8px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}31.122%{left:calc(77.8% - 15px);opacity:1;transform:translateY(0);box-shadow:0 0 0 6px rgba(14,143,126,.3)}90.561%{left:calc(77.8% - 15px);opacity:1;transform:translateY(0);box-shadow:0 0 0 6px rgba(14,143,126,.3)}91.327%{left:calc(77.8% - 15px);opacity:1;transform:translateY(-8px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}92.092%{left:calc(77.8% - 15px);opacity:1;transform:translateY(-8px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}95.153%{left:calc(22% - 15px);opacity:1;transform:translateY(400px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}95.408%{left:calc(22% - 15px);opacity:1;transform:translateY(400px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}96.173%{left:calc(22% - 15px);opacity:1;transform:translateY(408px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}100.000%{left:calc(22% - 15px);opacity:1;transform:translateY(408px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}}
+@keyframes wo_brk1{0.000%{left:calc(43.5% - 7px);width:calc(40% + 14px);opacity:0;transform:translateY(0)}16.837%{left:calc(43.5% - 7px);width:calc(40% + 14px);opacity:0;transform:translateY(0)}17.857%{left:calc(43.5% - 7px);width:calc(40% + 14px);opacity:1;transform:translateY(0)}28.061%{left:calc(43.5% - 7px);width:calc(40% + 14px);opacity:1;transform:translateY(0)}30.102%{left:calc(57.8% - 7px);width:calc(40% + 14px);opacity:1;transform:translateY(0)}92.092%{left:calc(57.8% - 7px);width:calc(40% + 14px);opacity:1;transform:translateY(0)}95.153%{left:calc(2% - 7px);width:calc(40% + 14px);opacity:1;transform:translateY(408px)}100.000%{left:calc(2% - 7px);width:calc(40% + 14px);opacity:1;transform:translateY(408px)}}
+@keyframes wo_tgL{0.000%{opacity:0}24.745%{opacity:0}25.510%{opacity:1}36.224%{opacity:1}36.990%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_tg1{0.000%{opacity:0}24.490%{opacity:0}25.255%{opacity:1}36.224%{opacity:1}36.990%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_tg2{0.000%{opacity:0}24.745%{opacity:0}25.510%{opacity:1}36.224%{opacity:1}36.990%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_ta52{0.000%{opacity:1}29.082%{opacity:1}29.847%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_tb52{0.000%{opacity:0}29.082%{opacity:0}29.847%{opacity:1}95.918%{opacity:1}96.684%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_tc52{0.000%{opacity:0}95.918%{opacity:0}96.684%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_ta53{0.000%{opacity:1}29.209%{opacity:1}29.974%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_tb53{0.000%{opacity:0}29.209%{opacity:0}29.974%{opacity:1}96.046%{opacity:1}96.811%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_tc53{0.000%{opacity:0}96.046%{opacity:0}96.811%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_cap{0.000%{opacity:0}36.990%{opacity:0;transform:translateY(8px)}37.755%{opacity:1;transform:translateY(0)}49.745%{opacity:1}50.510%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_fml{0.000%{opacity:0}41.837%{opacity:0;transform:translateY(6px)}42.602%{opacity:1;transform:translateY(0)}49.745%{opacity:1}50.510%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_b47{0.000%{outline:0 solid transparent}41.837%{outline:0 solid transparent}42.602%{outline:3px solid #1466DE}49.745%{outline:3px solid #1466DE}50.510%{outline:0 solid transparent}100.000%{outline:0 solid transparent}}
+@keyframes wo_lk2{0.000%{box-shadow:0 0 0 0 rgba(14,143,126,0)}16.837%{box-shadow:0 0 0 0 rgba(14,143,126,0)}17.602%{box-shadow:0 0 0 6px rgba(14,143,126,.3)}100.000%{box-shadow:0 0 0 6px rgba(14,143,126,.3)}}
+@keyframes wo_brk2{0.000%{left:calc(35.7% - 7px);width:calc(57.2% + 14px);opacity:0}16.837%{left:calc(35.7% - 7px);width:calc(57.2% + 14px);opacity:0}17.857%{left:calc(35.7% - 7px);width:calc(57.2% + 14px);opacity:1}100.000%{left:calc(35.7% - 7px);width:calc(57.2% + 14px);opacity:1}}
+@keyframes wo_down{0.000%{opacity:0;transform:translateY(-26px)}51.020%{opacity:0;transform:translateY(-26px)}52.041%{opacity:1;transform:translateY(0)}100.000%{opacity:1;transform:translateY(0)}}
+@keyframes wo_b57{0.000%{width:25%;outline:0 solid transparent}79.082%{width:25%;outline:0 solid transparent}81.633%{width:32.1%;outline:3px solid #B7791F}81.888%{width:32.1%;outline:3px solid #B7791F}82.653%{width:32.1%;outline:0 solid transparent}100.000%{width:32.1%;outline:0 solid transparent}}
+@keyframes wo_b58{0.000%{left:25%;width:32%;outline:0 solid transparent}79.082%{left:25%;width:32%;outline:0 solid transparent}81.633%{left:32.1%;width:32%;outline:3px solid #B7791F}81.888%{left:32.1%;width:32%;outline:3px solid #B7791F}82.653%{left:32.1%;width:32%;outline:0 solid transparent}100.000%{left:32.1%;width:32%;outline:0 solid transparent}}
+@keyframes wo_lk3{0.000%{left:calc(25% - 15px);box-shadow:0 0 0 0 rgba(14,143,126,0)}16.837%{left:calc(25% - 15px);box-shadow:0 0 0 0 rgba(14,143,126,0)}17.602%{left:calc(25% - 15px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}79.082%{left:calc(25% - 15px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}81.633%{left:calc(32.1% - 15px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}100.000%{left:calc(32.1% - 15px);box-shadow:0 0 0 6px rgba(14,143,126,.3)}}
+@keyframes wo_brk3{0.000%{width:calc(57% + 6px);opacity:0}16.837%{width:calc(57% + 6px);opacity:0}17.857%{width:calc(57% + 6px);opacity:1}79.082%{width:calc(57% + 6px);opacity:1}81.633%{width:calc(64.1% + 6px);opacity:1}100.000%{width:calc(64.1% + 6px);opacity:1}}
+@keyframes wo_ta57{0.000%{opacity:1}80.102%{opacity:1}80.867%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_tb57{0.000%{opacity:0}80.102%{opacity:0}80.867%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_ta58{0.000%{opacity:1}80.230%{opacity:1}80.995%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_tb58{0.000%{opacity:0}80.230%{opacity:0}80.995%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_pw{0.000%{opacity:0}80.612%{opacity:0}81.378%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_pk{0.000%{opacity:0}96.429%{opacity:0}97.194%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_c2b{0.000%{opacity:0}95.918%{opacity:0}96.684%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_n8{0.000%{opacity:0}95.918%{opacity:0}96.684%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_f8{0.000%{opacity:1}94.898%{opacity:1}95.663%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_fs{0.000%{opacity:1;border-color:#A9C4F5;background:rgba(20,102,222,.04);color:#6B86B8;box-shadow:0 0 0 0 rgba(20,102,222,0)}87.245%{opacity:1;border-color:#A9C4F5;background:rgba(20,102,222,.04);color:#6B86B8;box-shadow:0 0 0 0 rgba(20,102,222,0)}88.010%{opacity:1;border-color:#1466DE;background:rgba(20,102,222,.14);color:#0E4CA8;box-shadow:0 0 0 7px rgba(20,102,222,.25)}94.643%{opacity:1;border-color:#1466DE;background:rgba(20,102,222,.14);color:#0E4CA8;box-shadow:0 0 0 7px rgba(20,102,222,.25)}95.663%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_co1{0.000%{opacity:0}9.439%{opacity:0}10.204%{opacity:1}16.327%{opacity:1}17.092%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_co2{0.000%{opacity:0}16.582%{opacity:0}17.347%{opacity:1}22.959%{opacity:1}23.724%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_co3{0.000%{opacity:0}23.214%{opacity:0}23.980%{opacity:1}36.224%{opacity:1}36.990%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_co4{0.000%{opacity:0}36.480%{opacity:0}37.245%{opacity:1}50.510%{opacity:1}51.276%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_co6{0.000%{opacity:0}86.990%{opacity:0}87.755%{opacity:1}100.000%{opacity:1}}
+@keyframes wo_co5{0.000%{opacity:0}50.765%{opacity:0}51.531%{opacity:1}53.571%{opacity:1}54.337%{opacity:0}80.612%{opacity:0}81.378%{opacity:1}86.735%{opacity:1}87.500%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_pbg{0.000%{opacity:0}53.571%{opacity:0}54.592%{opacity:1}76.786%{opacity:1}78.061%{opacity:0}100.000%{opacity:0}}
+@keyframes wo_pop{0.000%{opacity:0;transform:scale(.96) translateY(14px)}54.337%{opacity:0;transform:scale(.96) translateY(14px)}55.612%{opacity:1;transform:scale(1) translateY(0)}76.786%{opacity:1;transform:scale(1)}78.061%{opacity:0;transform:scale(.98)}100.000%{opacity:0;transform:scale(.98)}}
+@keyframes wo_rp1{0.000%{opacity:0;transform:translateY(8px)}57.143%{opacity:0;transform:translateY(8px)}58.163%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes wo_rp2{0.000%{opacity:0;transform:translateY(8px)}59.439%{opacity:0;transform:translateY(8px)}60.459%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes wo_rp3{0.000%{opacity:0;transform:translateY(8px)}61.735%{opacity:0;transform:translateY(8px)}62.755%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes wo_rp4{0.000%{opacity:0;transform:translateY(8px)}64.031%{opacity:0;transform:translateY(8px)}65.051%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes wo_rp5{0.000%{opacity:0;transform:translateY(8px)}66.327%{opacity:0;transform:translateY(8px)}67.347%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes wo_rp6{0.000%{opacity:0;transform:translateY(8px)}68.622%{opacity:0;transform:translateY(8px)}69.643%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes wo_rp7{0.000%{opacity:0;transform:translateY(8px)}70.918%{opacity:0;transform:translateY(8px)}71.939%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes wo_press{0.000%{transform:none;box-shadow:0 8px 18px -8px rgba(20,102,222,.8)}74.490%{transform:none;box-shadow:0 8px 18px -8px rgba(20,102,222,.8)}75.128%{transform:scale(.95);box-shadow:0 0 0 10px rgba(20,102,222,.32)}76.276%{transform:scale(.95);box-shadow:0 0 0 10px rgba(20,102,222,.32)}100.000%{transform:scale(.95);box-shadow:0 0 0 10px rgba(20,102,222,.32)}}
+</style></head><body>
+<div id="fit"><div class="wopg"><div class="wopw"><div class="card">
+ <div class="wbh"><h2>ใบสั่งงาน (Work Order)</h2><span class="mchip">เปิดจากแผนผลิตหลัก (MPS) · FG-BP-1103 เข้า 28/10 · 1,000 ชิ้น</span>
+  <span class="seg"><span>ปฏิทิน</span><span>ดูรายการ</span><span class="on">ไทม์ไลน์</span></span>
+  <span class="bt">ตัวกรอง</span><span class="bt pri">＋ สร้างใบสั่งงาน</span></div>
+ <div class="flt">
+  <div><div class="vl">แผนก</div><div class="in">STP | แผนกปั๊มขึ้นรูป<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
+  <div><div class="vl">เครื่องจักร</div><div class="in">ทุกเครื่องในแผนก<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
+  <div><div class="vl">ช่วงวันที่</div><div class="in"><span>22/10/2026</span><span style="color:#9AA3B5">–</span><span>28/10/2026</span></div></div>
+  <div><div class="vl">ซูม</div><span class="seg"><span>ชั่วโมง</span><span>ครึ่งวัน</span><span class="on">วัน</span></span></div>
+ </div>
+ <div class="board">
+  <div class="gridw">
+   <div class="gh"><div class="mh">เครื่องจักร</div><div class="mo">ต.ค. 2026</div><div class="td">พฤ. 22</div><div>ศ. 23</div><div>ส. 24</div><div class="we">อา. 25</div><div>จ. 26</div><div>อ. 27</div><div>พ. 28</div></div>
+   <div class="grow"><div class="mc"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span><div><b>PR-1000T</b><small>Tandem Line</small></div><span class="ct"><i class="c2">2</i><i class="c3">4</i><i class="c2b">2</i></span></div>
+    <div class="lane">
+     <div class="brk brk1"><span>งานที่ต่อกัน</span></div>
+     <div class="bar run" style="left:0%;width:21.4%"><b>W2610-042</b><small>FG-BP-1102 ซุ้มล้อหลัง</small></div>
+     <div class="bar cf b44" style="left:21.4%;width:20%"><b>W2610-044</b><small>FG-BP-1107 คานขวางพื้น</small><span class="tm"><i>23/10 – 24/10</i></span></div>
+     <div class="bar dr d52 lp" style="left:43.5%;width:20%"><b>W2610-052 · Draft</b><small>FG-BP-1103 แผงพื้นห้องโดยสาร</small><span class="tm"><i class="ta ta52">25/10 – 26/10</i><i class="tb tb52">26/10 – 27/10</i><i class="tc tc52">22/10 – 23/10</i></span></div>
+     <div class="bar dr d53 lp" style="left:63.5%;width:20%"><b>W2610-053 · Draft</b><small>FG-BP-1105 แผงประตูท้ายด้านใน</small><span class="tm"><i class="ta ta53">26/10 – 27/10</i><i class="tb tb53">27/10 – 28/10</i><i class="tc tc53">23/10 – 24/10</i></span><span class="pl pk">เสร็จเร็วขึ้น</span></div>
+     <div class="link lk1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8F7E" stroke-width="2.6" stroke-linecap="round"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg></div>
+     <div class="stay tg1">ไม่ต่อกัน · อยู่ที่เดิม</div>
+     <div class="stay lockt" style="left:calc(21.4% + 8px)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>ยืนยันแล้ว · ลากไม่ได้</div>
+     <div class="nowl" style="left:4%"></div></div></div>
+   <div class="grow"><div class="mc"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span><div><b>PR-600T</b><small>Transfer Press</small></div><span class="ct">3</span></div>
+    <div class="lane">
+     <div class="brk brk2"><span>งานที่ต่อกัน</span></div>
+     <div class="bar run" style="left:0%;width:35.7%"><b>W2610-012</b><small>FG-BP-1101 คานรับกันชนหน้า</small></div>
+     <div class="bar cf b47" style="left:35.7%;width:28.6%"><b>W2610-047</b><small>FG-BP-1106 บังโคลนหน้าด้านใน</small><span class="tm"><i>24/10 – 26/10</i></span></div>
+     <div class="link lk2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8F7E" stroke-width="2.6" stroke-linecap="round"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg></div>
+     <div class="bar cf b55 lp" style="left:64.3%;width:28.6%"><b>W2610-055</b><small>FG-BP-1102 ซุ้มล้อหลัง</small><span class="tm"><i>26/10 – 28/10</i></span></div>
+     <div class="stay tg2">ไม่ต่อกัน · อยู่ที่เดิม</div>
+     <div class="cap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="margin-right:10px"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>กำลังผลิตมาตรฐาน 60 ชิ้น/ชม. · ตั้งค่าไว้ใน Config</div>
+     <div class="fml">เวลาผลิต = จำนวน ÷ กำลังผลิตมาตรฐาน<b>1,000 ÷ 60 ≈ 16.7 ชม.</b></div>
+     <div class="nowl" style="left:4%"></div></div></div>
+   <div class="grow"><div class="mc"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span><div><b>PR-400T</b><small>เครื่องปั๊ม 400T</small></div><span class="ct">2</span></div>
+    <div class="lane">
+     <div class="brk brk3"><span>งานที่ต่อกัน</span></div>
+     <div class="bar rl b57"><b>W2610-057</b><small>FG-BP-1107 คานขวางพื้น</small><span class="tm"><i class="ta ta57">22/10 – 23/10</i><i class="tb tb57">22/10 – 24/10</i></span></div>
+     <div class="link lk3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8F7E" stroke-width="2.6" stroke-linecap="round"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg></div>
+     <div class="bar cf b58 lp"><b>W2610-058</b><small>FG-BP-1101 คานรับกันชนหน้า</small><span class="tm"><i class="ta ta58">23/10 – 25/10</i><i class="tb tb58">24/10 – 26/10</i></span><span class="pl pw">เลื่อนออกไป</span></div>
+     <div class="down"><b>เครื่องหยุด</b><b>4 ชม.</b></div>
+     <div class="nowl" style="left:4%"></div></div></div>
+   <div class="grow"><div class="mc"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span><div><b>PR-800T</b><small>เครื่องปั๊ม 800T</small></div><span class="ct free f8">ว่าง</span><span class="ct n8">2</span></div>
+    <div class="lane"><div class="fslot">เครื่องว่าง · วางใบสั่งงานที่นี่ได้</div><div class="nowl" style="left:4%"></div></div></div>
+  </div>
+  <div class="leg"><span><i style="background:#7C3AED"></i>ร่าง (Draft)</span><span><i style="background:#1466DE"></i>ยืนยันแล้ว</span><span><i style="background:#D4A100"></i>ปล่อยงาน</span><span><i style="background:#E8590C"></i>กำลังผลิต</span><span><i style="background:#1B9A5A"></i>เสร็จแล้ว</span><span><i style="background:#0E8F7E"></i>งานที่ต่อกัน</span><span style="color:#6C7180">· 1 คอลัมน์ = 1 วันทำงาน (8 ชม.) · วันนี้ 22/10/2026</span></div>
+ </div>
+</div>
+<div class="co co1">เฉพาะงาน Draft ลากย้ายได้ · งานที่ต่อกันไปด้วยกัน</div>
+<div class="co co2">งานที่มีไอคอนลิงก์เชื่อมกัน = งานที่ต่อกัน (เป็นสายเดียวกัน)</div>
+<div class="co co3">งานที่ยืนยันแล้วไม่ถูกลาก · งานที่ไม่ต่อกันอยู่ที่เดิม</div>
+<div class="co co4">ใช้กำลังผลิตมาตรฐานที่ตั้งไว้ในระบบ · ปรับระหว่างวางแผนไม่ได้</div>
+<div class="co co5">เครื่องหยุด 4 ชม. → ระบบเสนอแผนขยับเวลา ให้ตรวจก่อนใช้งาน</div>
+<div class="co co6">มีเครื่องว่าง → ย้ายงาน Draft มาลง งานเสร็จเร็วขึ้น</div>
+</div>
+<div class="pbg"></div>
+<div class="pop"><div class="ph"><b>เครื่อง PR-400T หยุด 4 ชม. · ตรวจผลกระทบต่อแผน</b></div>
+ <div class="ps">แผนขยับเวลาจากการหยุดเครื่อง · ตัวอย่างเวลา 1 คอลัมน์ = 1 วันทำงาน (8 ชม.)</div>
+ <div class="tbl">
+  <div class="tr th"><span>งานใบสั่ง</span><span>เวลาเดิม</span><span></span><span>เวลาใหม่</span><span>เลื่อน</span></div>
+  <div class="tr rp1"><span><b>W2610-057</b><small>FG-BP-1107 คานขวางพื้น · เวลาผลิตยาวขึ้น</small></span><span class="o">22/10 08:00 – 23/10 16:00</span><span class="arr">&#10132;</span><span class="n">22/10 08:00 – 24/10 12:00</span><span><em>+4 ชม. / +0.5 วัน</em></span></div>
+  <div class="tr rp2"><span><b>W2610-058</b><small>FG-BP-1101 คานรับกันชนหน้า · ต่อกับ 057 เลื่อนไปด้วย</small></span><span class="o">23/10 16:00 – 25/10 16:00</span><span class="arr">&#10132;</span><span class="n">24/10 12:00 – 26/10 12:00</span><span><em>+4 ชม. / +0.5 วัน</em></span></div>
+ </div>
+ <div class="mini">
+  <div class="axis"><i>พฤ. 22</i><i>ศ. 23</i><i>ส. 24</i><i>อา. 25</i><i>จ. 26</i><i>อ. 27</i><i>พ. 28</i></div>
+  <div class="mr rp3"><span class="ml">เดิม</span><div class="mt"><div class="mb m1" style="left:0;width:28.57%"><b>057</b></div><div class="mb m2" style="left:28.57%;width:28.57%"><b>058</b></div></div></div>
+  <div class="mr rp4"><span class="ml">ใหม่</span><div class="mt"><div class="mb m1" style="left:0;width:28.57%"><b>057</b></div><div class="mb mdn" style="left:28.57%;width:7.14%"></div><div class="mb m1b" style="left:28.57%;width:0"></div><div class="mb m2n" style="left:35.71%;width:28.57%"><b>058</b></div><div class="due" style="left:57.14%"><u>กำหนดส่ง 25/10</u></div></div></div>
+ </div>
+ <div class="wrow"><span class="wchip rp5">เลยกำหนดส่ง 1 วัน · W2610-058</span><span class="note rp6">งานที่ต่อกันเลื่อนไปด้วย · งานที่ไม่ต่อกันอยู่ที่เดิม</span></div>
+ <div class="btns rp7"><span class="b2">ยกเลิก</span><span class="b1 go">ใช้แผนใหม่</span></div>
+</div>
+<div class="lbl">Beside Enterprise · ใบสั่งผลิต (Work Order)</div></div></div>
+<script>function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080),f=document.getElementById('fit');f.style.transform='scale('+s+')';f.style.left=(innerWidth-1920*s)/2+'px';f.style.top=(innerHeight-1080*s)/2+'px'}addEventListener('resize',fit);fit()</script>
+<script>var PAGES=['n1','s2','ag','b2','n2','b3','so','sf','sa','sd','pl','bm','mps','wo','mrp','po','buy','m4','iqc','m5','iss','m6','prd','m7','qc','trc','tf','m8','cst','cmp','m9','dlv','m10','dbd','sot','mar','fin'];(function(){var cur=location.pathname.split('/').pop().replace('.html',''),i=PAGES.indexOf(cur);function go(d){var j=i+d;if(j>=0&&j<PAGES.length)location.href=PAGES[j]+'.html'}
+addEventListener('keydown',function(e){if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();go(1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();go(-1)}});
+addEventListener('click',function(e){go(e.clientX<innerWidth*.2?-1:1)})})()</script>
+<script src="ctl.js"></script>
+</body></html>

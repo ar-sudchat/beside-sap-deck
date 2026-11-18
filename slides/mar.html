@@ -1,0 +1,123 @@
+<style>
+.sheet[data-key="mar"]{height:1013px;padding:0;overflow:hidden;background:#EEF3FB;position:relative;border-radius:0}
+.sheet[data-key="mar"] .vs{position:absolute;left:0;top:0;width:1920px;height:1080px;transform:scale(.9375);transform-origin:0 0}
+
+
+
+
+.mar,.mar *{box-sizing:border-box}
+.mar{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#EEF3FB;font-family:Sarabun,sans-serif;color:#2A3040;overflow:hidden;--ac:#1466DE;--ac2:#4F9BEA;--bad:#D23B30;--good:#1A7F37;--muted:#5F6676}
+.mar .ma{position:absolute;left:24px;top:20px;width:1872px;height:976px;background:#F3F6FB;border-radius:20px;padding:12px 22px 16px;display:flex;flex-direction:column}
+.mar .mtop{display:flex;justify-content:space-between;align-items:center;height:54px;border-bottom:1px solid #D7DEEB;margin-bottom:10px}
+.mar .mtop h4{margin:0;font:800 38px Sarabun;color:#0E4CA8}
+.mar .g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mar .top2{height:348px;margin-bottom:16px}.mar .bot2{flex:1;min-height:0;grid-template-columns:1.15fr 1fr}
+.mar .pn{background:#fff;border:1px solid #E8EDF6;border-radius:20px;box-shadow:0 2px 4px rgba(20,40,80,.05),0 12px 28px rgba(20,40,80,.08);padding:12px 24px;min-width:0;display:flex;flex-direction:column;min-height:0}
+.mar .pn h2{margin:0 0 4px;font:800 28px Sarabun;color:#14203A;position:relative;padding-left:16px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.mar .pn h2::before{content:'';position:absolute;left:0;top:4px;bottom:4px;width:5px;border-radius:3px;background:linear-gradient(180deg,#4F9BEA,#1466DE)}
+.mar .pn h2 small{font:500 20px Sarabun;color:var(--muted)}
+.mar .hero{background:linear-gradient(135deg,#0E4CA8 0%,#1466DE 55%,#4F9BEA 100%);border-color:transparent;color:#fff;padding:14px 30px 14px;justify-content:space-between;box-shadow:0 6px 18px rgba(20,102,222,.28)}
+.mar .hero .hd{display:flex;justify-content:space-between;align-items:center;font:800 27px Sarabun;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.28)}
+.mar .hero .dt{font:600 22px Sarabun;color:rgba(255,255,255,.85)}
+.mar .tagl{background:rgba(255,255,255,.93);color:#1466DE;border-radius:6px;padding:1px 12px;font:700 20px Sarabun;margin-left:12px;white-space:nowrap}
+.mar .hero .hr{display:flex;justify-content:space-between;align-items:center;width:100%}
+.mar .hero .k{font:600 32px Sarabun}
+.mar .hero .big{font:800 56px/1.05 Sarabun;letter-spacing:-.5px}
+.mar .hero .mid{font:700 42px/1.05 Sarabun;color:rgba(255,255,255,.93)}
+.mar .num{font-variant-numeric:tabular-nums}
+.mar .chv{display:inline-block;position:relative;width:20px;text-align:center;font-size:24px}
+.mar .chv i{font-style:normal;display:inline-block}
+.mar .hint{font:500 20px Sarabun;margin-left:10px;color:rgba(255,255,255,.88)}
+.mar .sub{padding-left:22px;display:flex;flex-direction:column;gap:1px}.mar .stk{display:flex;height:12px;border-radius:6px;overflow:hidden;margin:5px 0 0;background:rgba(255,255,255,.25)}.mar .hero .c1{background:#DDF956}.mar .hero .c2{background:#fff}.mar .hero .c3{background:#8FC0F5}
+.mar .sub .k{font:500 23px Sarabun}.mar .sub .k small{font-size:18px;color:rgba(255,255,255,.85)}
+.mar .sub .num{font:700 25px Sarabun}
+.mar .hero .prf{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);border-radius:16px;padding:6px 22px}
+.mar .hero .prf .k{font:800 30px Sarabun}
+.mar .pr{display:flex;align-items:center;gap:14px}
+.mar .pill{background:#DDF956;color:#1D2A00;border-radius:10px;padding:2px 16px;font:800 28px Sarabun;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.mar .big.xl{font-size:64px}
+.mar .ch{display:flex;gap:12px;align-items:flex-end;height:200px;padding:0 6px;border-bottom:2px solid #DBE3F1}
+.mar .ch .b{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0}
+.mar .ch .b i{display:block;width:84px;border-radius:14px 14px 4px 4px;background:linear-gradient(180deg,#A9C8F2,#D3E3F8)}
+.mar .ch .b.on i{background:linear-gradient(180deg,#4F9BEA,#1466DE);width:100px;box-shadow:0 4px 10px rgba(20,102,222,.35)}
+.mar .ch .v{font:800 23px Sarabun;color:#2A3040}.mar .ch .on .v{color:#1466DE;font-size:30px}
+.mar .ch .d{font:700 18px Sarabun;color:#1A7F37;background:#E3F4E8;border-radius:12px;padding:0 10px;margin:2px 0 4px}
+.mar .ch .d.dn{background:#FDECEB;color:#D23B30}.mar .ch .d.nb{background:none;padding:0}
+.mar .lb{display:flex;gap:12px;padding:0 6px;margin-top:4px}
+.mar .lb div{flex:1;text-align:center;font:400 18px/1.3 Sarabun;color:var(--muted);min-width:0}
+.mar .lb b{display:block;color:#4E5262;font:700 22px Sarabun}.mar .lb .on b{color:#1466DE}
+.mar .cum{margin-top:auto;padding-top:6px;border-top:1px dashed #DBE3F1;display:flex;justify-content:space-between;align-items:center;font:400 20px Sarabun}
+.mar .cum b{font:700 22px Sarabun}.mar .cum .r{font:800 24px Sarabun;color:#1466DE;background:#EAF1FC;border-radius:8px;padding:3px 12px}
+.mar .tw{flex:1;min-height:0;overflow:hidden}
+.mar table.m{width:100%;border-collapse:separate;border-spacing:0;font-size:18px;table-layout:fixed}
+.mar table.m th{background:#1466DE;color:#fff;font:700 19px/1.2 Sarabun;padding:8px 8px;border-right:1px solid rgba(255,255,255,.22);white-space:nowrap}
+.mar table.m th:first-child{border-top-left-radius:8px}.mar table.m th:last-child{border-top-right-radius:8px;border-right:0}
+.mar table.m td{padding:0 8px;height:43px;border-bottom:1px solid #EDF1F8;font:500 20px Sarabun;white-space:nowrap;overflow:visible}
+.mar table.m tbody tr:nth-child(even) td{background:#F6F9FE}
+.mar table.m .n{text-align:right;font-variant-numeric:tabular-nums}.mar table.m .c{text-align:center}.mar table.m .c small{color:var(--muted);font-size:17px}
+.mar table.m .cd{font-weight:700;color:#0F4FAE}.mar table.m .cd2{padding-left:30px;color:#4E5262;font-size:19px}
+.mar table.m .gp{font-weight:700;color:var(--good)}.mar table.m .pc{font-weight:700;color:#1466DE}
+.mar table.m .neg{color:var(--bad)}
+.mar table.m tr.fl td{background:#E6F0FD !important}
+.mar table.m tr.sr td{padding:0;border-bottom:0;font-size:20px;background:#FBFCFE !important}
+.mar table.m tr.sr .w{padding:0 8px;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid #EDF1F8;height:0;opacity:0}
+.mar table.m tr.sr td.n .w{justify-content:flex-end}.mar table.m tr.sr td.c .w{justify-content:center}
+.mar table.m tr.sr td.cd2 .w{font-size:18px}
+.mar table.m tfoot td{background:#EEF3FB;font-weight:700;border-top:2px solid #B9CDEF}
+.mar .chv2{display:inline-block;position:relative;width:16px;margin-right:4px;font-style:normal}
+.mar .chv2 i{font-style:normal;display:inline-block}
+.mar .tg{display:inline-block;margin-left:8px;font:800 17px/1.4 Sarabun;color:#fff;border-radius:8px;padding:0 9px;vertical-align:middle;opacity:0}
+.mar .tg.r{background:#D23B30}.mar .tg.g{background:#1A7F37}
+.mar .cb{display:flex;flex-direction:column;align-items:flex-end;gap:3px;line-height:1.2}
+.mar .cb s{display:flex;width:110px;height:9px;border-radius:5px;overflow:hidden;background:#EEF1F6;text-decoration:none}.mar .cb s i{display:block}
+.mar .c1{background:#1466DE}.mar .c2{background:#4F9BEA}.mar .c3{background:#B6D3F7}
+.mar .lg{font-size:19px;margin-left:8px}.mar .lg i{display:inline-block;width:12px;height:7px;border-radius:2px;margin:0 4px 1px 10px}
+.mar .t5best{animation:mar_t5 25s linear both}
+.mar .callout{position:absolute;left:600px;top:1002px;min-height:60px;background:#fff;border-radius:16px;border-left:8px solid #1466DE;box-shadow:0 14px 34px -14px rgba(20,60,140,.45);padding:8px 30px;font:600 24px/1.5 Sarabun;color:#14203A;display:flex;align-items:center;z-index:5;white-space:nowrap}
+.mar #lbl{position:absolute;left:40px;bottom:30px;background:#0E4CA8;color:#fff;border-radius:99px;padding:5px 18px;font:700 22px Sarabun;z-index:46}
+.mar .ma{left:24px;top:12px;height:984px;padding:8px 22px 12px}
+.mar .mtop{height:46px;margin-bottom:8px;justify-content:flex-start;gap:20px}
+.mar .mtop h4{font-size:34px}
+.mar .ctx{font:600 22px Sarabun;color:var(--muted)}
+.mar .top2{height:440px;margin-bottom:16px;grid-template-columns:1.1fr 1fr}
+.mar .bot2{grid-template-columns:1.15fr 1fr}
+.mar .pn{padding:14px 24px}
+.mar .hero{padding:16px 28px;justify-content:space-between}
+.mar .hero .hd{padding-bottom:8px}
+.mar .stk{height:14px;margin:0}
+.mar .chips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mar .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:5px}
+.mar .chip .cl{font:700 22px/1.3 Sarabun;white-space:nowrap}
+.mar .chip .cl i{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:8px;vertical-align:-1px}
+.mar .chip .cs{font:500 18px/1.3 Sarabun;color:rgba(255,255,255,.88)}
+.mar .chip .ca{display:flex;justify-content:space-between;align-items:center;margin-top:2px}
+.mar .chip .ca .num{font:800 26px/1.2 Sarabun}
+.mar .chip .sh{font:700 19px Sarabun;background:rgba(255,255,255,.22);border-radius:10px;padding:0 9px}
+.mar .hero .prf{padding:8px 22px}
+.mar .ch{height:262px}
+.mar .ch .b{border-radius:14px}
+.mar table.m td{height:46px}.mar table.m th{padding:10px 8px}
+.mar table.m tr.sr td{background:#FBFCFE;border-bottom:1px solid #EDF1F8;font-size:20px;padding:0 8px}
+.mar table.m tr.sr td.cd2{padding-left:30px;font-size:19px}
+.mar .tg{opacity:1}
+.mar .callout{left:620px;top:1004px;min-height:56px;padding:6px 30px;font-size:26px}
+.mar .tw{overflow:visible}
+@keyframes mar_e1{0.000%{box-shadow:0 0 0 0 rgba(221,249,86,0)}7.143%{box-shadow:0 0 0 0 rgba(221,249,86,0)}10.714%{box-shadow:0 0 0 5px #DDF956, 0 0 26px rgba(221,249,86,.7)}17.143%{box-shadow:0 0 0 5px #DDF956, 0 0 26px rgba(221,249,86,.7)}20.714%{box-shadow:0 0 0 0 rgba(221,249,86,0)}100.000%{box-shadow:0 0 0 0 rgba(221,249,86,0)}}
+@keyframes mar_e2{0.000%{box-shadow:0 0 0 0 rgba(221,249,86,0)}7.143%{box-shadow:0 0 0 0 rgba(221,249,86,0)}10.714%{box-shadow:0 0 0 5px #DDF956, 0 0 26px rgba(221,249,86,.7)}17.143%{box-shadow:0 0 0 5px #DDF956, 0 0 26px rgba(221,249,86,.7)}20.714%{box-shadow:0 0 0 0 rgba(221,249,86,0)}100.000%{box-shadow:0 0 0 0 rgba(221,249,86,0)}}
+@keyframes mar_e3{0.000%{box-shadow:0 0 0 0 rgba(221,249,86,0)}7.143%{box-shadow:0 0 0 0 rgba(221,249,86,0)}10.714%{box-shadow:0 0 0 5px #DDF956, 0 0 26px rgba(221,249,86,.7)}17.143%{box-shadow:0 0 0 5px #DDF956, 0 0 26px rgba(221,249,86,.7)}20.714%{box-shadow:0 0 0 0 rgba(221,249,86,0)}100.000%{box-shadow:0 0 0 0 rgba(221,249,86,0)}}
+@keyframes mar_e4{0.000%{box-shadow:0 0 0 0 rgba(221,249,86,0)}17.143%{box-shadow:0 0 0 0 rgba(221,249,86,0)}20.714%{box-shadow:0 0 0 5px #DDF956, 0 0 26px rgba(221,249,86,.7)}27.143%{box-shadow:0 0 0 5px #DDF956, 0 0 26px rgba(221,249,86,.7)}30.714%{box-shadow:0 0 0 0 rgba(221,249,86,0)}100.000%{box-shadow:0 0 0 0 rgba(221,249,86,0)}}
+@keyframes mar_e5{0.000%{background-color:rgba(20,102,222,0)}27.143%{background-color:rgba(20,102,222,0)}30.714%{background-color:rgba(20,102,222,.12)}37.143%{background-color:rgba(20,102,222,.12)}40.714%{background-color:rgba(20,102,222,0)}100.000%{background-color:rgba(20,102,222,0)}}
+@keyframes mar_e6{0.000%{box-shadow:0 0 0 0 rgba(20,102,222,0)}27.143%{box-shadow:0 0 0 0 rgba(20,102,222,0)}30.714%{box-shadow:0 0 0 3px rgba(20,102,222,.55)}37.143%{box-shadow:0 0 0 3px rgba(20,102,222,.55)}40.714%{box-shadow:0 0 0 0 rgba(20,102,222,0)}100.000%{box-shadow:0 0 0 0 rgba(20,102,222,0)}}
+@keyframes mar_e7{0.000%{background-color:rgba(20,102,222,0)}37.143%{background-color:rgba(20,102,222,0)}40.714%{background-color:rgba(20,102,222,.2)}47.143%{background-color:rgba(20,102,222,.2)}50.714%{background-color:rgba(20,102,222,0)}100.000%{background-color:rgba(20,102,222,0)}}
+@keyframes mar_e8{0.000%{background-color:rgba(26,127,55,0)}57.143%{background-color:rgba(26,127,55,0)}60.714%{background-color:rgba(26,127,55,.2)}67.143%{background-color:rgba(26,127,55,.2)}70.714%{background-color:rgba(26,127,55,0)}100.000%{background-color:rgba(26,127,55,0)}}
+@keyframes mar_e9{0.000%{background-color:rgba(210,59,48,0)}47.143%{background-color:rgba(210,59,48,0)}50.714%{background-color:rgba(210,59,48,.2)}57.143%{background-color:rgba(210,59,48,.2)}60.714%{background-color:rgba(210,59,48,0)}100.000%{background-color:rgba(210,59,48,0)}}
+@keyframes mar_e10{0.000%{box-shadow:0 2px 4px rgba(20,40,80,.05),0 12px 28px rgba(20,40,80,.08),0 0 0 0 rgba(20,102,222,0)}67.143%{box-shadow:0 2px 4px rgba(20,40,80,.05),0 12px 28px rgba(20,40,80,.08),0 0 0 0 rgba(20,102,222,0)}70.714%{box-shadow:0 2px 4px rgba(20,40,80,.05),0 12px 28px rgba(20,40,80,.08),0 0 0 4px rgba(20,102,222,.7)}77.143%{box-shadow:0 2px 4px rgba(20,40,80,.05),0 12px 28px rgba(20,40,80,.08),0 0 0 4px rgba(20,102,222,.7)}80.714%{box-shadow:0 2px 4px rgba(20,40,80,.05),0 12px 28px rgba(20,40,80,.08),0 0 0 0 rgba(20,102,222,0)}100.000%{box-shadow:0 2px 4px rgba(20,40,80,.05),0 12px 28px rgba(20,40,80,.08),0 0 0 0 rgba(20,102,222,0)}}
+@keyframes mar_c11{0.000%{opacity:0;transform:translateY(12px)}7.143%{opacity:0;transform:translateY(12px)}10.714%{opacity:1;transform:none}17.143%{opacity:1;transform:none}20.000%{opacity:0;transform:translateY(-8px)}100.000%{opacity:0;transform:translateY(-8px)}}
+@keyframes mar_c12{0.000%{opacity:0;transform:translateY(12px)}17.143%{opacity:0;transform:translateY(12px)}20.714%{opacity:1;transform:none}27.143%{opacity:1;transform:none}30.000%{opacity:0;transform:translateY(-8px)}100.000%{opacity:0;transform:translateY(-8px)}}
+@keyframes mar_c13{0.000%{opacity:0;transform:translateY(12px)}27.143%{opacity:0;transform:translateY(12px)}30.714%{opacity:1;transform:none}37.143%{opacity:1;transform:none}40.000%{opacity:0;transform:translateY(-8px)}100.000%{opacity:0;transform:translateY(-8px)}}
+@keyframes mar_c14{0.000%{opacity:0;transform:translateY(12px)}37.143%{opacity:0;transform:translateY(12px)}40.714%{opacity:1;transform:none}47.143%{opacity:1;transform:none}50.000%{opacity:0;transform:translateY(-8px)}100.000%{opacity:0;transform:translateY(-8px)}}
+@keyframes mar_c15{0.000%{opacity:0;transform:translateY(12px)}47.143%{opacity:0;transform:translateY(12px)}50.714%{opacity:1;transform:none}57.143%{opacity:1;transform:none}60.000%{opacity:0;transform:translateY(-8px)}100.000%{opacity:0;transform:translateY(-8px)}}
+@keyframes mar_c16{0.000%{opacity:0;transform:translateY(12px)}57.143%{opacity:0;transform:translateY(12px)}60.714%{opacity:1;transform:none}67.143%{opacity:1;transform:none}70.000%{opacity:0;transform:translateY(-8px)}100.000%{opacity:0;transform:translateY(-8px)}}
+@keyframes mar_c17{0.000%{opacity:0;transform:translateY(12px)}67.143%{opacity:0;transform:translateY(12px)}70.714%{opacity:1;transform:none}77.143%{opacity:1;transform:none}80.000%{opacity:0;transform:translateY(-8px)}100.000%{opacity:0;transform:translateY(-8px)}}
+@keyframes mar_c18{0.000%{opacity:0;transform:translateY(12px)}77.143%{opacity:0;transform:translateY(12px)}80.714%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+</style><div class="slidewrap"><div class="sheet" data-key="mar"><div class="vs"><div class="mar"><div class="ma"><div class="mtop"><h4>Margin Analysis</h4><span class="ctx">งวด 2026-09 · ล็อกแล้ว</span></div><div class="g2 top2"><div class="pn hero"><div class="hd"><span>สรุปการขาย<span class="tagl">ต้นทุน · ล็อกงวดแล้ว</span></span><span class="dt">01–30/09/2026</span></div><div class="hr"><span class="k">ยอดขาย</span><span class="num big">฿7,639,000</span></div><div class="hr"><span class="k">หัก ต้นทุน</span><span class="num mid">−฿6,015,006</span></div><div class="hr prf" style="animation:mar_e4 14.0s linear both"><span class="k">กำไร</span><span class="pr"><span class="pill num">21.3%</span><span class="num big xl">฿1,623,994</span></span></div></div><div class="pn"><h2>กำไร รายเดือน <small>พัน ฿ · 6 เดือน · ทุกเดือนล็อกงวดแล้ว</small></h2><div class="ch"><div class="b"><span class="v num">1,455.2</span><span class="d nb">&nbsp;</span><i style="height:161px"></i></div><div class="b"><span class="v num">1,512.8</span><span class="d">▲ 4.0%</span><i style="height:167px"></i></div><div class="b"><span class="v num">1,480.6</span><span class="d dn">▼ 2.1%</span><i style="height:164px"></i></div><div class="b"><span class="v num">1,590.3</span><span class="d">▲ 7.4%</span><i style="height:176px"></i></div><div class="b"><span class="v num">1,672.4</span><span class="d">▲ 5.2%</span><i style="height:185px"></i></div><div class="b on" style="animation:mar_e5 14.0s linear both,mar_e6 14.0s linear both"><span class="v num">1,624.0</span><span class="d dn">▼ 2.9%</span><i style="height:180px"></i></div></div><div class="lb"><div class=""><b>เม.ย.</b>อัตรากำไร 20.4%</div><div class=""><b>พ.ค.</b>อัตรากำไร 20.8%</div><div class=""><b>มิ.ย.</b>อัตรากำไร 20.6%</div><div class=""><b>ก.ค.</b>อัตรากำไร 21.0%</div><div class=""><b>ส.ค.</b>อัตรากำไร 21.9%</div><div class="on"><b>ก.ย.</b>อัตรากำไร 21.3%</div></div><div class="cum"><span><b>สะสม 6 เดือน (เม.ย.–ก.ย. 2026)</b></span><span class="r num">กำไร ฿9,335,294 · 21.0%</span></div></div></div><div class="g2 bot2"><div class="pn"><h2>กำไรตามกลุ่มสินค้า <small>3 กลุ่ม · แตกรายสินค้าได้</small></h2><div class="tw"><table class="m"><colgroup><col style="width:178px"><col><col style="width:86px"><col style="width:124px"><col style="width:128px"><col style="width:128px"><col style="width:84px"></colgroup><thead><tr><th>รหัสกลุ่ม</th><th>ชื่อกลุ่ม</th><th>รายการ</th><th>ยอดขาย ฿</th><th>ต้นทุน ฿</th><th>กำไร ฿</th><th>%</th></tr></thead><tbody><tr class="clk fl"><td style="animation:mar_e7 14.0s linear both" class="cd"><span class="chv2">⌄</span>FG-FLR</td><td style="animation:mar_e7 14.0s linear both">พื้นและหลังคา</td><td style="animation:mar_e7 14.0s linear both" class="c">3</td><td style="animation:mar_e7 14.0s linear both" class="n">3,175,000</td><td style="animation:mar_e7 14.0s linear both" class="n">2,507,086</td><td style="animation:mar_e7 14.0s linear both" class="n gp">+667,914</td><td style="animation:mar_e7 14.0s linear both" class="n pc">21.0%</td></tr><tr class="sr"><td class="cd2">FG-BP-1103</td><td>แผงพื้นห้องโดยสาร</td><td class="c">4,200 <small>ชิ้น</small></td><td class="n">1,533,000</td><td class="n">1,187,886</td><td class="n gp">+345,114</td><td class="n pc">22.5%</td></tr><tr class="sr best"><td style="animation:mar_e8 14.0s linear both" class="cd2">FG-BP-1107</td><td style="animation:mar_e8 14.0s linear both">คานขวางพื้น<span class="tg g">ดีที่สุด</span></td><td style="animation:mar_e8 14.0s linear both" class="c">3,000 <small>ชิ้น</small></td><td style="animation:mar_e8 14.0s linear both" class="n">930,000</td><td style="animation:mar_e8 14.0s linear both" class="n">589,200</td><td style="animation:mar_e8 14.0s linear both" class="n gp">+340,800</td><td style="animation:mar_e8 14.0s linear both" class="n pc">36.6%</td></tr><tr class="sr loss"><td style="animation:mar_e9 14.0s linear both" class="cd2">FG-BP-1105</td><td style="animation:mar_e9 14.0s linear both">แผงหลังคา<span class="tg r">ขาดทุน</span></td><td style="animation:mar_e9 14.0s linear both" class="c">800 <small>ชิ้น</small></td><td style="animation:mar_e9 14.0s linear both" class="n">712,000</td><td style="animation:mar_e9 14.0s linear both" class="n">730,000</td><td style="animation:mar_e9 14.0s linear both" class="n gp neg">−18,000</td><td style="animation:mar_e9 14.0s linear both" class="n pc neg">−2.5%</td></tr><tr class="clk"><td class="cd"><span class="chv2">›</span>FG-STR</td><td>โครงสร้างหน้าและข้าง</td><td class="c">2</td><td class="n">2,878,000</td><td class="n">2,161,290</td><td class="n gp">+716,710</td><td class="n pc">24.9%</td></tr><tr class="clk"><td class="cd"><span class="chv2">›</span>FG-WHL</td><td>ซุ้มล้อและฝาครอบ</td><td class="c">2</td><td class="n">1,586,000</td><td class="n">1,346,630</td><td class="n gp">+239,370</td><td class="n pc">15.1%</td></tr></tbody><tfoot><tr class="tot"><td colspan="2">รวมทุกกลุ่ม</td><td class="c">7</td><td class="n">7,639,000</td><td class="n">6,015,006</td><td class="n gp">+1,623,994</td><td class="n pc">21.3%</td></tr></tfoot></table></div></div><div class="pn" style="animation:mar_e10 14.0s linear both"><h2>สินค้าขายดี <small>5 อันดับตามยอดขาย<span class="lg"><i class="c1"></i>DM<i class="c2"></i>DL<i class="c3"></i>OH</span></small></h2><div class="tw"><table class="m"><colgroup><col style="width:132px"><col><col style="width:108px"><col style="width:128px"><col style="width:108px"><col style="width:74px"></colgroup><thead><tr><th>รหัสสินค้า</th><th>ชื่อสินค้า</th><th>ยอดขาย ฿</th><th>ต้นทุน ฿</th><th>กำไร ฿</th><th>%</th></tr></thead><tbody><tr><td class="cd">FG-BP-1101</td><td>คานรับกันชนหน้า</td><td class="n"><b>1,534,000</b></td><td class="n"><div class="cb">1,177,020<s><i class="c1" style="width:70.7%"></i><i class="c2" style="width:9.1%"></i><i class="c3" style="width:20.2%"></i></s></div></td><td class="n gp">+356,980</td><td class="n pc">23.3%</td></tr><tr><td class="cd">FG-BP-1103</td><td>แผงพื้นห้องโดยสาร</td><td class="n"><b>1,533,000</b></td><td class="n"><div class="cb">1,187,886<s><i class="c1" style="width:58.0%"></i><i class="c2" style="width:5.1%"></i><i class="c3" style="width:36.9%"></i></s></div></td><td class="n gp">+345,114</td><td class="n pc">22.5%</td></tr><tr><td class="cd">FG-BP-1104</td><td>เสากลาง B-Pillar</td><td class="n"><b>1,344,000</b></td><td class="n"><div class="cb">984,270<s><i class="c1" style="width:70.6%"></i><i class="c2" style="width:7.7%"></i><i class="c3" style="width:21.7%"></i></s></div></td><td class="n gp">+359,730</td><td class="n pc">26.8%</td></tr><tr><td class="cd">FG-BP-1102</td><td>ซุ้มล้อหลัง</td><td class="n"><b>1,092,000</b></td><td class="n"><div class="cb">912,860<s><i class="c1" style="width:66.2%"></i><i class="c2" style="width:11.0%"></i><i class="c3" style="width:22.8%"></i></s></div></td><td class="n gp">+179,140</td><td class="n pc">16.4%</td></tr><tr><td class="cd">FG-BP-1107</td><td>คานขวางพื้น</td><td class="n"><b>930,000</b></td><td class="n"><div class="cb">589,200<s><i class="c1" style="width:62.3%"></i><i class="c2" style="width:9.2%"></i><i class="c3" style="width:28.5%"></i></s></div></td><td class="n gp">+340,800</td><td class="n pc">36.6%</td></tr></tbody></table></div></div></div></div><div class="callout" style="opacity:0;animation:mar_c11 14.0s linear both">ต้นทุน = วัตถุดิบ + ค่าแรง + ค่าใช้จ่ายโรงงาน</div><div class="callout" style="opacity:0;animation:mar_c12 14.0s linear both">กำไร ฿1,623,994 · 21.3% ของยอดขาย</div><div class="callout" style="opacity:0;animation:mar_c13 14.0s linear both">เดือนล่าสุด ก.ย. กำไร ลดลง 2.9% จากเดือนก่อน</div><div class="callout" style="opacity:0;animation:mar_c14 14.0s linear both">กลุ่มพื้นและหลังคา แตกดูรายสินค้าได้ทันที</div><div class="callout" style="opacity:0;animation:mar_c15 14.0s linear both">แผงหลังคา ขาดทุน เพราะต้นทุนสูงกว่าราคาขาย</div><div class="callout" style="opacity:0;animation:mar_c16 14.0s linear both">คานขวางพื้น กำไรดีที่สุด 36.6%</div><div class="callout" style="opacity:0;animation:mar_c17 14.0s linear both">5 อันดับสินค้าขายดี ดูสัดส่วนต้นทุนแต่ละชิ้นได้</div><div class="callout" style="opacity:0;animation:mar_c18 14.0s linear both">เห็นกำไรต่อสินค้า จากต้นทุนเทียบราคาขาย</div><div id="lbl">Beside Lite · วิเคราะห์กำไร (Margin Analysis)</div></div></div></div></div>

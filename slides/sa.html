@@ -1,0 +1,86 @@
+<style>
+.sheet[data-key="sa"]{height:1013px;padding:0;overflow:hidden;background:linear-gradient(135deg,#1466DE 0%,#0F55C4 55%,#0A43A0 100%);position:relative;border-radius:0}
+.sheet[data-key="sa"] .vs{position:absolute;left:0;top:0;width:1920px;height:1080px;transform:scale(.9375);transform-origin:0 0}
+
+
+.sa{position:absolute;left:0;top:0;width:1920px;height:1080px;font-family:Sarabun,sans-serif;color:#fff;overflow:hidden}
+.sa,.sa *{box-sizing:border-box}
+.sa .eb{position:absolute;left:120px;top:54px;font:700 32px Sarabun;color:#DDF956}
+.sa .h{position:absolute;left:116px;top:100px;font:800 86px/1.1 Sarabun;white-space:nowrap}
+.sa .bar{position:absolute;left:120px;top:226px;width:200px;height:9px;border-radius:5px;background:#DDF956}
+.sa .win{position:absolute;left:53px;top:290px;width:1344px;height:auto;transform-origin:0 0;transform:scale(1.35);background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 36px 70px -30px rgba(0,10,60,.85);color:#2B3345;font:500 15px Sarabun}
+.sa .nav{height:76px;background:#2E63D6;display:flex;align-items:center;color:#fff;position:relative;padding-left:230px}
+.sa .nav .lg{position:absolute;left:0;top:0;width:205px;height:76px;background:#fff;border-radius:0 0 34px 0;display:flex;flex-direction:column;justify-content:center;padding-left:34px;color:#1466DE}
+.sa .nav .lg b{font:800 30px/1 Sarabun}.sa .nav .lg small{font:600 13px Sarabun;color:#1466DE}
+.sa .mi{width:106px;text-align:center;font:500 14px Sarabun;padding-top:2px}.sa .mi i{display:block;width:22px;height:22px;margin:0 auto 4px;border-radius:6px;background:rgba(255,255,255,.85)}
+.sa .mi.on i{background:#DDF956}.sa .mi.on{font-weight:800}
+.sa .nav .us{position:absolute;right:26px;top:26px;font:700 16px Sarabun}
+.sa .pg{padding:0 22px}
+.sa .tt{display:flex;align-items:center;gap:12px;height:62px;border-bottom:1.5px solid #E4E8F0;font:700 19px Sarabun;color:#5B6479}
+.sa .tt .bk{width:32px;height:32px;border:1.5px solid #CBD2DF;border-radius:7px;display:grid;place-items:center;font-size:18px;color:#2B3345}
+.sa .tt .r{margin-left:auto;display:flex;gap:8px}
+.sa .btn{border:1.5px solid #B8C0CF;border-radius:10px;padding:5px 13px 5px 10px;font:700 13.5px Sarabun;color:#475069;display:flex;align-items:center;gap:7px;background:#fff;white-space:nowrap}
+.sa .btn i{width:17px;height:17px;border-radius:50%;display:block}
+.sa .lab{font:700 14px Sarabun;color:#2B3345}
+.sa .inp{height:38px;border:1.5px solid #CBD2DF;border-radius:6px;background:#EFEFEF;display:flex;align-items:center;padding:0 12px;color:#5B6479;font-size:14.5px;white-space:nowrap;overflow:hidden}
+.sa .inp.w{background:#fff;color:#2B3345}
+
+.sa .steps{top:890px!important}
+.sa .win{left:120px!important;top:262px!important;transform:scale(1.25)}
+.sa .win{opacity:0;animation:sa_win 14s linear both}
+.sa .flt{display:flex;gap:26px;padding:16px 8px 14px}.sa .flt .fd{display:flex;align-items:center;gap:12px;flex:1}.sa .flt .lab{flex:none}
+.sa .flt .inp{flex:1;background:#fff;color:#2B3345;justify-content:space-between}.sa .flt .inp:after{content:"⌄";color:#5B6479}
+.sa .tbw{position:relative}
+.sa .g{display:grid;grid-template-columns:150px 330px 150px 1fr 1fr 1fr}
+.sa .hd{background:#2E63D6;color:#fff;font:700 15px Sarabun;text-align:center}
+.sa .hd>div{display:flex;align-items:center;justify-content:center;border-left:1.5px solid rgba(255,255,255,.25)}
+.sa .hd .l{grid-row:span 2;height:84px}.sa .hd .gh{grid-column:span 3;height:44px;justify-content:flex-start;gap:12px;padding:0 14px;font-size:17px}
+.sa .hd .sb{height:40px;border-top:1.5px solid rgba(255,255,255,.25)}
+.sa .bdg{position:relative;width:130px;height:24px;font:700 12.5px/24px Sarabun;text-align:center}
+.sa .bdg span{position:absolute;inset:0;border-radius:999px}
+.sa .bdg .p{background:rgba(0,0,0,.28);color:#FFE08A;animation:sa_pend 14s linear both}
+.sa .bdg .d{background:rgba(0,0,0,.22);color:#7DF0C8;opacity:0;animation:sa_done 14s linear both}
+.sa .mg{border:1.5px solid rgba(255,255,255,.7);border-radius:8px;padding:2px 10px;font:700 13px Sarabun;background:#2E63D6;animation:sa_mg 14s linear both}
+.sa .row{border-top:1.5px solid #E4E8F0;height:50px;font:500 15px Sarabun}.sa .row>div{display:flex;align-items:center;padding:0 12px}
+.sa .row.p2{background:#E8F0FD;font-weight:700;color:#1E3F85}.sa .row.p{background:#E8F0FD;font-weight:700;color:#1E3F85;animation:sa_row 14s linear both}.sa .row.c{background:#fff}
+.sa .row .n{justify-content:flex-end}
+.sa .tot{border-top:1.5px solid #CBD2DF;background:#F4F5F7;height:48px;font:800 15px Sarabun}.sa .tot>div{display:flex;align-items:center;justify-content:flex-end;padding:0 12px}.sa .tot .t{grid-column:span 2;justify-content:center}
+.sa .dd{position:absolute;left:836px;top:48px;width:150px;background:#fff;border:1.5px solid #CBD2DF;border-radius:8px;box-shadow:0 12px 28px -10px rgba(0,0,0,.4);padding:6px;font:700 15px Sarabun;color:#2B3345;opacity:0;animation:sa_dd 14s linear both;z-index:4}
+.sa .dd div{padding:7px 12px;border-radius:6px}.sa .dd .ap{animation:sa_ap 14s linear both}
+
+@keyframes sa_win{0.000%{opacity:0;transform:scale(1.25) translateY(30px)}4.286%{opacity:0;transform:scale(1.25) translateY(30px)}10.000%{opacity:1;transform:scale(1.25)}100.000%{opacity:1;transform:scale(1.25)}}
+@keyframes sa_row{0.000%{background:#E8F0FD}15.714%{background:#E8F0FD}18.571%{background:#FFF3C4}27.143%{background:#FFF3C4}30.000%{background:#E8F0FD}100.000%{background:#E8F0FD}}
+@keyframes sa_mg{0.000%{box-shadow:none;background:#2E63D6}32.857%{box-shadow:none;background:#2E63D6}36.429%{box-shadow:0 0 0 4px #DDF956;background:#0E4CA8}42.857%{box-shadow:0 0 0 4px #DDF956;background:#0E4CA8}46.429%{box-shadow:none;background:#2E63D6}100.000%{box-shadow:none;background:#2E63D6}}
+@keyframes sa_dd{0.000%{opacity:0}35.714%{opacity:0}37.857%{opacity:1}54.286%{opacity:1}56.429%{opacity:0}100.000%{opacity:0}}
+@keyframes sa_ap{0.000%{background:#fff;color:#2B3345}44.286%{background:#fff;color:#2B3345}47.857%{background:#DDF956;color:#0E4CA8}53.571%{background:#DDF956;color:#0E4CA8}57.143%{background:#fff;color:#2B3345}100.000%{background:#fff;color:#2B3345}}
+@keyframes sa_pend{0.000%{opacity:1}56.429%{opacity:1}59.286%{opacity:0}100.000%{opacity:0}}
+@keyframes sa_done{0.000%{opacity:0}56.429%{opacity:0}59.286%{opacity:1}100.000%{opacity:1}}
+@keyframes sa_s1{0.000%{opacity:0;transform:translateY(18px)}14.286%{opacity:0;transform:translateY(18px)}18.571%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes sa_s2{0.000%{opacity:0;transform:translateY(18px)}35.714%{opacity:0;transform:translateY(18px)}40.000%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes sa_s3{0.000%{opacity:0;transform:translateY(18px)}60.000%{opacity:0;transform:translateY(18px)}64.286%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+.sa .steps{position:absolute;left:120px;right:120px;top:880px;display:flex;gap:26px}
+.sa .sp{flex:1;display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.4);border-radius:24px;padding:18px 22px}
+.sa .sp .n{flex:none;width:60px;height:60px;border-radius:50%;background:#DDF956;color:#0E4CA8;font:800 34px/60px Sarabun;text-align:center}
+.sa .sp b{display:block;font:800 32px/1.15 Sarabun}.sa .sp small{display:block;font:500 22px/1.3 Sarabun;color:#D6E5FF;margin-top:3px}
+@keyframes sa_eb{0.000%{opacity:0}0.714%{opacity:0}3.571%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}@keyframes sa_h{0.000%{opacity:0;transform:translateY(18px)}1.429%{opacity:0;transform:translateY(18px)}5.714%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}@keyframes sa_bar{0.000%{opacity:0}2.857%{opacity:0}7.143%{opacity:1}100.000%{opacity:1}}
+</style><div class="slidewrap"><div class="sheet" data-key="sa"><div class="vs"><div class="sa">
+ <div class="eb" style="animation:sa_eb 14s linear both">ขั้นที่ 1 · ความต้องการสินค้า</div>
+ <div class="h" style="animation:sa_h 14s linear both">อนุมัติพยากรณ์ยอดขาย · Sales Forecast</div>
+ <div class="bar" style="animation:sa_bar 14s linear both"></div>
+ <div class="win"><div class="pg">
+ <div class="tt">Sales Approval<div class="r"><div class="btn"><i style="background:#5B6BB5"></i>Report</div></div></div>
+ <div class="flt"><div class="fd"><span class="lab">Year</span><div class="inp">2026</div></div><div class="fd"><span class="lab">View</span><div class="inp">Customer</div></div><div class="fd"><span class="lab">Status</span><div class="inp">All</div></div></div>
+ <div class="tbw">
+  <div class="g hd"><div class="l">Code</div><div class="l">Customer/Item</div><div class="l">Sum Qty</div>
+   <div class="gh">2026-12 <div class="bdg"><span class="p">Pending Approval</span><span class="d">Completed</span></div><div class="mg">Manage ⌄</div></div>
+   <div class="sb">Forecast</div><div class="sb">Sales Order</div><div class="sb">Diff</div></div>
+  <div class="g row p"><div>▸ &nbsp;C-OEMA</div><div>OEM-A ผู้ผลิตรถยนต์</div><div class="n">4,400.00</div><div class="n">4,400.00</div><div class="n">-</div><div class="n">4,400.00</div></div>
+  <div class="g row c"><div style="padding-left:34px;color:#5B6479">FG-BP-1103</div><div style="color:#5B6479">แผงพื้นห้องโดยสาร (Floor Panel)</div><div class="n" style="color:#5B6479">2,700.00</div><div class="n" style="color:#5B6479">2,700.00</div><div class="n" style="color:#5B6479">-</div><div class="n" style="color:#5B6479">2,700.00</div></div>
+  <div class="g row c"><div style="padding-left:34px;color:#5B6479">FG-BP-1105</div><div style="color:#5B6479">แผงประตู (Door Panel)</div><div class="n" style="color:#5B6479">1,700.00</div><div class="n" style="color:#5B6479">1,700.00</div><div class="n" style="color:#5B6479">-</div><div class="n" style="color:#5B6479">1,700.00</div></div>
+  <div class="g row p2"><div>▸ &nbsp;C-OEMB</div><div>OEM-B ผู้ผลิตรถยนต์</div><div class="n">1,500.00</div><div class="n">1,500.00</div><div class="n">-</div><div class="n">1,500.00</div></div>
+  <div class="g tot"><div class="t">Total Quantity</div><div>5,900.00</div><div>5,900.00</div><div>-</div><div>5,900.00</div></div>
+  <div class="dd"><div class="ap">✓ &nbsp;Approve</div><div>✕ &nbsp;Reject</div></div>
+ </div>
+</div></div>
+ <div class="steps"><div class="sp" style="animation:sa_s1 14s linear both"><div class="n">1</div><div><b>ผู้มีสิทธิ์เปิด Sales Approval</b><small>เห็นพยากรณ์ เทียบใบสั่งขาย รายเดือน</small></div></div><div class="sp" style="animation:sa_s2 14s linear both"><div class="n">2</div><div><b>Manage → Approve</b><small>หรือ Reject ถ้าไม่ผ่าน</small></div></div><div class="sp" style="animation:sa_s3 14s linear both"><div class="n">3</div><div><b>สถานะ Completed</b><small>พร้อมใช้วางแผนผลิต · ส่งต่อขั้นที่ 2</small></div></div></div>
+</div></div></div></div>

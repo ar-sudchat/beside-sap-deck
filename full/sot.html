@@ -1,0 +1,221 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><title>sot · ติดตามเอกสารตามใบสั่งขาย</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap">
+<style>html,body{margin:0;height:100%;overflow:hidden;font-family:Sarabun,sans-serif;background:#EEF3FB}
+#fit{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+
+
+
+
+
+.sot #rm{position:absolute;left:24px;top:18px;width:1872px;height:1044px;background:#fff;border-radius:24px;box-shadow:0 18px 50px -22px rgba(20,60,140,.4);overflow:hidden}
+.sot .tb{position:absolute;left:0;top:0;right:0;height:96px;display:flex;align-items:center;gap:16px;padding:0 26px;border-bottom:1.5px solid #E6EBF3}
+.sot .tt1{display:flex;align-items:center;gap:12px}
+.sot .tt1 b{display:block;white-space:nowrap;font:700 24px Sarabun;color:#0E4CA8;line-height:1.15}
+.sot .tt1 small{display:block;font:600 16px Sarabun;color:#1B7F4B}
+.sot .srch{display:flex;align-items:center;gap:8px;height:58px;border:2px solid #C9DCFA;border-radius:14px;padding:0 6px 0 14px;margin-left:14px;background:#fff;box-shadow:0 2px 8px -3px rgba(20,102,222,.3)}
+.sot .srch .q{width:250px;font:700 30px Sarabun;color:#14203A;height:44px;display:flex;align-items:center}
+.sot .srch .q.ph{color:#9AA3B5;font-weight:400;font-size:24px}
+.sot #go{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 20px;background:#1466DE;color:#fff;border-radius:11px;font:700 20px Sarabun;box-shadow:0 4px 12px -4px rgba(20,102,222,.7)}
+.sot .lv{display:flex;align-items:center;gap:6px;font:600 18px Sarabun;color:#4A5160;margin-left:6px}
+.sot .lv span{min-width:36px;height:36px;border-radius:9px;display:grid;place-items:center;padding:0 6px}
+.sot .lv span.on{background:#E8EFFC;color:#1466DE;font-weight:700}
+.sot .sg{display:inline-flex;border:1.5px solid #DCE3EE;border-radius:12px;overflow:hidden;font:600 17px Sarabun}
+.sot .sg span{white-space:nowrap;padding:9px 14px;border-left:1.5px solid #DCE3EE}
+.sot .sg span:first-child{border-left:0}
+.sot .sg span.on{background:#1466DE;color:#fff}
+.sot .ib{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;border:1.5px solid transparent}
+.sot .ib.on{background:#E8EFFC;border-color:#C9DCFA}
+.sot .grow{flex:1}
+.sot .chips{position:absolute;left:26px;top:110px;display:flex;gap:10px;align-items:center}
+.sot .ch{border:1.5px solid;border-radius:99px;padding:3px 16px;font:700 17px Sarabun;background:#fff}
+.sot .col{position:absolute;top:160px;width:282px;height:870px;border-radius:16px;overflow:hidden}
+.sot .col .h{height:50px;display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;font:700 21px Sarabun}
+.sot .col .h em{font-style:normal;background:rgba(255,255,255,.3);border-radius:99px;min-width:28px;height:28px;display:grid;place-items:center;font-size:16px}
+.sot .nd{position:absolute;width:256px;background:#fff;border:1.5px solid #DCE3EE;border-radius:12px;box-shadow:0 8px 22px -14px rgba(20,40,80,.55);z-index:3;overflow:hidden}
+.sot .nd .nh{height:32px;display:flex;align-items:center;gap:8px;padding:0 12px;color:#fff;font:700 17px Sarabun}
+.sot .nd .nb{padding:6px 12px 8px}
+.sot .nd .no{display:flex;justify-content:space-between;align-items:center;font:700 20px Sarabun;line-height:26px}
+.sot .nd .st{display:inline-block;border-radius:99px;padding:0 10px;font:600 14px Sarabun;margin:2px 0 3px;line-height:20px}
+.sot .nd .kv{display:flex;justify-content:space-between;font:400 15px Sarabun;color:#6C7180;line-height:1.4}
+.sot .nd .kv b{color:#14203A;font-weight:600}
+.sot .nd .plus{position:absolute;right:8px;top:6px;background:#14203A;color:#fff;border-radius:99px;font:700 13px Sarabun;padding:0 7px;line-height:20px}
+.sot #nLOT{box-shadow:0 0 0 3px #14A39A,0 10px 26px -10px rgba(20,163,154,.7)}
+.sot .ltag{position:absolute;z-index:4;background:#0F766E;color:#fff;border-radius:99px;padding:1px 12px;font:700 15px Sarabun}
+.sot #edges{position:absolute;left:0;top:0;width:1872px;height:1044px;z-index:2;overflow:visible}
+.sot .el{position:absolute;z-index:4;transform:translate(-50%,-50%);border-radius:99px;padding:1px 12px;font:700 15px Sarabun;color:#fff;white-space:nowrap;box-shadow:0 2px 6px -2px rgba(0,0,0,.3)}
+.sot #bal{position:absolute;width:270px;background:#fff;border:1.5px solid #CFE3DD;border-radius:14px;box-shadow:0 12px 28px -14px rgba(10,80,70,.55);z-index:3;overflow:hidden}
+.sot #bal .bh{background:linear-gradient(180deg,#118a7e,#0F766E);color:#fff;padding:10px 14px}
+.sot #bal .bh b{display:block;font:700 19px Sarabun}
+.sot #bal .bh small{font:400 14px Sarabun;opacity:.9}
+.sot #bal .row{margin:12px;border:1.5px solid #E2E8F2;border-radius:12px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}
+.sot #bal .row b{font:700 20px Sarabun}
+.sot #bal .row small{display:block;font:400 15px Sarabun;color:#6C7180}
+.sot #bal .row .v{text-align:right;font:700 30px Sarabun;color:#0F766E}
+.sot #bal .row .v small{text-align:right}
+.sot #bal .sum{display:flex;justify-content:space-between;padding:4px 16px 14px;font:400 17px Sarabun;color:#4A5160}
+.sot #bal .sum b{font:700 22px Sarabun;color:#14203A}
+.sot #doc{position:absolute;left:316px;top:290px;width:330px;background:#fff;border-radius:18px;border:1.5px solid #F2C9A6;box-shadow:0 30px 70px -20px rgba(10,20,40,.55);z-index:6;overflow:hidden;opacity:0}
+.sot #doc .dh{background:linear-gradient(180deg,#F07B1F,#E2600B);color:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px}
+.sot #doc .dh b{font:700 22px Sarabun;flex:1}
+.sot #doc .dh small{font:600 15px Sarabun;background:rgba(255,255,255,.25);border-radius:99px;padding:1px 10px}
+.sot #doc .mt{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;padding:12px 16px;font:400 15px Sarabun;color:#6C7180;border-bottom:1.5px solid #EEF1F6}
+.sot #doc .mt b{display:block;color:#14203A;font:700 17px Sarabun}
+.sot #doc table{width:100%;border-collapse:collapse;font-family:Sarabun}
+.sot #doc th{background:#FFF3E8;font:700 15px Sarabun;color:#8A4A10;height:34px;text-align:left;padding:0 10px}
+.sot #doc td{font:400 15px Sarabun;padding:5px 8px;border-bottom:1px solid #F1F3F7;vertical-align:top}
+.sot #doc td.n{text-align:right;white-space:nowrap}
+.sot #doc td b{font-weight:700;font-size:16px}
+.sot #doc td small{color:#6C7180;font-size:13.5px;white-space:nowrap}
+.sot #doc tr.lt td{font-size:14.5px;color:#4A5160;padding:4px 10px;background:#FAFBFC}
+.sot #doc tr.lt td:first-child{padding-left:30px}
+.sot #doc tr.me td{background:#E6F7F4;color:#0F766E;font-weight:700}
+.sot #doc .df{padding:8px 16px;display:flex;flex-direction:column;gap:0;font:600 15px Sarabun;color:#1B7F4B;background:#F4FBF7}
+.sot #mm{position:absolute;left:1548px;top:226px;width:300px;height:170px;background:#fff;border:1.5px solid #C9DCFA;border-radius:14px;box-shadow:0 14px 34px -14px rgba(20,60,140,.55);z-index:7;opacity:0;overflow:hidden}
+.sot #mm .mh{font:700 14px Sarabun;color:#4A5160;padding:4px 10px;border-bottom:1px solid #EEF1F6}
+.sot #mm .vp{position:absolute;left:4px;top:26px;width:290px;height:138px;border:2.5px solid #1466DE;border-radius:4px;background:rgba(20,102,222,.06)}
+.sot #mm i{position:absolute;width:24px;height:11px;border-radius:2px}
+.sot,.sot *{box-sizing:border-box}
+.sot{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#EEF3FB;font-family:Sarabun,sans-serif;color:#14203A;overflow:hidden}
+.sot #lite{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.sot #rm{opacity:0;animation:sot_in 25.5s linear both}
+.sot #lbl{position:absolute;left:40px;bottom:30px;background:#0E4CA8;color:#fff;border-radius:99px;padding:5px 18px;font:700 22px Sarabun;z-index:46}
+.sot .tt1 small{position:relative;height:22px}
+.sot .tt1 small span{position:absolute;left:0;top:0;white-space:nowrap}
+.sot .s1{animation:sot_s1 25.5s linear both}.sot .s2{opacity:0;animation:sot_s2 25.5s linear both}
+.sot .srch .q{position:relative;display:block}
+.sot .q .ph1{position:absolute;left:0;top:0;line-height:44px;color:#9AA3B5;font:400 24px Sarabun;white-space:nowrap;animation:sot_ph 25.5s linear both}
+.sot .q .tp{position:absolute;left:0;top:0;line-height:44px;white-space:nowrap;overflow:hidden;width:0;animation:sot_tp 25.5s linear both}
+.sot #go{animation:sot_go 25.5s linear both}
+.sot .chips,.sot .col .h em{opacity:0;animation:sot_chips 25.5s linear both}
+.sot .nd,.sot .ltag,.sot #doc,.sot #mm,.sot .el,.sot #edges path[id^=ah]{opacity:0}
+.sot #edges mask path{stroke-dasharray:1;stroke-dashoffset:1}
+.sot .nd .st{opacity:0;animation:sot_st 25.5s linear both}
+.sot #mmb{animation:sot_mmb 25.5s linear both}
+.sot #doc{left:316px;top:430px;border-color:#BFE3DC}
+.sot #doc .dh{background:linear-gradient(180deg,#14A39A,#0E8A7A)}
+.sot #doc th{background:#E6F7F4;color:#0F766E}
+.sot #doc .df{background:#F4FBF7;color:#0F766E}
+.sot #doc tr.me td{animation:sot_me 25.5s linear both}
+.sot #tagDL{box-shadow:0 2px 8px -2px rgba(226,96,11,.6)}
+.sot #intro{position:absolute;left:50%;top:380px;width:1180px;padding:34px 44px;background:#fff;border-left:12px solid #1466DE;border-radius:26px;box-shadow:0 30px 60px -26px rgba(14,76,168,.55);opacity:0;z-index:20;animation:sot_intro 25.5s linear both}
+.sot #intro b{display:block;font:800 52px/1.25 Sarabun;color:#0E4CA8}.sot #intro small{display:block;margin-top:12px;font:600 30px/1.3 Sarabun;color:#4A6FA8}
+.sot .cal{position:absolute;right:60px;top:104px;max-width:1000px;padding:7px 26px;background:#fff;border-left:9px solid #1466DE;border-radius:14px;box-shadow:0 14px 30px -14px rgba(14,76,168,.55);font:700 26px/1.35 Sarabun;color:#0E4CA8;white-space:nowrap;opacity:0;z-index:20}
+.sot #c5{font-size:28px}
+.sot #nW{animation:sot_p_W 25.5s linear both}
+.sot #nMI{animation:sot_p_MI 25.5s linear both}
+.sot #nPD{animation:sot_p_PD 25.5s linear both}
+.sot #nQC{animation:sot_p_QC 25.5s linear both}
+.sot #nTF{animation:sot_p_TF 25.5s linear both}
+.sot #nLOT{animation:sot_p_LOT 25.5s linear both}
+.sot #nDL{animation:sot_p_DL 25.5s linear both}
+.sot #nAR{animation:sot_p_AR 25.5s linear both}
+.sot #nGR{animation:sot_p_GR 25.5s linear both}
+.sot #nPO{animation:sot_p_PO 25.5s linear both}
+.sot #nSO{animation:sot_so 25.5s linear both}
+.sot #tagSO{animation:sot_tagSO 25.5s linear both}
+.sot #tagDL{animation:sot_tagDL 25.5s linear both}
+.sot #nDL{animation:sot_p_DL 25.5s linear both,sot_dlring 25.5s linear both}
+.sot #mp0{animation:sot_e0 25.5s linear both}.sot #ah0{animation:sot_a0 25.5s linear both}.sot #el0{animation:sot_l0 25.5s linear both}
+.sot #mp1{animation:sot_e1 25.5s linear both}.sot #ah1{animation:sot_a1 25.5s linear both}.sot #el1{animation:sot_l1 25.5s linear both}
+.sot #mp2{animation:sot_e2 25.5s linear both}.sot #ah2{animation:sot_a2 25.5s linear both}.sot #el2{animation:sot_l2 25.5s linear both}
+.sot #mp3{animation:sot_e3 25.5s linear both}.sot #ah3{animation:sot_a3 25.5s linear both}.sot #el3{animation:sot_l3 25.5s linear both}
+.sot #mp4{animation:sot_e4 25.5s linear both}.sot #ah4{animation:sot_a4 25.5s linear both}.sot #el4{animation:sot_l4 25.5s linear both}
+.sot #mp5{animation:sot_e5 25.5s linear both}.sot #ah5{animation:sot_a5 25.5s linear both}.sot #el5{animation:sot_l5 25.5s linear both}
+.sot #mp6{animation:sot_e6 25.5s linear both}.sot #ah6{animation:sot_a6 25.5s linear both}.sot #el6{animation:sot_l6 25.5s linear both}
+.sot #mp7{animation:sot_e7 25.5s linear both}.sot #ah7{animation:sot_a7 25.5s linear both}.sot #el7{animation:sot_l7 25.5s linear both}
+.sot #mp8{animation:sot_e8 25.5s linear both}.sot #ah8{animation:sot_a8 25.5s linear both}.sot #el8{animation:sot_l8 25.5s linear both}
+.sot #mp9{animation:sot_e9 25.5s linear both}.sot #ah9{animation:sot_a9 25.5s linear both}.sot #el9{animation:sot_l9 25.5s linear both}
+.sot #doc{animation:sot_doc 25.5s linear both}.sot #mm{transform-origin:100% 100%;animation:sot_mm 25.5s linear both}
+.sot #c2{animation:sot_c2 25.5s linear both}
+.sot #c3{animation:sot_c3 25.5s linear both}
+.sot #c4{animation:sot_c4 25.5s linear both}
+.sot #c5{animation:sot_c5 25.5s linear both}
+@keyframes sot_in{0.000%{opacity:0}0.392%{opacity:0}2.745%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_s1{0.000%{opacity:1}21.961%{opacity:1}23.137%{opacity:0}100.000%{opacity:0}}
+@keyframes sot_s2{0.000%{opacity:0}21.961%{opacity:0}23.137%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_ph{0.000%{opacity:1}12.941%{opacity:1}13.333%{opacity:0}100.000%{opacity:0}}
+@keyframes sot_tp{0.000%{width:0}13.333%{width:0;animation-timing-function:steps(11,end)}19.216%{width:250px}100.000%{width:250px}}
+@keyframes sot_go{0.000%{transform:none}21.569%{transform:none}22.039%{transform:scale(.92);filter:brightness(.85)}22.745%{transform:none}100.000%{transform:none}}
+@keyframes sot_chips{0.000%{opacity:0}22.353%{opacity:0}23.529%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_st{0.000%{opacity:0}70.588%{opacity:0}71.961%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_mmb{0.000%{background:transparent;border-color:transparent}86.275%{background:transparent;border-color:transparent}86.863%{background:#E8EFFC;border-color:#C9DCFA}100.000%{background:#E8EFFC;border-color:#C9DCFA}}
+@keyframes sot_me{0.000%{background:#FAFBFC;color:#4A5160}80.000%{background:#FAFBFC;color:#4A5160}81.176%{background:#B8EBE3;color:#0F766E}84.706%{background:#E6F7F4;color:#0F766E}100.000%{background:#E6F7F4;color:#0F766E}}
+@keyframes sot_p_W{0.000%{opacity:0;transform:scale(.92)}34.510%{opacity:0;transform:scale(.92)}35.882%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_p_MI{0.000%{opacity:0;transform:scale(.92)}39.216%{opacity:0;transform:scale(.92)}40.588%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_p_PD{0.000%{opacity:0;transform:scale(.92)}40.980%{opacity:0;transform:scale(.92)}42.353%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_p_QC{0.000%{opacity:0;transform:scale(.92)}42.745%{opacity:0;transform:scale(.92)}44.118%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_p_TF{0.000%{opacity:0;transform:scale(.92)}45.882%{opacity:0;transform:scale(.92)}47.255%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_p_LOT{0.000%{opacity:0;transform:scale(.92)}47.647%{opacity:0;transform:scale(.92)}49.020%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_p_DL{0.000%{opacity:0;transform:scale(.92)}51.765%{opacity:0;transform:scale(.92)}53.137%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_p_AR{0.000%{opacity:0;transform:scale(.92)}58.039%{opacity:0;transform:scale(.92)}59.412%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_p_GR{0.000%{opacity:0;transform:scale(.92)}64.314%{opacity:0;transform:scale(.92)}65.686%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_p_PO{0.000%{opacity:0;transform:scale(.92)}66.078%{opacity:0;transform:scale(.92)}67.451%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_so{0.000%{opacity:0;transform:scale(.92);box-shadow:0 0 0 3px #14A39A}27.059%{opacity:0;transform:scale(.92);box-shadow:0 0 0 3px #14A39A}28.627%{opacity:1;transform:scale(1);box-shadow:0 0 0 4px #14A39A,0 0 36px 10px rgba(20,163,154,.55)}30.980%{box-shadow:0 0 0 3px #14A39A,0 0 0 0 rgba(20,163,154,0)}32.941%{opacity:1;transform:scale(1);box-shadow:0 0 0 3px #14A39A,0 10px 26px -10px rgba(20,163,154,.7)}100.000%{opacity:1;transform:scale(1);box-shadow:0 0 0 3px #14A39A,0 10px 26px -10px rgba(20,163,154,.7)}}
+@keyframes sot_tagSO{0.000%{opacity:0}28.235%{opacity:0}29.412%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_tagDL{0.000%{opacity:0;transform:translateY(6px)}73.725%{opacity:0;transform:translateY(6px)}75.098%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes sot_dlring{0.000%{box-shadow:0 8px 22px -14px rgba(20,40,80,.55)}73.725%{box-shadow:0 8px 22px -14px rgba(20,40,80,.55)}75.098%{box-shadow:0 0 0 4px #E2600B,0 10px 26px -10px rgba(226,96,11,.6)}100.000%{box-shadow:0 0 0 4px #E2600B,0 10px 26px -10px rgba(226,96,11,.6)}}
+@keyframes sot_e0{0.000%{stroke-dashoffset:1}32.549%{stroke-dashoffset:1}34.510%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a0{0.000%{opacity:0}34.314%{opacity:0}34.902%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l0{0.000%{opacity:0}33.333%{opacity:0}34.314%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_e1{0.000%{stroke-dashoffset:1}38.039%{stroke-dashoffset:1}39.216%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a1{0.000%{opacity:0}39.020%{opacity:0}39.608%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l1{0.000%{opacity:0}38.824%{opacity:0}39.804%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_e2{0.000%{stroke-dashoffset:1}39.804%{stroke-dashoffset:1}40.980%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a2{0.000%{opacity:0}40.784%{opacity:0}41.373%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l2{0.000%{opacity:0}40.588%{opacity:0}41.569%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_e3{0.000%{stroke-dashoffset:1}41.569%{stroke-dashoffset:1}42.745%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a3{0.000%{opacity:0}42.549%{opacity:0}43.137%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l3{0.000%{opacity:0}42.353%{opacity:0}43.333%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_e4{0.000%{stroke-dashoffset:1}44.706%{stroke-dashoffset:1}45.882%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a4{0.000%{opacity:0}45.686%{opacity:0}46.275%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l4{0.000%{opacity:0}45.490%{opacity:0}46.471%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_e5{0.000%{stroke-dashoffset:1}46.471%{stroke-dashoffset:1}47.647%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a5{0.000%{opacity:0}47.451%{opacity:0}48.039%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l5{0.000%{opacity:0}47.255%{opacity:0}48.235%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_e6{0.000%{stroke-dashoffset:1}49.804%{stroke-dashoffset:1}52.941%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a6{0.000%{opacity:0}52.745%{opacity:0}53.333%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l6{0.000%{opacity:0}50.588%{opacity:0}51.569%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_e7{0.000%{stroke-dashoffset:1}55.686%{stroke-dashoffset:1}59.608%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a7{0.000%{opacity:0}59.412%{opacity:0}60.000%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l7{0.000%{opacity:0}56.471%{opacity:0}57.451%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_e8{0.000%{stroke-dashoffset:1}63.137%{stroke-dashoffset:1}64.314%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a8{0.000%{opacity:0}64.118%{opacity:0}64.706%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l8{0.000%{opacity:0}63.922%{opacity:0}64.902%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_e9{0.000%{stroke-dashoffset:1}64.902%{stroke-dashoffset:1}66.078%{stroke-dashoffset:0}100.000%{stroke-dashoffset:0}}
+@keyframes sot_a9{0.000%{opacity:0}65.882%{opacity:0}66.471%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_l9{0.000%{opacity:0}65.686%{opacity:0}66.667%{opacity:1}100.000%{opacity:1}}
+@keyframes sot_doc{0.000%{opacity:0;transform:translateX(-20px)}78.039%{opacity:0;transform:translateX(-20px)}80.000%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes sot_mm{0.000%{opacity:0;transform:scale(.9)}86.275%{opacity:0;transform:scale(.9)}87.647%{opacity:1;transform:scale(1)}100.000%{opacity:1;transform:scale(1)}}
+@keyframes sot_c2{0.000%{opacity:0;transform:translateY(-10px)}32.157%{opacity:0;transform:translateY(-10px)}33.725%{opacity:1;transform:none}62.353%{opacity:1;transform:none}63.922%{opacity:0;transform:translateY(-10px)}100.000%{opacity:0;transform:translateY(-10px)}}
+@keyframes sot_c3{0.000%{opacity:0;transform:translateY(-10px)}63.137%{opacity:0;transform:translateY(-10px)}64.706%{opacity:1;transform:none}69.412%{opacity:1;transform:none}70.980%{opacity:0;transform:translateY(-10px)}100.000%{opacity:0;transform:translateY(-10px)}}
+@keyframes sot_c4{0.000%{opacity:0;transform:translateY(-10px)}70.196%{opacity:0;transform:translateY(-10px)}71.765%{opacity:1;transform:none}78.039%{opacity:1;transform:none}79.608%{opacity:0;transform:translateY(-10px)}100.000%{opacity:0;transform:translateY(-10px)}}
+@keyframes sot_c5{0.000%{opacity:0;transform:translateY(-10px)}86.275%{opacity:0;transform:translateY(-10px)}87.843%{opacity:1;transform:none}99.608%{opacity:1;transform:none}101.176%{opacity:0;transform:translateY(-10px)}100.000%{opacity:0;transform:translateY(-10px)}}
+@keyframes sot_intro{0.000%{opacity:0;transform:translateX(-50%) translateY(20px)}1.961%{opacity:0;transform:translateX(-50%) translateY(20px)}3.529%{opacity:1;transform:translateX(-50%)}11.765%{opacity:1;transform:translateX(-50%)}13.333%{opacity:0;transform:translateX(-50%) translateY(-12px)}100.000%{opacity:0;transform:translateX(-50%) translateY(-12px)}}
+</style></head><body>
+<div id="fit"><div class="sot"><div id="lite"><div id="rm"><div id="rm">
+ <div class="tb">
+  <div class="tt1"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="5" rx="1"></rect><rect x="2.5" y="16.5" width="6" height="5" rx="1"></rect><rect x="15.5" y="16.5" width="6" height="5" rx="1"></rect><path d="M12 7.5v4.5M5.5 16.5V12h13v4.5"></path></svg>
+   <span><b>Document Relationship Map</b><small id="sub"><span class="s1">ค้นหาด้วยเลขใบสั่งขาย</span><span class="s2">11 เอกสาร · 10 เส้นเชื่อม · ไม่มีเส้นตัดกัน</span></small></span></div>
+  <div class="srch"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1.2"></rect><rect x="14" y="3" width="7" height="7" rx="1.2"></rect><rect x="3" y="14" width="7" height="7" rx="1.2"></rect><path d="M14 14h3v3M21 14v0M14 21h7v-4"></path></svg>
+   <span class="q" id="q"><span class="ph1">ใส่เลขใบสั่งขาย</span><span class="tp">SO2610-0014</span></span><span id="go"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5L21 21"></path></svg>ค้นหา</span></div>
+  <div class="lv">ระดับ <span>1</span><span>2</span><span>3</span><span class="on">ทั้งหมด</span></div>
+  <div class="sg"><span>← ไล่ย้อนหลัง</span><span>ไปข้างหน้า →</span><span class="on">ทั้งสองทิศ</span></div>
+  <span class="grow"></span>
+  <span class="ib"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="12" r="2.5"></circle><circle cx="18" cy="6" r="2.5"></circle><circle cx="18" cy="18" r="2.5"></circle><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"></path></svg></span>
+  <span class="ib" id="mmb"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><rect x="12" y="11" width="7" height="7" rx="1"></rect></svg></span>
+  <span class="ib"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg></span>
+  <span class="ib"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></span>
+ </div>
+ <div class="chips" id="chips"><span class="ch" style="border-color:#2F6FDB;color:#2F6FDB">● ขาย / จัดส่ง 2</span><span class="ch" style="border-color:#17994B;color:#17994B">● จัดซื้อ 2</span><span class="ch" style="border-color:#D9770A;color:#D9770A">● ผลิต 4</span><span class="ch" style="border-color:#0A8FB0;color:#0A8FB0">● คลังสินค้า 1</span><span class="ch" style="border-color:#0F766E;color:#0F766E">● ล็อต / สินค้า 1</span><span class="ch" style="border-color:#8E3FD6;color:#8E3FD6">● การเงิน 1</span></div><div id="cols"><div class="col" style="left:26px;background:#2F6FDB12;border:1.5px solid #2F6FDB33"><div class="h" style="background:#2F6FDB">ขาย / จัดส่ง<em>2</em></div></div><div class="col" style="left:332px;background:#17994B12;border:1.5px solid #17994B33"><div class="h" style="background:#17994B">จัดซื้อ<em>2</em></div></div><div class="col" style="left:638px;background:#D9770A12;border:1.5px solid #D9770A33"><div class="h" style="background:#D9770A">ผลิต<em>4</em></div></div><div class="col" style="left:944px;background:#0A8FB012;border:1.5px solid #0A8FB033"><div class="h" style="background:#0A8FB0">คลังสินค้า<em>1</em></div></div><div class="col" style="left:1250px;background:#0F766E12;border:1.5px solid #0F766E33"><div class="h" style="background:#0F766E">ล็อต / สินค้า<em>1</em></div></div><div class="col" style="left:1556px;background:#8E3FD612;border:1.5px solid #8E3FD633"><div class="h" style="background:#8E3FD6">การเงิน<em>1</em></div></div></div><svg id="edges"><defs><mask id="m0" maskUnits="userSpaceOnUse"><path id="mp0" d="M295,296 L649,296" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M295,296 L649,296" fill="none" stroke="#2F6FDB" stroke-width="3.2" stroke-linejoin="round" mask="url(#m0)"></path><path id="ah0" d="M0,0 L-14,-8 L-14,8 Z" fill="#2F6FDB" transform="translate(651,296) rotate(0)"></path><defs><mask id="m1" maskUnits="userSpaceOnUse"><path id="mp1" d="M779,377 L779,395" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M779,377 L779,395" fill="none" stroke="#D9770A" stroke-width="3.2" stroke-linejoin="round" mask="url(#m1)"></path><path id="ah1" d="M0,0 L-14,-8 L-14,8 Z" fill="#D9770A" transform="translate(779,397) rotate(90)"></path><defs><mask id="m2" maskUnits="userSpaceOnUse"><path id="mp2" d="M779,559 L779,577" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M779,559 L779,577" fill="none" stroke="#E2600B" stroke-width="3.2" stroke-linejoin="round" mask="url(#m2)"></path><path id="ah2" d="M0,0 L-14,-8 L-14,8 Z" fill="#E2600B" transform="translate(779,579) rotate(90)"></path><defs><mask id="m3" maskUnits="userSpaceOnUse"><path id="mp3" d="M779,741 L779,759" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M779,741 L779,759" fill="none" stroke="#5E9E12" stroke-width="3.2" stroke-linejoin="round" mask="url(#m3)"></path><path id="ah3" d="M0,0 L-14,-8 L-14,8 Z" fill="#5E9E12" transform="translate(779,761) rotate(90)"></path><defs><mask id="m4" maskUnits="userSpaceOnUse"><path id="mp4" d="M907,842 L955,842" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M907,842 L955,842" fill="none" stroke="#12846B" stroke-width="3.2" stroke-linejoin="round" mask="url(#m4)"></path><path id="ah4" d="M0,0 L-14,-8 L-14,8 Z" fill="#12846B" transform="translate(957,842) rotate(0)"></path><defs><mask id="m5" maskUnits="userSpaceOnUse"><path id="mp5" d="M1213,842 L1261,842" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M1213,842 L1261,842" fill="none" stroke="#475569" stroke-width="3.2" stroke-linejoin="round" mask="url(#m5)"></path><path id="ah5" d="M0,0 L-14,-8 L-14,8 Z" fill="#475569" transform="translate(1263,842) rotate(0)"></path><defs><mask id="m6" maskUnits="userSpaceOnUse"><path id="mp6" d="M1085,923 L1085,945 L230,945 L230,925" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M1085,923 L1085,945 L230,945 L230,925" fill="none" stroke="#0E8A7A" stroke-width="3.2" stroke-linejoin="round" mask="url(#m6)"></path><path id="ah6" d="M0,0 L-14,-8 L-14,8 Z" fill="#0E8A7A" transform="translate(230,923) rotate(-90)"></path><defs><mask id="m7" maskUnits="userSpaceOnUse"><path id="mp7" d="M120,923 L120,975 L1697,975 L1697,743" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M120,923 L120,975 L1697,975 L1697,743" fill="none" stroke="#B5359E" stroke-width="3.2" stroke-linejoin="round" mask="url(#m7)"></path><path id="ah7" d="M0,0 L-14,-8 L-14,8 Z" fill="#B5359E" transform="translate(1697,741) rotate(-90)"></path><defs><mask id="m8" maskUnits="userSpaceOnUse"><path id="mp8" d="M601,478 L649,478" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M601,478 L649,478" fill="none" stroke="#17994B" stroke-width="3.2" stroke-linejoin="round" stroke-dasharray="10 7" mask="url(#m8)"></path><path id="ah8" d="M0,0 L-14,-8 L-14,8 Z" fill="#17994B" transform="translate(651,478) rotate(0)"></path><defs><mask id="m9" maskUnits="userSpaceOnUse"><path id="mp9" d="M473,579 L473,561" fill="none" stroke="#fff" stroke-width="12" pathLength="1"></path></mask></defs><path d="M473,579 L473,561" fill="none" stroke="#7B4DDB" stroke-width="3.2" stroke-linejoin="round" stroke-dasharray="10 7" mask="url(#m9)"></path><path id="ah9" d="M0,0 L-14,-8 L-14,8 Z" fill="#7B4DDB" transform="translate(473,559) rotate(-90)"></path></svg><div id="nodes"><div class="nd" id="nSO" style="left:39px;top:215px"><div class="nh" style="background:#2F6FDB">ใบสั่งขาย</div><div class="nb"><div class="no">SO2610-0014<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E8EFFC;color:#1450B8">ดำเนินการ</span><div class="kv"><span>ลูกค้า</span><b>OEM-A ผู้ผลิตรถยนต์</b></div><div class="kv"><span>สินค้า</span><b>FG-BP-1103</b></div><div class="kv"><span>จำนวน</span><b>1,000 PCS</b></div></div></div><div class="nd" id="nDL" style="left:39px;top:761px"><div class="nh" style="background:#0E8A7A">ส่งสินค้า</div><div class="nb"><div class="no">DL-2610-0329<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E8EFFC;color:#1450B8">ดำเนินการ</span><div class="kv"><span>วันที่</span><b>30/10/2026</b></div><div class="kv"><span>ลูกค้า</span><b>OEM-A ผู้ผลิตรถยนต์</b></div><div class="kv"><span>ส่งแล้ว</span><b>600 / 1,000 PCS</b></div></div></div><div class="nd" id="nGR" style="left:345px;top:397px"><div class="nh" style="background:#17994B">รับสินค้า</div><div class="nb"><div class="no">GR2610-0118<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E3F6EA;color:#17803F">ปิดแล้ว</span><div class="kv"><span>วันที่</span><b>05/10/2026</b></div><div class="kv"><span>ผู้ขาย</span><b>บจก. เหล็กแผ่นตัวอย่าง</b></div><div class="kv"><span>SAP</span><b>261000140</b></div></div></div><div class="nd" id="nPO" style="left:345px;top:579px"><div class="nh" style="background:#7B4DDB">ใบสั่งซื้อ</div><div class="nb"><div class="no">PO2610-0071<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E3F6EA;color:#17803F">ปิดแล้ว</span><div class="kv"><span>วันที่</span><b>01/10/2026</b></div><div class="kv"><span>ผู้ขาย</span><b>บจก. เหล็กแผ่นตัวอย่าง</b></div><div class="kv"><span>SAP</span><b>261000088</b></div></div></div><div class="nd" id="nW" style="left:651px;top:215px"><div class="nh" style="background:#D9770A">ใบสั่งผลิต</div><div class="nb"><div class="no">W2610-052<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E3F6EA;color:#17803F">ปิดแล้ว</span><div class="kv"><span>สินค้า</span><b>FG-BP-1103</b></div><div class="kv"><span>เครื่อง</span><b>PR-1000T</b></div><div class="kv"><span>จำนวน</span><b>1,000 PCS</b></div></div></div><div class="nd" id="nMI" style="left:651px;top:397px"><div class="nh" style="background:#E2600B">เบิกวัตถุดิบ</div><div class="nb"><div class="no">MI-2610-0412<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E3F6EA;color:#17803F">ปิดแล้ว</span><div class="kv"><span>วันที่</span><b>27/10/2026</b></div><div class="kv"><span>WO</span><b>W2610-052</b></div><div class="kv"><span>จำนวน</span><b>1,800 KG</b></div></div></div><div class="nd" id="nPD" style="left:651px;top:579px"><div class="nh" style="background:#5E9E12">รับผลผลิต</div><div class="nb"><div class="no">PD-2610-0231<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E3F6EA;color:#17803F">ปิดแล้ว</span><div class="kv"><span>วันที่</span><b>28/10/2026</b></div><div class="kv"><span>ล็อต</span><b>LOT-261028-01</b></div><div class="kv"><span>จำนวน</span><b>1,000 PCS</b></div></div></div><div class="nd" id="nQC" style="left:651px;top:761px"><div class="nh" style="background:#12846B">ตรวจคุณภาพ</div><div class="nb"><div class="no">QC2610-0066<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E3F6EA;color:#17803F">ปิดแล้ว</span><div class="kv"><span>วันที่</span><b>28/10/2026</b></div><div class="kv"><span>ผลตรวจ</span><b>ผ่านทั้งหมด</b></div><div class="kv"><span>จำนวน</span><b>1,000 PCS</b></div></div></div><div class="nd" id="nTF" style="left:957px;top:761px"><div class="nh" style="background:#475569">โอนย้ายสินค้า</div><div class="nb"><div class="no">TF-2610-0158<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E3F6EA;color:#17803F">ปิดแล้ว</span><div class="kv"><span>วันที่</span><b>29/10/2026</b></div><div class="kv"><span>ไปคลัง</span><b>WH-SHIP</b></div><div class="kv"><span>จำนวน</span><b>1,000 PCS</b></div></div></div><div class="nd" id="nLOT" style="left:1263px;top:761px"><div class="nh" style="background:#0F766E">ล็อตสินค้า</div><div class="nb"><div class="no">LOT-261028-01<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#E1F4F1;color:#0F766E">รับเข้า 29/10/2026</span><div class="kv"><span>สินค้า</span><b>FG-BP-1103</b></div><div class="kv"><span>คลัง</span><b>WH-SHIP</b></div><div class="kv"><span>คงเหลือ</span><b>400 PCS</b></div></div></div><div class="nd" id="nAR" style="left:1569px;top:579px"><div class="nh" style="background:#B5359E">ใบแจ้งหนี้</div><div class="nb"><div class="no">AR2610-0013<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></div><span class="st" style="background:#FDF0D5;color:#8A5A00">เปิดอยู่</span><div class="kv"><span>วันที่</span><b>30/10/2026</b></div><div class="kv"><span>ลูกค้า</span><b>OEM-A ผู้ผลิตรถยนต์</b></div><div class="kv"><span>มูลค่า</span><b>213,600.00</b></div></div></div><span class="ltag" id="tagSO" style="left:158px;top:222px">● ที่ค้นหา</span><span class="ltag" id="tagDL" style="left:43px;top:728px;background:#E2600B">● ติดอยู่ที่นี่</span></div><div id="doc"><div class="dh"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8"></path></svg><b>DL-2610-0329<span style="display:block;font:600 15px Sarabun;opacity:.9">ส่งสินค้า</span></b><small>ดำเนินการ</small></div>
+<div class="mt"><span>วันที่<b>30/10/2026</b></span><span>ใบสั่งขาย<b>SO2610-0014</b></span><span>คลัง<b>WH-SHIP · คลังส่งสินค้า</b></span><span>ลูกค้า<b>OEM-A ผู้ผลิตรถยนต์</b></span></div>
+<table><tbody><tr><th>สินค้า</th><th style="text-align:right">จำนวน</th></tr>
+<tr><td><b>FG-BP-1103</b><br><small>แผงพื้นห้องโดยสาร</small></td><td class="n"><b>600.00</b> PCS</td></tr>
+<tr class="lt me"><td>ล็อต LOT-261028-01</td><td class="n">600.00 PCS</td></tr>
+<tr class="lt"><td>ยังไม่ได้ส่ง</td><td class="n">400.00 PCS</td></tr></tbody></table>
+<div class="df"><span>ส่งแล้ว 600 จาก 1,000 ชิ้น</span><span>ใบแจ้งหนี้ AR2610-0013 · เปิดอยู่</span></div></div><div id="mm"><div class="mh">มินิแมป</div><div id="mmi"><i style="left:6.25px;top:36.18px;background:#2F6FDB"></i><i style="left:6.25px;top:128.08px;background:#0E8A7A"></i><i style="left:55.29px;top:66.82px;background:#17994B"></i><i style="left:55.29px;top:97.45px;background:#7B4DDB"></i><i style="left:104.33px;top:36.18px;background:#D9770A"></i><i style="left:104.33px;top:66.82px;background:#E2600B"></i><i style="left:104.33px;top:97.45px;background:#5E9E12"></i><i style="left:104.33px;top:128.08px;background:#12846B"></i><i style="left:153.37px;top:128.08px;background:#475569"></i><i style="left:202.41px;top:128.08px;background:#0F766E"></i><i style="left:251.45px;top:97.45px;background:#B5359E"></i></div><div class="vp" id="mvp"></div></div><span class="el" id="el0" style="background:#2F6FDB;left:473px;top:296px">พยากรณ์ → ผลิต 1,000 PCS</span><span class="el" id="el1" style="background:#D9770A;left:779px;top:387px">1,800 KG</span><span class="el" id="el2" style="background:#E2600B;left:779px;top:569px">1,000 PCS</span><span class="el" id="el3" style="background:#5E9E12;left:779px;top:751px">ตรวจ 1,000 PCS</span><span class="el" id="el6" style="background:#0E8A7A;left:700px;top:945px">600 PCS</span><span class="el" id="el7" style="background:#B5359E;left:1300px;top:975px">213,600.00</span><span class="el" id="el9" style="background:#7B4DDB;left:473px;top:569px">2,500 KG</span></div><div id="intro"><b>ใส่เลขใบสั่งขาย เห็นเอกสารที่เกี่ยวข้องทั้งสาย</b><small>ใบสั่งผลิต ตรวจคุณภาพ ส่งสินค้า ใบแจ้งหนี้ พร้อมสถานะของแต่ละใบ</small></div><div class="cal" id="c2">ไปข้างหน้า · ผลิต → คลังสินค้า → ส่งสินค้า → การเงิน</div><div class="cal" id="c3">ไล่ย้อนหลัง · วัตถุดิบที่จัดซื้อมาใช้ผลิต</div><div class="cal" id="c4">สถานะของแต่ละเอกสาร และจุดที่ใบสั่งขายติดอยู่</div><div class="cal" id="c5">เห็นสถานะเอกสารครบวงจร ตั้งแต่ใบสั่งขายถึงใบแจ้งหนี้ ในหน้าเดียว</div></div><div id="lbl">Beside Enterprise · ติดตามเอกสารตามใบสั่งขาย</div></div></div>
+<script>function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080),f=document.getElementById('fit');f.style.transform='scale('+s+')';f.style.left=(innerWidth-1920*s)/2+'px';f.style.top=(innerHeight-1080*s)/2+'px'}addEventListener('resize',fit);fit()</script>
+<script>var PAGES=['n1','s2','ag','b2','n2','b3','so','sf','sa','sd','pl','bm','mps','wo','mrp','po','buy','m4','iqc','m5','iss','m6','prd','m7','qc','trc','tf','m8','cst','cmp','m9','dlv','m10','dbd','sot','mar','fin'];(function(){var cur=location.pathname.split('/').pop().replace('.html',''),i=PAGES.indexOf(cur);function go(d){var j=i+d;if(j>=0&&j<PAGES.length)location.href=PAGES[j]+'.html'}
+addEventListener('keydown',function(e){if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();go(1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();go(-1)}});
+addEventListener('click',function(e){go(e.clientX<innerWidth*.2?-1:1)})})()</script>
+<script src="ctl.js"></script>
+</body></html>

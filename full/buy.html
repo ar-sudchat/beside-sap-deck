@@ -1,0 +1,114 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><title>buy · จัดซื้อและรับของ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap">
+<style>html,body{margin:0;height:100%;overflow:hidden;font-family:Sarabun,sans-serif;background:#EEF3FB}
+#fit{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+
+
+
+
+
+
+.buy,.buy *{box-sizing:border-box}
+.buy{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#C9C5BB;font-family:Tahoma,'Leelawadee UI',Sarabun,sans-serif;color:#141414;overflow:hidden}
+.buy .sapw{position:absolute;top:128px;width:900px;background:#F0EDE4;border:1px solid #6B6B6B;box-shadow:0 22px 50px -22px rgba(30,30,20,.7)}
+.buy #w_po{left:40px;opacity:0;animation:by_po 24s linear both}
+.buy #w_gr{left:980px;opacity:0;animation:by_gr 24s linear both}
+.buy .tt{height:50px;background:linear-gradient(#7A797D,#5D5C60);border-bottom:4px solid #F0AB00;color:#fff;font:600 23px Tahoma,Sarabun;display:flex;align-items:center;justify-content:space-between;padding:0 18px}
+.buy .tt i{font-style:normal;letter-spacing:14px;font-size:21px}
+.buy .bd{padding:18px 24px 0}
+.buy .sh{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.buy .sr{display:grid;grid-template-columns:150px 1fr;align-items:center;height:42px}
+.buy .sr label{font-size:19px}
+.buy .sf{height:34px;border:1px solid #9C9C94;background:#fff;display:flex;align-items:center;padding:0 9px;font-size:19px;white-space:nowrap;position:relative}
+.buy .sf.ro{background:#E8E6DF}.buy .sf.ar:before{content:"▶ ";color:#E8A200;font-size:12px;margin-right:4px}
+.buy .stabs{display:flex;gap:2px;margin-top:16px}.buy .stabs i{font-style:normal;border:1px solid #9C9C94;border-bottom:0;padding:5px 18px;background:#DEDAD0;font-size:19px}.buy .stabs i.on{background:#fff;font-weight:700}
+.buy .sm{background:#fff;border:1px solid #9C9C94;overflow:hidden}
+.buy .sm table{border-collapse:collapse;width:100%;margin:0;font-family:inherit;table-layout:fixed}
+.buy .sm th{background:#E6E3DB;font:400 18px Tahoma,Sarabun;height:38px;border:1px solid #C8C4BA;text-align:left;padding:0 8px;color:#141414}
+.buy .sm td{height:38px;border:1px solid #E1DED6;padding:0 8px;font:400 18px Tahoma,Sarabun;white-space:nowrap;overflow:hidden;position:relative}
+.buy .sm td.n{text-align:right}.buy .sm td.h{background:#E6E3DB;text-align:center;padding:0}
+.buy .sm td.ar:before{content:"▶ ";color:#E8A200;font-size:12px}
+.buy .sft{display:grid;grid-template-columns:1fr 380px;gap:20px;margin-top:14px}
+.buy .stot .sr{grid-template-columns:190px 1fr}.buy .stot .sf{justify-content:flex-end}
+.buy .sbt{display:flex;gap:10px;margin:16px 0 18px}.buy .sbt i{font-style:normal;font-size:19px;background:linear-gradient(#FFD45C,#F0AB00);border:1px solid #C98E00;padding:5px 30px}
+.buy .sbt i.off{background:#E6E3DB;border-color:#B5B1A6;color:#6B6B6B}.buy .sbt .sp{margin-left:auto;display:flex;gap:10px}
+.buy .sst{background:#ECE9E0;border-top:1px solid #B5B1A6;height:34px;position:relative}
+.buy .sst span{position:absolute;left:18px;top:0;line-height:34px;color:#0B7A2A;font:700 19px Tahoma,Sarabun;opacity:0;animation:by_st 24s linear both}
+.buy .vq{position:absolute;right:8px;top:0;line-height:36px}
+.buy .q0{opacity:1;animation:by_q0 24s linear both}.buy .q1{opacity:0;animation:by_q1 24s linear both}
+.buy .chip{position:absolute;top:30px;height:76px;display:flex;align-items:center;gap:14px;background:#fff;border-radius:18px;padding:0 24px;font:700 24px Sarabun;color:#0E4CA8;box-shadow:0 10px 26px -12px rgba(14,40,90,.55);border-bottom:4px solid #DDF956}
+.buy .chip small{display:block;font:400 18px Sarabun;color:#4A5160}
+.buy .chip .ic{width:42px;height:42px;border-radius:12px;background:#0E4CA8;display:grid;place-items:center}
+.buy #c1{left:40px;opacity:0;animation:by_c1 24s linear both}
+.buy #c2{left:980px;opacity:0;animation:by_c2 24s linear both}
+.buy #sum{position:absolute;left:980px;width:900px;top:905px;height:80px;background:#0E4CA8;color:#fff;border-radius:18px;border-bottom:5px solid #DDF956;display:flex;align-items:center;justify-content:center;gap:18px;font:700 30px Sarabun;opacity:0;animation:by_sum 24s linear both}
+.buy #sum b{font:800 44px Sarabun;color:#DDF956}
+.buy #qlink{position:absolute;left:40px;top:872px;width:900px;height:108px;background:#fff;color:#0E4CA8;border-radius:22px;border:3px solid #DDF956;box-shadow:0 20px 40px -18px rgba(14,76,168,.6);display:flex;align-items:center;gap:20px;padding:0 28px;opacity:0;animation:by_ql 24s linear both,by_qg 24s linear both}
+.buy #qlink .qi{flex:none;width:68px;height:68px;border-radius:20px;background:#1466DE;color:#DDF956;display:grid;place-items:center}
+.buy #qlink b{display:block;font:800 31px/1.2 Sarabun}.buy #qlink small{display:block;font:500 22px/1.3 Sarabun;color:#4A6FA8;margin-top:2px}
+.buy #qlink .qa{margin-left:auto;font:800 44px Sarabun;color:#1466DE}
+.buy #lbl{position:absolute;left:40px;bottom:40px;background:#0E4CA8;color:#fff;border-radius:99px;padding:5px 18px;font:700 22px Sarabun;z-index:46}
+.buy .f1{animation:by_r1 24s linear both}.buy .f2{animation:by_r2 24s linear both}.buy .f3{animation:by_r3 24s linear both}
+.buy .f4{animation:by_r4 24s linear both}.buy .f5{animation:by_r5 24s linear both}.buy .f6{animation:by_r6 24s linear both}
+.buy .f7{animation:by_r7 24s linear both}
+.buy #okb{animation:by_ok 24s linear both}
+@keyframes by_po{0.000%{opacity:0;transform:translateY(30px)}1.667%{opacity:0;transform:translateY(30px)}4.167%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes by_c1{0.000%{opacity:0;transform:translateY(-12px)}1.667%{opacity:0;transform:translateY(-12px)}3.750%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes by_r1{0.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}10.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}11.458%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}20.833%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}22.917%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}100.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}}
+@keyframes by_r2{0.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}10.417%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}11.875%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}20.833%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}22.917%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}100.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}}
+@keyframes by_r3{0.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}22.500%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}23.958%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}30.833%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}32.917%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}100.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}}
+@keyframes by_gr{0.000%{opacity:0;transform:translateX(60px)}34.167%{opacity:0;transform:translateX(60px)}37.083%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes by_c2{0.000%{opacity:0;transform:translateY(-12px)}34.167%{opacity:0;transform:translateY(-12px)}36.250%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes by_r4{0.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#E8E6DF}41.667%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#E8E6DF}43.125%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}51.667%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}53.750%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#E8E6DF}100.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#E8E6DF}}
+@keyframes by_r5{0.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#E8E6DF}41.667%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#E8E6DF}43.125%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}51.667%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}53.750%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#E8E6DF}100.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#E8E6DF}}
+@keyframes by_q0{0.000%{opacity:1}53.333%{opacity:1}54.583%{opacity:0}100.000%{opacity:0}}
+@keyframes by_q1{0.000%{opacity:0}53.333%{opacity:0}54.583%{opacity:1}100.000%{opacity:1}}
+@keyframes by_r6{0.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}54.167%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}55.625%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}100.000%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}}
+@keyframes by_ok{0.000%{transform:none;filter:none}63.333%{transform:none;filter:none}64.167%{transform:scale(.94);filter:brightness(.85)}65.417%{transform:none;filter:none}100.000%{transform:none;filter:none}}
+@keyframes by_st{0.000%{opacity:0}65.000%{opacity:0}66.250%{opacity:1}100.000%{opacity:1}}
+@keyframes by_sum{0.000%{opacity:0;transform:translateY(16px)}71.667%{opacity:0;transform:translateY(16px)}74.583%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes by_r7{0.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}22.500%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}23.958%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}30.833%{box-shadow:0 0 0 5px #E8A200;background:#FFF1BF}32.917%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}100.000%{box-shadow:0 0 0 0 rgba(232,162,0,0);background:#fff}}
+@keyframes by_ql{0.000%{opacity:0;transform:translateY(18px)}81.667%{opacity:0;transform:translateY(18px)}84.583%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes by_qg{0.000%{box-shadow:0 20px 40px -18px rgba(14,76,168,.6)}89.167%{box-shadow:0 20px 40px -18px rgba(14,76,168,.6)}91.250%{box-shadow:0 0 0 8px rgba(221,249,86,.55),0 20px 40px -18px rgba(14,76,168,.6)}95.833%{box-shadow:0 0 0 8px rgba(221,249,86,.55),0 20px 40px -18px rgba(14,76,168,.6)}100.000%{box-shadow:0 0 0 8px rgba(221,249,86,.55),0 20px 40px -18px rgba(14,76,168,.6)}}
+</style></head><body>
+<div id="fit"><div class="buy">
+<div class="chip" id="c1"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#DDF956" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span>จาก Beside: ความต้องการซื้อวัตถุดิบ<small>ส่งต่อให้ฝ่ายจัดซื้อออกใบสั่งซื้อใน SAP</small></span></div>
+<div class="chip" id="c2"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#DDF956" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span>ของมาส่ง: ฝ่ายคลังรับของใน SAP<small>อ้างอิงใบสั่งซื้อใบเดิม</small></span></div>
+
+<div class="sapw" id="w_po"><div class="tt"><span>Purchase Order</span><i>_ ▢ ✕</i></div>
+ <div class="bd">
+  <div class="sh"><div><div class="sr"><label>Vendor</label><div class="sf ar">V00031</div></div><div class="sr"><label>Name</label><div class="sf ro">บจก. เหล็กแผ่นตัวอย่าง</div></div><div class="sr"><label>Vendor Ref. No.</label><div class="sf">SQ-6610-118</div></div></div>
+   <div><div class="sr"><label>No.</label><div class="sf ro" id="po_no" style="animation:by_r3 20s linear both,by_r5 20s linear both">261000088</div></div><div class="sr"><label>Status</label><div class="sf ro">Open</div></div><div class="sr"><label>Posting Date</label><div class="sf">22/10/26</div></div><div class="sr"><label>Delivery Date</label><div class="sf">26/10/26</div></div></div></div>
+  <div class="stabs"><i class="on">Contents</i><i>Logistics</i><i>Accounting</i></div>
+  <div class="sm"><table><colgroup><col style="width:40px"><col style="width:190px"><col><col style="width:130px"><col style="width:190px"></colgroup>
+   <tr><th></th><th>Item No.</th><th>Item Description</th><th>Quantity</th><th>Total (LC)</th></tr>
+   <tr><td class="h">1</td><td class="ar f1">RM-JSC590R-14</td><td>เหล็กกล้าแรงดึงสูง JSC590R 1.4 มม.</td><td class="n f2">3,000.000</td><td class="n">THB 115,500.00</td></tr>
+   <tr><td class="h">2</td><td></td><td></td><td></td><td></td></tr><tr><td class="h">3</td><td></td><td></td><td></td><td></td></tr></table></div>
+  <div class="sft"><div><div class="sr" style="grid-template-columns:100px 1fr"><label>Remarks</label><div class="sf" style="font-size:16px">Based on Purchase Request 261000031</div></div></div>
+   <div class="stot"><div class="sr"><label>Total Before Discount</label><div class="sf ro">THB 115,500.00</div></div><div class="sr"><label>Tax</label><div class="sf ro">THB 8,085.00</div></div><div class="sr"><label>Total</label><div class="sf ro">THB 123,585.00</div></div></div></div>
+  <div class="sbt"><i>OK</i><i>Cancel</i></div></div>
+ <div class="sst"></div></div>
+
+<div class="sapw" id="w_gr"><div class="tt"><span>Goods Receipt PO</span><i>_ ▢ ✕</i></div>
+ <div class="bd">
+  <div class="sh"><div><div class="sr"><label>Vendor</label><div class="sf ar">V00031</div></div><div class="sr"><label>Name</label><div class="sf ro">บจก. เหล็กแผ่นตัวอย่าง</div></div><div class="sr"><label>Vendor Ref. No.</label><div class="sf">DO-4471</div></div></div>
+   <div><div class="sr"><label>No.</label><div class="sf ro">261000140</div></div><div class="sr"><label>Status</label><div class="sf ro">Open</div></div><div class="sr"><label>Posting Date</label><div class="sf">26/10/26</div></div><div class="sr"><label>Due Date</label><div class="sf">26/10/26</div></div></div></div>
+  <div class="stabs"><i class="on">Contents</i><i>Logistics</i><i>Accounting</i></div>
+  <div class="sm"><table><colgroup><col style="width:40px"><col style="width:190px"><col><col style="width:130px"><col style="width:170px"></colgroup>
+   <tr><th></th><th>Item No.</th><th>Item Description</th><th>Quantity</th><th>Base Ref.</th></tr>
+   <tr><td class="h">1</td><td class="ar">RM-JSC590R-14</td><td>เหล็กกล้าแรงดึงสูง JSC590R 1.4 มม.</td><td class="n f6"><span class="vq q0">0.000</span><span class="vq q1">3,000.000</span>&nbsp;</td><td class="f4" style="background:#E8E6DF">PO 261000088</td></tr>
+   <tr><td class="h">2</td><td></td><td></td><td></td><td></td></tr><tr><td class="h">3</td><td></td><td></td><td></td><td></td></tr></table></div>
+  <div class="sft"><div><div class="sr" style="grid-template-columns:100px 1fr"><label>Remarks</label><div class="sf" style="font-size:16px">Based on Purchase Orders 261000088</div></div></div>
+   <div class="stot"><div class="sr"><label>Total Before Discount</label><div class="sf ro">THB 115,500.00</div></div><div class="sr"><label>Tax</label><div class="sf ro">THB 8,085.00</div></div><div class="sr"><label>Total</label><div class="sf ro">THB 123,585.00</div></div></div></div>
+  <div class="sbt"><i id="okb">Add</i><i>Cancel</i></div></div>
+ <div class="sst"><span>Operation completed successfully</span></div></div>
+
+<div id="sum">รับของครบตามใบสั่งซื้อ รวม <b>3,000</b> กิโลกรัม</div>
+<div id="qlink"><div class="qi"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.7-8 9-4.8-1.3-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div><b>ของมาถึงแล้ว ต้องตรวจคุณภาพวัตถุดิบก่อนนำไปใช้</b><small>คุณภาพเริ่มตั้งแต่ของเข้า · ไปดูหน้าตรวจคุณภาพวัตถุดิบขาเข้า</small></div><div class="qa">→</div></div>
+<div id="lbl">SAP Business One · จัดซื้อและรับของ</div></div></div>
+<script>function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080),f=document.getElementById('fit');f.style.transform='scale('+s+')';f.style.left=(innerWidth-1920*s)/2+'px';f.style.top=(innerHeight-1080*s)/2+'px'}addEventListener('resize',fit);fit()</script>
+<script>var PAGES=['n1','s2','ag','b2','n2','b3','so','sf','sa','sd','pl','bm','mps','wo','mrp','po','buy','m4','iqc','m5','iss','m6','prd','m7','qc','trc','tf','m8','cst','cmp','m9','dlv','m10','dbd','sot','mar','fin'];(function(){var cur=location.pathname.split('/').pop().replace('.html',''),i=PAGES.indexOf(cur);function go(d){var j=i+d;if(j>=0&&j<PAGES.length)location.href=PAGES[j]+'.html'}
+addEventListener('keydown',function(e){if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();go(1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();go(-1)}});
+addEventListener('click',function(e){go(e.clientX<innerWidth*.2?-1:1)})})()</script>
+<script src="ctl.js"></script>
+</body></html>
