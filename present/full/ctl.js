@@ -6,6 +6,8 @@
      deck.back() · deck.reset() · deck.rate = 1 (ความเร็วเล่นของแต่ละเอฟเฟกต์) · deck.setMode('step'|'auto')
    ไม่มีแผงควบคุมบนจอ (ไม่ติดไปในวิดีโอ) */
 (function(){
+/* หน้าที่เป็นจอระบบจริง: ค่อยอธิบายทีละขั้น (สูงสุด 8 คลิก) · หน้าอื่น 1 คลิกแล้วแสดงครบ — ปรับรายชื่อ/จำนวนได้ที่นี่ หรือกำหนด window.PRESENTER_STEPS={wo:24} */
+var DECK_REAL=['sa','sd','bm','mps','wo','mrp','po','buy','iqc','iss','prd','qc','trc','cst','cmp','dlv','dbd','sot','mar'];
 var vm=false,vt=0,ambient=[],GAP=0.55,mode='step',bps=[],idx=-1,masterT=0,target=null,playing=false,last=0,driven=[],END=0,resolvers=[],readyRes;
 if(/[?&]auto\b/.test(location.search))mode='auto';
 var deck={presenter:true,rate:1,ready:new Promise(function(r){readyRes=r})};
@@ -20,7 +22,8 @@ function compute(){
       if(diff&&s>=0&&en>s&&en>0.05&&en-s<=6)iv.push([s,en])}});
   iv.sort(function(a,b){return a[0]-b[0]});var out=[],ls=null,ce=0;
   iv.forEach(function(x){if(ls===null){ls=x[0];ce=x[1]}else if(x[0]-ls<GAP){ls=x[0];ce=Math.max(ce,x[1])}else{out.push(ce);ls=x[0];ce=x[1]}});
-  if(ls!==null)out.push(ce);var N=out.length;/* presenter: 1 คลิกต่อหน้า (เปิดหน้าเห็นขั้นแรกเอง → คลิก 1 = ครบ) */if(N>2)out=[out[0],out[N-1]];bps=out;END=out.length?out[out.length-1]:0}
+  if(ls!==null)out.push(ce);var N=out.length;/* presenter: 1 คลิกต่อหน้า (เปิดหน้าเห็นขั้นแรกเอง → คลิก 1 = ครบ) */var pk=location.pathname.split('/').pop().replace('.html','');var G=(window.PRESENTER_STEPS&&window.PRESENTER_STEPS[pk])||(DECK_REAL.indexOf(pk)>=0?8:1);
+  if(N>2&&G<N){var o2=[out[0]];for(var gi=1;gi<G;gi++){o2.push(out[Math.max(0,Math.min(N-1,Math.round(gi*N/G)-1))])}o2.push(out[N-1]);var dd=[];o2.forEach(function(x){if(dd.indexOf(x)<0)dd.push(x)});out=dd}bps=out;END=out.length?out[out.length-1]:0}
 function done(){var r=resolvers;resolvers=[];r.forEach(function(f){f(true)})}
 function tick(ts){var dt=last?(ts-last)/1000:0;last=ts;if(vm){requestAnimationFrame(tick);return}
   if(playing){masterT+=dt*deck.rate*((deck.smooth&&target!=null&&target-masterT>1.0)?1.6:1);if(target!=null&&masterT>=target){masterT=target;playing=false;setAll(masterT);done()}else setAll(masterT)}
