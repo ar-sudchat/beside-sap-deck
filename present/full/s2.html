@@ -1,0 +1,122 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><title>s2 · แบ่งหน้าที่ แล้วต่อยอดกัน</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap">
+<style>html,body{margin:0;height:100%;background:#EEF3FB;overflow:hidden;font-family:Sarabun,sans-serif}
+#fit{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+.eyb{position:absolute;left:80px;top:46px;font:700 26px Sarabun;letter-spacing:3px;color:#1466DE}
+.ttl{position:absolute;left:80px;top:84px;font:800 58px Sarabun;color:#0E4CA8}
+.card{position:absolute;top:200px;width:580px;height:740px;background:#fff;border-radius:30px;box-shadow:0 24px 60px -28px rgba(20,60,140,.45);padding:40px 40px}
+#cS{left:80px;border:2px solid #F3E2AE}
+#cB{left:1260px;border:2px solid #BFD5FA}
+.card .lg{height:96px;display:flex;align-items:center}
+.card .lg img{height:84px}
+.card .role{font:600 32px Sarabun;color:#3B4458;margin-top:16px}
+.card .tiles{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.tile{height:218px;border-radius:22px;padding:24px 22px;background:#F6F8FC}
+.tile .ti{width:66px;height:66px;border-radius:18px;display:grid;place-items:center}
+.tile b{display:block;font:800 38px Sarabun;margin-top:14px;line-height:1.2}
+.tile small{display:block;font:500 23px Sarabun;color:#5B6577;margin-top:2px}
+#cS .tile{background:#FFFAEB}#cS .ti{background:#F6C443}
+#cB .tile{background:#EEF4FF}#cB .ti{background:#1466DE}
+#hub{position:absolute;left:830px;top:400px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#2A7BF0,#0E4CA8);box-shadow:0 0 0 14px rgba(20,102,222,.12),0 0 0 30px rgba(20,102,222,.06),0 24px 50px -16px rgba(14,76,168,.7);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;opacity:0}
+#hub svg{width:96px;height:96px}
+#hub b{font:800 34px Sarabun;margin-top:2px}#hub small{font:700 19px Sarabun;letter-spacing:3px;color:#BFD5FA}
+.wl{position:absolute;font:700 34px Sarabun;padding:8px 28px;border-radius:99px;white-space:nowrap}
+#wlA{left:960px;top:290px;transform:translateX(-50%);background:#1466DE;color:#fff;box-shadow:0 10px 24px -10px rgba(20,102,222,.8)}
+#wlB{left:960px;top:722px;transform:translateX(-50%);background:#E0A800;color:#1E1A0A;box-shadow:0 10px 24px -10px rgba(224,168,0,.8)}
+
+.v2{position:absolute;left:0;top:0;width:1920px;height:1080px;font-family:Sarabun,sans-serif;background:#EEF3FB;overflow:hidden}
+.v2 .v-in{opacity:0;animation:v2in .7s ease-out forwards}
+#cS.v-in{transform:translateX(-80px);animation-name:v2l;animation-delay:.4s}
+#cB.v-in{transform:translateX(80px);animation-name:v2r;animation-delay:.6s}
+@keyframes v2in{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes v2l{to{opacity:1;transform:none}}
+@keyframes v2r{to{opacity:1;transform:none}}
+#wlA,#wlB{transform:translateX(-50%)}
+#wlA.v-in,#wlB.v-in{animation-name:v2wl}
+@keyframes v2wl{from{opacity:0;transform:translateX(-50%) translateY(12px)}to{opacity:1;transform:translateX(-50%)}}
+.v2 .v-pop{opacity:0;transform:scale(.5);animation:v2pop .7s cubic-bezier(.2,1.5,.4,1) 1.3s forwards}
+@keyframes v2pop{to{opacity:1;transform:none}}
+#hubic{animation:v2spin 8s linear infinite;transform-origin:50% 50%}
+@keyframes v2spin{to{transform:rotate(360deg)}}
+.glowA,.glowB{opacity:0;animation:v2glow .6s ease-out forwards}
+.glowA{animation-delay:2.0s}.glowB{animation-delay:3.4s}
+@keyframes v2glow{to{opacity:.13}}
+.lineA,.lineB{stroke-dasharray:1;stroke-dashoffset:1;animation:v2draw 1.3s ease-in-out forwards}
+.lineA{animation-delay:2.0s}.lineB{animation-delay:3.4s}
+@keyframes v2draw{to{stroke-dashoffset:0}}
+.headA,.headB{opacity:0;animation:v2glow2 .2s forwards}
+.headA{animation-delay:3.2s}.headB{animation-delay:4.6s}
+@keyframes v2glow2{to{opacity:1}}
+.dotsA,.dotsB{opacity:1}
+.bmark{display:flex;align-items:center;gap:16px}
+.card .bmark img{width:84px;height:84px}
+.bmark b{font:700 52px/1 Sarabun;color:#1466DE;display:block}
+.bmark small{font:600 22px Sarabun;color:#1466DE;display:block}
+
+.card{top:190px!important;height:790px!important}
+.card .tiles{gap:14px!important;margin-top:20px!important}
+.tile{height:148px!important;padding:14px 18px!important}
+.tile .ti{width:46px!important;height:46px!important;border-radius:14px!important}
+.tile b{font-size:31px!important;margin-top:8px!important}
+.tile small{font-size:21px!important}
+.card .foot2{position:absolute;left:40px;right:40px;bottom:26px;border-radius:18px;padding:12px 20px;font:700 26px/1.3 Sarabun;text-align:center}
+#cS .foot2{background:#FFF1C9;color:#6B4A00}
+#cB .foot2{background:#DDF956;color:#0E4CA8}
+.card{height:830px!important}
+.v2,.v2 *{box-sizing:border-box}
+.card{height:800px!important}
+.tile small{font-size:20px!important;white-space:nowrap}
+.card .foot2{font-size:24px!important;white-space:nowrap;padding:12px 10px!important}
+.card{height:820px!important}
+.tile small{font-size:18px!important}
+.card .foot2{bottom:16px!important}
+.card{height:830px!important}
+</style><style id="predeck">#fit,#fit *{animation-play-state:paused!important}#fit{opacity:0}</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+ <symbol id="i-sync" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.6L4 8M4 4v4h4M4 13a8 8 0 0 0 14.3 4.6L20 16M20 20v-4h-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2.5V7h4.5M9 12h6M9 15.5h6M9 9h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+ <symbol id="i-kb" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+ <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 11h10.6L20.5 8H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.6" fill="currentColor"/><circle cx="17" cy="19.5" r="1.6" fill="currentColor"/></symbol>
+ <symbol id="i-book" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+ <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4M7.5 14h3M13.5 14h3M7.5 17.5h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+ <symbol id="i-box" viewBox="0 0 24 24"><path d="M12 2.8l8.5 4.6v9.2L12 21.2l-8.5-4.6V7.4z M3.5 7.4L12 12l8.5-4.6M12 12v9.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+ <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+ <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5l8 3v6.2c0 4.9-3.4 8.4-8 9.8-4.6-1.4-8-4.9-8-9.8V5.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.3 12l2.6 2.6 4.9-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.8a3.4 3.4 0 0 1 0 6.4M18.5 14.8c1.7.8 2.8 2.6 3 5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</defs></svg>
+<div id="fit"><div class="v2">
+ <div class="eyb v-in">SAP BUSINESS ONE × BESIDE</div>
+ <div class="ttl v-in" style="animation-delay:.15s">แบ่งหน้าที่ แล้วต่อยอดกัน</div>
+ 
+ <div class="card v-in" id="cS">
+  <div class="lg"><img src="../img/sap-business-one-logo.png"></div>
+  <div class="role">ระบบหลัก · บัญชี ขาย ซื้อ</div>
+  <div class="tiles"><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-doc"/></svg></div><b>ใบสั่งขาย</b><small>Sales Order</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-cart"/></svg></div><b>จัดซื้อ</b><small>ใบขอซื้อ · ใบสั่งซื้อ · รับของ</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-db"/></svg></div><b>Inventory</b><small>รับ–เบิก · มูลค่าคลัง</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-doc"/></svg></div><b>ส่งของ</b><small>Delivery · Invoice</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-book"/></svg></div><b>บัญชี</b><small>ต้นทุน · GL</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-db"/></svg></div><b>ข้อมูลหลัก</b><small>สินค้า · คู่ค้า · คลัง</small></div></div><div class="foot2">จุดเด่น: บัญชี ขาย ซื้อ · ข้อมูลหลักที่เดียว</div>
+ </div>
+ <div class="card v-in" id="cB">
+  <div class="lg bmark"><img src="../img/logo-180.png"><div><b>Beside</b></div></div>
+  <div class="role">ต่อยอดฝั่งโรงงาน · หน้างาน</div>
+  <div class="tiles"><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-cal"/></svg></div><b>วางแผน</b><small>MPS · MRP</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-check"/></svg></div><b>ตรวจรับ</b><small>QC วัตถุดิบ · ตามล็อต</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-gear"/></svg></div><b>ผลิต</b><small>เบิกตามล็อต · OEE</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-box"/></svg></div><b>รับผลผลิต</b><small>ของดี · ของเสีย</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-shield"/></svg></div><b>ตรวจคุณภาพ</b><small>QC · COA</small></div><div class="tile"><div class="ti"><svg width="30" height="30" style="color:#fff"><use href="#i-book"/></svg></div><b>ต้นทุนจริง</b><small>Actual Cost</small></div></div><div class="foot2">จุดเด่น: เห็นหน้างานจริง · ตามล็อต · ต้นทุนจริง</div>
+ </div>
+ <svg id="wire" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0;width:1920px;height:1080px">
+  <path class="glowA" d="M676 520 C 770 520, 770 340, 960 340 S 1150 520, 1244 520" fill="none" stroke="#1466DE" stroke-width="22" stroke-linecap="round"/>
+  <path class="lineA" pathLength="1" d="M676 520 C 770 520, 770 340, 960 340 S 1150 520, 1244 520" fill="none" stroke="#1466DE" stroke-width="9" stroke-linecap="round"/>
+  <path class="glowB" d="M1244 560 C 1150 560, 1150 720, 960 720 S 770 560, 676 560" fill="none" stroke="#E0A800" stroke-width="22" stroke-linecap="round"/>
+  <path class="lineB" pathLength="1" d="M1244 560 C 1150 560, 1150 720, 960 720 S 770 560, 676 560" fill="none" stroke="#E0A800" stroke-width="9" stroke-linecap="round"/>
+  <path class="headA" d="M1220 504 L1244 520 L1220 536" fill="none" stroke="#1466DE" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="headB" d="M700 544 L676 560 L700 576" fill="none" stroke="#E0A800" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g class="dotsA"><circle r="11" fill="#DDF956" stroke="#fff" stroke-width="3"><animateMotion dur="7s" begin="3.40s" repeatCount="indefinite" path="M676 520 C 770 520, 770 340, 960 340 S 1150 520, 1244 520"/></circle><circle r="11" fill="#DDF956" stroke="#fff" stroke-width="3"><animateMotion dur="7s" begin="5.73s" repeatCount="indefinite" path="M676 520 C 770 520, 770 340, 960 340 S 1150 520, 1244 520"/></circle><circle r="11" fill="#DDF956" stroke="#fff" stroke-width="3"><animateMotion dur="7s" begin="8.06s" repeatCount="indefinite" path="M676 520 C 770 520, 770 340, 960 340 S 1150 520, 1244 520"/></circle></g>
+  <g class="dotsB"><circle r="11" fill="#DDF956" stroke="#fff" stroke-width="3"><animateMotion dur="7s" begin="4.40s" repeatCount="indefinite" path="M1244 560 C 1150 560, 1150 720, 960 720 S 770 560, 676 560"/></circle><circle r="11" fill="#DDF956" stroke="#fff" stroke-width="3"><animateMotion dur="7s" begin="6.73s" repeatCount="indefinite" path="M1244 560 C 1150 560, 1150 720, 960 720 S 770 560, 676 560"/></circle><circle r="11" fill="#DDF956" stroke="#fff" stroke-width="3"><animateMotion dur="7s" begin="9.06s" repeatCount="indefinite" path="M1244 560 C 1150 560, 1150 720, 960 720 S 770 560, 676 560"/></circle></g>
+ </svg>
+ <div class="wl v-in" id="wlA" style="animation-delay:2.5s">SAP → Beside · อ่านข้อมูลจาก SAP</div>
+ <div class="wl v-in" id="wlB" style="animation-delay:3.9s">Beside → SAP · ส่งกลับตามมาตรฐาน SAP</div>
+ <div id="hub" class="v-pop"><svg id="hubic" style="color:#DDF956"><use href="#i-sync"/></svg><b>Beside</b><small>CONNECTOR</small></div>
+</div></div>
+<script>function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080),f=document.getElementById('fit');f.style.transform='scale('+s+')';f.style.left=(innerWidth-1920*s)/2+'px';f.style.top=(innerHeight-1080*s)/2+'px'}addEventListener('resize',fit);fit()</script>
+<script>var PAGES=['n1','s2','b2','n2','b3','so','sf','sa','sd','pl','bm','mps','wo','mrp','po','buy','m4','iqc','m5','iss','m6','prd','m7','qc','trc','m8','cst','cmp','m9','dlv','dbd','sot','mar','fin'];(function(){var cur=location.pathname.split('/').pop().replace('.html',''),i=PAGES.indexOf(cur);function go(d){var j=i+d;if(j>=0&&j<PAGES.length)location.href=PAGES[j]+'.html'}
+addEventListener('keydown',function(e){if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();go(1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();go(-1)}});
+addEventListener('click',function(e){go(e.clientX<innerWidth*.2?-1:1)})})()</script>
+<script src="ctl.js"></script>
+</body></html>

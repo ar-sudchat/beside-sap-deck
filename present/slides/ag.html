@@ -1,0 +1,45 @@
+<style>
+.sheet[data-key="ag"]{height:1013px;padding:0;overflow:hidden;background:linear-gradient(135deg,#1466DE 0%,#0F55C4 55%,#0A43A0 100%);position:relative;border-radius:0}
+.sheet[data-key="ag"] .vs{position:absolute;left:0;top:0;width:1920px;height:1080px;transform:scale(.9375);transform-origin:0 0}
+
+.ag{position:absolute;left:0;top:0;width:1920px;height:1080px;font-family:Sarabun,sans-serif;color:#fff;overflow:hidden}
+.ag,.ag *{box-sizing:border-box}
+.ag .in{opacity:0;transform:translateY(24px);animation:agin .75s ease-out forwards}
+@keyframes agin{to{opacity:1;transform:none}}
+.ag .eb{position:absolute;left:120px;top:96px;font:700 32px Sarabun;letter-spacing:.14em;color:#DDF956}
+.ag .h{position:absolute;left:116px;top:140px;font:800 112px/1.1 Sarabun;white-space:nowrap}
+.ag .bar{position:absolute;left:120px;top:296px;width:230px;height:10px;border-radius:5px;background:#DDF956}
+.ag .rows{position:absolute;left:120px;top:370px;width:1080px}
+.ag .rows:before{content:"";position:absolute;left:49px;top:60px;bottom:60px;width:4px;background:rgba(221,249,86,.45)}
+.ag .row{position:relative;display:flex;align-items:center;gap:36px;height:170px}
+.ag .num{flex:none;width:100px;height:100px;border-radius:50%;background:#DDF956;color:#0E4CA8;font:800 54px/100px Sarabun;text-align:center;box-shadow:0 0 0 12px rgba(221,249,86,.2)}
+.ag .t{font:800 56px/1.15 Sarabun}
+.ag .s{font:500 32px/1.35 Sarabun;color:#D5E3FF;margin-top:6px}
+.ag .ring{position:absolute;left:1280px;top:300px;width:520px;height:520px}
+.ag .ring i{position:absolute;border-radius:50%;border:2px dashed rgba(255,255,255,.35);inset:0;animation:agspin 30s linear infinite}
+.ag .ring i.r2{inset:70px;border:2px solid rgba(255,255,255,.25);animation:none;background:rgba(255,255,255,.07)}
+@keyframes agspin{to{transform:rotate(360deg)}}
+.ag .core{position:absolute;left:140px;top:140px;width:240px;height:240px;border-radius:50%;border:3px solid #DDF956;display:grid;place-items:center;color:#DDF956;background:rgba(221,249,86,.08)}
+.ag .core svg{width:150px;height:150px;animation:agspin 8s linear infinite}
+.ag .chip{position:absolute;background:#fff;border-radius:18px;padding:12px 24px;box-shadow:0 20px 40px -18px rgba(0,10,60,.7);display:flex;align-items:center;gap:12px;color:#1466DE;font:800 38px Sarabun}
+.ag .chip img{display:block}
+.ag .c1{left:-10px;top:30px;animation:agfloat 4s ease-in-out infinite}
+.ag .c2{right:-30px;bottom:20px;animation:agfloat 4s ease-in-out 2s infinite}
+@keyframes agfloat{50%{transform:translateY(-14px)}}
+.ag .logo{position:absolute;left:1280px;top:96px;height:72px}
+
+.ag .eb{top:84px!important;font-size:30px!important}
+.ag .h{top:150px!important}
+.ag .bar{top:318px!important}
+.ag .rows{top:410px!important}
+.ag .ring{top:380px!important}
+</style>
+<div class="slidewrap"><div class="sheet" data-key="ag"><div class="vs"><div class="ag">
+ <div class="eb in">AGENDA · วาระวันนี้</div>
+ <div class="h in" style="animation-delay:.12s">สิ่งที่จะได้ดูวันนี้</div>
+ <div class="bar in" style="animation-delay:.3s"></div>
+ <div class="rows"><div class="row in" style="animation-delay:0.70s"><div class="num">1</div><div><div class="t">ภาพรวมและข้อมูลหลัก</div><div class="s">SAP กับ Beside แบ่งหน้าที่อย่างไร · ข้อมูลสินค้าและสูตรผลิต</div></div></div><div class="row in" style="animation-delay:1.15s"><div class="num">2</div><div><div class="t">ตามงานจริงหนึ่งงาน</div><div class="s">จากใบสั่งขาย วางแผน วัตถุดิบ ผลิต ตรวจ จนส่งของ</div></div></div><div class="row in" style="animation-delay:1.60s"><div class="num">3</div><div><div class="t">ใช้ข้อมูลที่ได้ต่อ</div><div class="s">ต้นทุนจริง · สอบย้อนล็อต · ภาพรวมทั้งโรงงาน</div></div></div></div>
+ <div class="ring in" style="animation-delay:.9s"><i></i><i class="r2"></i><div class="core"><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.6L4 8M4 4v4h4M4 13a8 8 0 0 0 14.3 4.6L20 16M20 20v-4h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="chip c1"><img src="img/sap-business-one-logo.png" alt="SAP Business One" style="height:44px"></div>
+  <div class="chip c2"><img src="img/logo-180.png" alt="" style="height:44px">Beside</div></div>
+</div></div></div></div>

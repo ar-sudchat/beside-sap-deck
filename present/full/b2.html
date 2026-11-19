@@ -1,0 +1,82 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><title>b2 · ตัวอย่างที่เราจะตาม</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap">
+<style>html,body{margin:0;height:100%;overflow:hidden;font-family:Sarabun,sans-serif;background:radial-gradient(circle at 82% 0%,rgba(255,255,255,.15),rgba(255,255,255,0) 38%),radial-gradient(circle at 6% 100%,rgba(221,249,86,.09),rgba(221,249,86,0) 34%),linear-gradient(135deg,#1466DE 0%,#0F55C4 55%,#0A43A0 100%) fixed}
+#fit{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+
+
+
+.bz{position:absolute;left:0;top:0;width:1920px;height:1080px;font-family:Sarabun,sans-serif;color:#fff;overflow:hidden}
+.bz,.bz *{box-sizing:border-box}
+.bz .in{opacity:0;transform:translateY(24px);animation:bzin .75s ease-out forwards}
+@keyframes bzin{to{opacity:1;transform:none}}
+.bz .eb{position:absolute;left:120px;top:68px;font:700 30px Sarabun;color:#DDF956}
+.bz .h{position:absolute;left:116px;top:130px;font:800 108px/1.1 Sarabun;white-space:nowrap}
+.bz .bar{position:absolute;left:120px;top:294px;width:230px;height:10px;border-radius:5px;background:#DDF956}
+.bz .side{position:absolute;top:362px;width:340px;height:380px;border-radius:36px;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.38);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.bz .side .ico{color:#DDF956;height:auto;line-height:0}
+.bz .side .tag{font:700 28px Sarabun;color:#DCE8FF;margin:16px 0 6px}
+.bz .side .name{font:800 42px/1.3 Sarabun}
+.bz .cu{left:120px}.bz .fa{left:1460px}
+.bz .smk{stroke:#DDF956;animation:bzsmk 3s ease-out infinite;opacity:0}
+@keyframes bzsmk{0%{opacity:0;transform:translateY(6px)}30%{opacity:.9}100%{opacity:0;transform:translateY(-14px)}}
+.bz .order{position:absolute;left:560px;top:344px;width:800px;height:416px;border-radius:40px;background:#fff;color:#0E4CA8;box-shadow:0 44px 90px -34px rgba(0,10,60,.8);padding:30px 36px;display:flex;gap:28px;align-items:center}
+.bz .order .pic{flex:none;width:200px;height:200px;border-radius:28px;background:#EAF2FE;display:grid;place-items:center}
+.bz .order .pic img{width:170px;display:block}
+.bz .order .tg{display:inline-block;background:#E3ECFA;color:#0E4CA8;font:800 24px Sarabun;border-radius:999px;padding:4px 20px}
+.bz .order .nm{font:800 44px/1.15 Sarabun;margin-top:12px}
+.bz .order .qty{font:800 60px/1 Sarabun;color:#1466DE;margin-top:8px}
+.bz .order .qty small{font:700 34px Sarabun;color:#35476B;margin-left:8px}
+.bz .due{margin-top:24px;display:flex;align-items:center;gap:20px;background:#DDF956;color:#0E4CA8;border-radius:24px;padding:14px 26px;animation:bzglow 2.4s ease-in-out infinite}
+.bz .due svg{flex:none;color:#0E4CA8}
+.bz .due .tx{font:700 28px/1.1 Sarabun}
+.bz .due .dt{font:800 84px/1 Sarabun;margin-top:2px;white-space:nowrap}
+@keyframes bzglow{0%,100%{box-shadow:0 0 0 0 rgba(221,249,86,.0)}50%{box-shadow:0 0 0 12px rgba(221,249,86,.35)}}
+.bz .ar{position:absolute;top:552px;height:6px;border-radius:3px;background:repeating-linear-gradient(90deg,#DDF956 0 16px,transparent 16px 28px);background-size:28px 6px;animation:bzdash2 .9s linear infinite}
+.bz .ar:after{content:"";position:absolute;right:-6px;top:-11px;border-left:22px solid #DDF956;border-top:14px solid transparent;border-bottom:14px solid transparent}
+@keyframes bzdash2{to{background-position:28px 0}}
+.bz .a1{left:470px;width:80px}.bz .a2{left:1370px;width:78px}
+.bz .wf{position:absolute;left:120px;right:120px;top:800px;display:flex;align-items:stretch}
+.bz .stp{position:relative;flex:1;height:200px;border-radius:28px;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;opacity:0;transform:translateY(20px);animation:bzin 1s ease-out forwards,bzlit .8s ease-out forwards}
+.bz .stp .n{position:absolute;left:-2px;top:-2px;width:54px;height:54px;border-radius:28px 0 28px 0;background:#DDF956;color:#0E4CA8;font:800 30px/54px Sarabun;text-align:center}
+.bz .stp svg{color:#DDF956}
+.bz .stp .l{font:800 34px/1.1 Sarabun}
+@keyframes bzlit{to{background:rgba(255,255,255,.2);border-color:#DDF956}}
+.bz .cn{flex:none;width:44px;display:flex;align-items:center;justify-content:center;opacity:0;animation:bzin .7s ease-out forwards}
+.bz .cn:before{content:"";border-left:20px solid #DDF956;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.bz .ar{opacity:0;animation:bzfade .7s ease-out 2.9s forwards,bzdash2 .9s linear infinite!important}
+.bz .a2{animation:bzfade .7s ease-out 3.6s forwards,bzdash2 .9s linear infinite!important}
+@keyframes bzfade{to{opacity:1}}
+</style><style id="predeck">#fit,#fit *{animation-play-state:paused!important}#fit{opacity:0}</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+ <symbol id="i-sync" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.6L4 8M4 4v4h4M4 13a8 8 0 0 0 14.3 4.6L20 16M20 20v-4h-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2.5V7h4.5M9 12h6M9 15.5h6M9 9h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+ <symbol id="i-kb" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+ <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 11h10.6L20.5 8H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.6" fill="currentColor"/><circle cx="17" cy="19.5" r="1.6" fill="currentColor"/></symbol>
+ <symbol id="i-book" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+ <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4M7.5 14h3M13.5 14h3M7.5 17.5h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+ <symbol id="i-box" viewBox="0 0 24 24"><path d="M12 2.8l8.5 4.6v9.2L12 21.2l-8.5-4.6V7.4z M3.5 7.4L12 12l8.5-4.6M12 12v9.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+ <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+ <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5l8 3v6.2c0 4.9-3.4 8.4-8 9.8-4.6-1.4-8-4.9-8-9.8V5.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.3 12l2.6 2.6 4.9-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.8a3.4 3.4 0 0 1 0 6.4M18.5 14.8c1.7.8 2.8 2.6 3 5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</defs></svg>
+<div id="fit"><div class="bz">
+ <div class="eb in">ตัวอย่างที่เราจะตาม</div>
+ <div class="h in" style="animation-delay:.12s">โรงงานปั๊มชิ้นส่วนรถยนต์</div>
+ <div class="bar in" style="animation-delay:.3s"></div>
+ <div class="side cu in" style="animation-delay:.5s"><div class="ico"><svg viewBox="0 0 150 120" width="190" height="152" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="58" cy="34" r="20"/><path d="M18 108 C18 80 36 66 58 66 C80 66 98 80 98 108"/><path d="M92 82 V74 L98 62 Q99 60 102 60 H128 Q131 60 132 62 L138 74 V82 Z" fill="rgba(221,249,86,.18)"/><path d="M92 74 H138"/><circle cx="102" cy="86" r="6" fill="#0F55C4"/><circle cx="128" cy="86" r="6" fill="#0F55C4"/><path d="M104 14 l4 8 9 1 -6.5 6 2 9 -8.5 -4.5 -8.5 4.5 2 -9 -6.5 -6 9 -1z" stroke-width="3" fill="#DDF956" stroke="#DDF956" transform="translate(14 -2) scale(.9)"/></svg></div><div class="tag">ลูกค้า</div><div class="name">ผู้ผลิตรถยนต์</div></div>
+ <div class="ar a1"></div>
+ <div class="order in" style="animation-delay:1.2s"><div class="pic"><img src="../img/items/floor-panel.svg" alt="แผงพื้นห้องโดยสาร"></div>
+  <div><span class="tg">ออเดอร์</span><div class="nm">แผงพื้นห้องโดยสาร</div><div class="qty">1,000<small>ชิ้น</small></div>
+  <div class="due"><svg viewBox="0 0 24 24" width="68" height="68"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4M7.5 14h3M13.5 14h3M7.5 17.5h3" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg><div><div class="tx">ส่งภายใน</div><div class="dt">29 ต.ค.</div></div></div></div></div>
+ <div class="ar a2"></div>
+ <div class="side fa in" style="animation-delay:1.9s"><div class="ico"><svg viewBox="0 0 120 80" width="170" height="113" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 70 V36 L30 24 V36 L50 24 V36 L70 24 V70 Z"/><path d="M80 70 V14 H100 V70"/><path d="M8 70 H112"/><path d="M22 52 H34M42 52 H54M22 62 H34"/><path class="smk" d="M90 10 c-4 -6 4 -10 0 -16"/></svg></div><div class="tag">โรงงานของเรา</div><div class="name">โรงปั๊มชิ้นส่วน</div></div>
+ <div class="wf"><div class="stp" style="animation-delay:4.80s,5.30s"><div class="n">1</div><svg viewBox="0 0 24 24" width="62" height="62"><use href="#i-doc"/></svg><div class="l">รับออเดอร์</div></div><div class="cn" style="animation-delay:5.70s"></div><div class="stp" style="animation-delay:5.90s,6.40s"><div class="n">2</div><svg viewBox="0 0 24 24" width="62" height="62"><use href="#i-cal"/></svg><div class="l">วางแผน</div></div><div class="cn" style="animation-delay:6.80s"></div><div class="stp" style="animation-delay:7.00s,7.50s"><div class="n">3</div><svg viewBox="0 0 24 24" width="62" height="62"><use href="#i-cart"/></svg><div class="l">สั่งวัตถุดิบ</div></div><div class="cn" style="animation-delay:7.90s"></div><div class="stp" style="animation-delay:8.10s,8.60s"><div class="n">4</div><svg viewBox="0 0 24 24" width="62" height="62"><use href="#i-gear"/></svg><div class="l">ผลิต</div></div><div class="cn" style="animation-delay:9.00s"></div><div class="stp" style="animation-delay:9.20s,9.70s"><div class="n">5</div><svg viewBox="0 0 24 24" width="62" height="62"><use href="#i-check"/></svg><div class="l">ตรวจ</div></div><div class="cn" style="animation-delay:10.10s"></div><div class="stp" style="animation-delay:10.30s,10.80s"><div class="n">6</div><svg viewBox="0 0 24 24" width="62" height="62"><use href="#i-box"/></svg><div class="l">ส่งของ</div></div></div>
+</div></div>
+<script>function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080),f=document.getElementById('fit');f.style.transform='scale('+s+')';f.style.left=(innerWidth-1920*s)/2+'px';f.style.top=(innerHeight-1080*s)/2+'px'}addEventListener('resize',fit);fit()</script>
+<script>var PAGES=['n1','s2','b2','n2','b3','so','sf','sa','sd','pl','bm','mps','wo','mrp','po','buy','m4','iqc','m5','iss','m6','prd','m7','qc','trc','m8','cst','cmp','m9','dlv','dbd','sot','mar','fin'];(function(){var cur=location.pathname.split('/').pop().replace('.html',''),i=PAGES.indexOf(cur);function go(d){var j=i+d;if(j>=0&&j<PAGES.length)location.href=PAGES[j]+'.html'}
+addEventListener('keydown',function(e){if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();go(1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();go(-1)}});
+addEventListener('click',function(e){go(e.clientX<innerWidth*.2?-1:1)})})()</script>
+<script src="ctl.js"></script>
+</body></html>

@@ -39,7 +39,7 @@
    "sub": "",
    "section": "ตอนที่ 1",
    "file": "slides/ag.html",
-   "hidden": false
+   "hidden": true
   },
   {
    "key": "b2",
@@ -231,7 +231,7 @@
    "sub": "",
    "section": "ขั้นที่ 2",
    "file": "slides/tf.html",
-   "hidden": false
+   "hidden": true
   },
   {
    "key": "m8",
@@ -279,7 +279,7 @@
    "sub": "",
    "section": "ขั้นที่ 2",
    "file": "slides/m10.html",
-   "hidden": false
+   "hidden": true
   },
   {
    "key": "dbd",

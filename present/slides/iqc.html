@@ -1,0 +1,231 @@
+<style>
+.sheet[data-key="iqc"]{height:1013px;padding:0;overflow:hidden;background:#EEF3FB;position:relative;border-radius:0}
+.sheet[data-key="iqc"] .vs{position:absolute;left:0;top:0;width:1920px;height:1080px;transform:scale(.9375);transform-origin:0 0}
+
+
+
+.iqc,.iqc *{box-sizing:border-box}
+.iqc{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#EEF3FB;font-family:Sarabun,sans-serif;color:#1B2430;overflow:hidden}
+.iqc .card{position:absolute;left:40px;top:22px;width:1840px;height:950px;background:#fff;border-radius:24px;box-shadow:0 18px 50px -22px rgba(20,60,140,.4);padding:20px 30px;opacity:0}
+.iqc .top{display:flex;align-items:center;gap:12px;height:58px}
+.iqc .top h3{margin:0;font:800 32px Sarabun;color:#0E4CA8;flex:1;white-space:nowrap}
+.iqc .back{font:700 40px Sarabun;color:#1466DE;margin-right:6px;line-height:1}
+.iqc .pb{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 18px;border-radius:12px;font:700 20px Sarabun;border:1.5px solid #CBD3E1;background:#fff;color:#1466DE;box-shadow:0 2px 6px -2px rgba(20,60,140,.18);white-space:nowrap}
+.iqc .pb img{width:24px;height:24px}
+.iqc .pb.pri{background:#1466DE;border-color:#1466DE;color:#fff;box-shadow:0 6px 16px -6px rgba(20,102,222,.7)}
+.iqc hr{border:0;border-top:1.5px solid #E2E7EE;margin:12px 0}
+.iqc .cn{display:inline-grid;vertical-align:baseline}
+.iqc .flt{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:6px}
+.iqc .fc label{display:block;font:600 18px Sarabun;color:#5B6676;margin-bottom:4px}
+.iqc .fv{height:46px;border:1.5px solid #CBD3E1;border-radius:10px;display:flex;align-items:center;padding:0 14px;font:500 21px Sarabun;background:#fff}
+.iqc .fv i{margin-left:auto;font-style:normal;color:#8A94A3}
+.iqc .fv.ph{color:#8A94A3}
+.iqc .tabs{display:flex;gap:6px;margin:16px 0 14px;border-bottom:1.5px solid #E2E7EE}
+.iqc .tab{display:flex;align-items:center;gap:10px;padding:8px 18px;border-bottom:3px solid transparent;margin-bottom:-1.5px;font:700 22px Sarabun;color:#5B6676}
+.iqc .tab.on{color:#2457C5;border-bottom-color:#2457C5}
+.iqc .tn{min-width:34px;height:28px;border-radius:14px;background:#E6EAF0;color:#5B6676;font:700 18px Sarabun;display:inline-grid;place-items:center;padding:0 8px}
+.iqc .tab.on .tn{background:#2457C5;color:#fff}
+.iqc .tn .cn>span{display:block;text-align:center}
+.iqc .tbw{position:relative}
+.iqc table{border-collapse:separate;border-spacing:0;width:100%;table-layout:fixed;font-family:Sarabun}
+.iqc th{background:linear-gradient(180deg,#1166E0,#0A58D6);color:#fff;font:600 20px Sarabun;height:58px;padding:0 12px;white-space:nowrap}
+.iqc th:first-child{border-top-left-radius:14px}.iqc th:last-child{border-top-right-radius:14px}
+.iqc th.l,.iqc td.l{text-align:left}.iqc th.r,.iqc td.r{text-align:right}.iqc th.c,.iqc td.c{text-align:center}
+.iqc .lt td{height:84px;border-bottom:1.5px solid #EAEEF5;padding:0 12px;font:500 22px Sarabun;white-space:nowrap}
+.iqc .lt .nm{display:block;font-weight:600;line-height:1.25}
+.iqc .lt .sb{display:block;font:400 16px Sarabun;color:#6C7180;line-height:1.2}
+.iqc .sp{display:inline-flex;align-items:center;padding:3px 16px;border-radius:14px;font:700 19px Sarabun;white-space:nowrap}
+.iqc .sp.nw{background:#F1F2F4;color:#5B6676}.iqc .sp.wa{background:#FFF3DC;color:#A3611A}.iqc .sp.ok{background:#E3F5EC;color:#1F8A5B}.iqc .sp.bd{background:#FDECEC;color:#C43D3D}
+.iqc .hl{position:absolute;left:0;width:1780px;height:84px;border-radius:10px;border:3px solid #1466DE;background:rgba(20,102,222,.10);pointer-events:none;opacity:0}
+.iqc .chip{position:absolute;display:flex;align-items:center;gap:12px;height:62px;padding:0 26px 0 18px;border-radius:99px;font:600 25px Sarabun;white-space:nowrap;box-shadow:0 10px 24px -12px rgba(0,0,0,.4);opacity:0}
+.iqc .chip b{font-weight:800}
+.iqc .chip.ok{background:#E3F5EC;color:#14532D;border:2px solid #1F8A5B}
+.iqc .chip.bd{background:#FDECEC;color:#8A1F1F;border:2px solid #C43D3D}
+/* detail */
+.iqc .body{display:flex;gap:26px;margin-top:6px}
+.iqc #iq_left{width:470px;flex:none;border-right:1.5px solid #E2E7EE;padding-right:24px}
+.iqc .sec{display:flex;align-items:center;gap:10px;background:#EEF4FF;border-left:5px solid #2457C5;border-radius:12px;padding:8px 14px;height:54px;font:800 22px Sarabun;color:#1A3F8F}
+.iqc .sec .ic{width:34px;height:34px;border-radius:50%;background:#2457C5;display:grid;place-items:center;flex:none}
+.iqc .sec .st{margin-left:auto;display:inline-flex;align-items:center;gap:8px}
+.iqc .pl{display:inline-flex;padding:2px 14px;border-radius:12px;font:700 17px Sarabun;white-space:nowrap}
+.iqc .pl.nw{background:#F1F2F4;color:#5B6676}.iqc .pl.wa{background:#FFF3DC;color:#A3611A}.iqc .pl.ok{background:#E3F5EC;color:#1F8A5B}
+.iqc .lk{display:inline-flex;opacity:0}
+.iqc .lf{margin-top:8px}.iqc .lf label{display:block;font:600 17px Sarabun;color:#5B6676;margin-bottom:2px}
+.iqc .lf .v{height:44px;border-radius:10px;background:#EEF1F6;display:flex;align-items:center;padding:0 12px;font:500 20px Sarabun;white-space:nowrap;overflow:hidden}
+.iqc .lf2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.iqc .hrow{display:flex;align-items:center;gap:12px;height:60px;margin-top:8px;padding:0 14px;border-radius:12px;background:#EEF4FF;border-left:5px solid #2457C5;font:700 22px Sarabun}
+.iqc .hrow .cn{margin-left:auto}
+.iqc .hr1{font:700 20px Sarabun}.iqc .hr1.pe{color:#A3611A}.iqc .hr1.ok{color:#1F8A5B}
+.iqc .coaw{display:inline-block;margin:10px 0 0 14px;border-radius:12px}
+.iqc .coab{display:inline-flex;align-items:center;height:46px;padding:0 18px;border:1.5px dashed #9DB8E6;border-radius:12px;font:700 19px Sarabun;color:#1466DE}
+.iqc .coau{display:inline-flex;align-items:center;height:46px;padding:0 18px;border:1.5px solid #1F8A5B;background:#E3F5EC;border-radius:12px;font:700 19px Sarabun;color:#14532D}
+.iqc #iq_right{flex:1;min-width:0;position:relative}
+.iqc .prog{display:flex;align-items:center;gap:14px;height:48px}
+.iqc .rd{font:800 20px Sarabun;color:#fff;background:#2457C5;border-radius:99px;padding:2px 18px}
+.iqc .prog .pt{font:700 22px Sarabun}
+.iqc .segs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:6px}
+.iqc .segs i{height:10px;border-radius:4px;background:#E2E7EE;display:block}
+.iqc .tw{margin-top:12px;opacity:0}
+.iqc .dt td{height:88px;border-bottom:1.5px solid #EAEEF5;padding:0 10px;font:500 22px Sarabun;white-space:nowrap}
+.iqc .dt .cd{color:#2457C5;font-weight:700;font-size:19px}
+.iqc .dt .nm{display:block;font-weight:600;font-size:21px;white-space:normal;line-height:1.2}
+.iqc .dt .sb{display:block;font:400 16px Sarabun;color:#6C7180}
+.iqc .dt td.r{font-variant-numeric:tabular-nums}.iqc .dt td.nil{color:#8A94A3}
+.iqc .qn{color:#6C7180}
+.iqc .sb2{font:400 18px Sarabun;color:#5B6676}
+.iqc .ib{height:48px;width:200px;border:1.5px solid #C9D1DC;border-radius:10px;display:flex;align-items:center;justify-content:flex-end;padding:0 14px;font:700 24px Sarabun;background:#fff}
+.iqc .ty{display:inline-block}
+.iqc .pf{display:grid;grid-template-columns:1fr 1fr;gap:6px;width:200px}
+.iqc .pfb{height:42px;border:1.5px solid #C9D1DC;border-radius:8px;display:grid;place-items:center;font:600 17px Sarabun;white-space:nowrap;background:#fff}
+.iqc .rs{display:inline-flex;align-items:center;padding:3px 16px;border-radius:10px;font:700 18px Sarabun;white-space:nowrap}
+.iqc .rs.nt{background:#F1F2F4;color:#8A94A3}.iqc .rs.ok{background:#E3F5EC;color:#1F8A5B}.iqc .rs.bd{background:#FDECEC;color:#C43D3D}
+.iqc .rs.big{font-size:24px;padding:6px 22px;border-radius:12px}
+.iqc .foot{display:flex;align-items:center;gap:16px;margin-top:16px;opacity:0}
+.iqc #iq_coa,.iqc #iq_b{position:absolute;background:#fff;border-radius:20px;border:2px solid #C7D3E8;box-shadow:0 30px 70px -20px rgba(20,60,140,.55);padding:18px 24px 22px;opacity:0;z-index:20}
+.iqc #iq_coa{left:700px;top:170px;width:1090px}
+.iqc #iq_b{left:380px;top:300px;width:1160px;border-color:#E9B1B1}
+.iqc .ch{display:flex;align-items:center;gap:12px;font:800 28px Sarabun;color:#0E4CA8}
+.iqc .ch .ic{width:38px;height:38px;border-radius:10px;background:#1466DE;display:grid;place-items:center}
+.iqc .ch.bd{color:#8A1F1F}.iqc .ch.bd .ic{background:#C43D3D}
+.iqc .used{margin-left:auto;font:700 19px Sarabun;color:#1B7F4B;background:#E6F5EC;border-radius:99px;padding:2px 16px}
+.iqc .used.bd{color:#C43D3D;background:#FDECEC}
+.iqc #iq_coa .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 20px;margin-top:10px;font:600 22px Sarabun}
+.iqc #iq_coa .meta span{display:block;color:#5B6676;font:500 16px Sarabun}
+.iqc #iq_coa table,.iqc #iq_b table{margin-top:12px}
+.iqc #iq_coa td,.iqc #iq_b td{height:52px;border-bottom:1.5px solid #EAEEF5;padding:0 10px;font:500 21px Sarabun;white-space:nowrap}
+.iqc #iq_coa th,.iqc #iq_b th{height:44px;font-size:18px}
+.iqc #iq_coa .cd,.iqc #iq_b .cd{color:#2457C5;font-weight:700;font-size:18px}
+.iqc #iq_b tr.bd td{background:#FDF3F3}.iqc #iq_b tr.bd td b{color:#C43D3D}.iqc #iq_b tr.bd td:first-child{box-shadow:inset 4px 0 0 #C43D3D}
+.iqc #iq_coa .att{display:flex;align-items:center;gap:10px;margin-top:14px;height:50px;padding:0 16px;border:1.5px dashed #9DB8E6;border-radius:12px;font:600 20px Sarabun;color:#1A3F8F}
+.iqc #iq_coa .att b{margin-left:auto;color:#1B7F4B;background:#E6F5EC;border-radius:99px;padding:1px 14px;font-size:17px}
+.iqc #iq_fin{position:absolute;right:80px;bottom:150px;display:flex;align-items:center;gap:14px;background:#14803F;color:#fff;border-radius:20px;padding:14px 32px;font:800 36px Sarabun;box-shadow:0 18px 40px -16px rgba(20,128,63,.7);opacity:0;z-index:30;flex-wrap:wrap;max-width:900px}
+.iqc #iq_fin small{flex-basis:100%;font:500 20px Sarabun;opacity:.92;margin-top:-6px;padding-left:48px}
+.iqc #lbl{position:absolute;left:40px;bottom:40px;background:#0E4CA8;color:#fff;border-radius:99px;padding:5px 18px;font:700 22px Sarabun;z-index:46}
+@keyframes iq1{0.000%{opacity:1}6.923%{opacity:1}8.077%{opacity:0}100.000%{opacity:0}}
+@keyframes iq2{0.000%{opacity:0}6.923%{opacity:0}8.077%{opacity:1}10.769%{opacity:1}11.923%{opacity:0}100.000%{opacity:0}}
+@keyframes iq3{0.000%{opacity:0}10.769%{opacity:0}11.923%{opacity:1}100.000%{opacity:1}}
+@keyframes iq4{0.000%{opacity:1}10.769%{opacity:1}11.923%{opacity:0}100.000%{opacity:0}}
+@keyframes iq5{0.000%{opacity:0}10.769%{opacity:0}11.923%{opacity:1}70.000%{opacity:1}71.154%{opacity:0}100.000%{opacity:0}}
+@keyframes iq6{0.000%{opacity:0}70.000%{opacity:0}71.154%{opacity:1}88.462%{opacity:1}89.615%{opacity:0}100.000%{opacity:0}}
+@keyframes iq7{0.000%{opacity:0}88.462%{opacity:0}89.615%{opacity:1}100.000%{opacity:1}}
+@keyframes iq8{0.000%{opacity:1}100.000%{opacity:1}}
+@keyframes iq9{0.000%{opacity:1}70.000%{opacity:1}71.154%{opacity:0}100.000%{opacity:0}}
+@keyframes iq10{0.000%{opacity:0}70.000%{opacity:0}71.154%{opacity:1}88.462%{opacity:1}89.615%{opacity:0}100.000%{opacity:0}}
+@keyframes iq11{0.000%{opacity:0}88.462%{opacity:0}89.615%{opacity:1}100.000%{opacity:1}}
+@keyframes iq12{0.000%{opacity:1}70.000%{opacity:1}71.154%{opacity:0}100.000%{opacity:0}}
+@keyframes iq13{0.000%{opacity:0}70.000%{opacity:0}71.154%{opacity:1}100.000%{opacity:1}}
+@keyframes iq14{0.000%{opacity:1}88.462%{opacity:1}89.615%{opacity:0}100.000%{opacity:0}}
+@keyframes iq15{0.000%{opacity:0}88.462%{opacity:0}89.615%{opacity:1}100.000%{opacity:1}}
+@keyframes iq16{0.000%{opacity:1}70.000%{opacity:1}71.154%{opacity:0}100.000%{opacity:0}}
+@keyframes iq17{0.000%{opacity:0}70.000%{opacity:0}71.154%{opacity:1}100.000%{opacity:1}}
+@keyframes iq18{0.000%{opacity:1}88.462%{opacity:1}89.615%{opacity:0}100.000%{opacity:0}}
+@keyframes iq19{0.000%{opacity:0}88.462%{opacity:0}89.615%{opacity:1}100.000%{opacity:1}}
+@keyframes iq20{0.000%{opacity:1}70.000%{opacity:1}71.154%{opacity:0}100.000%{opacity:0}}
+@keyframes iq21{0.000%{opacity:0}70.000%{opacity:0}71.154%{opacity:1}100.000%{opacity:1}}
+@keyframes iq22{0.000%{opacity:1}88.462%{opacity:1}89.615%{opacity:0}100.000%{opacity:0}}
+@keyframes iq23{0.000%{opacity:0}88.462%{opacity:0}89.615%{opacity:1}100.000%{opacity:1}}
+@keyframes iq24{0.000%{opacity:0;transform:translateY(8px)}6.923%{opacity:0;transform:translateY(8px)}8.462%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes iq25{0.000%{opacity:0;transform:translateY(8px)}10.769%{opacity:0;transform:translateY(8px)}12.308%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes iq26{0.000%{opacity:0}14.615%{opacity:0}15.769%{opacity:1}18.846%{opacity:1}20.000%{opacity:0}100.000%{opacity:0}}
+@keyframes iq27{0.000%{opacity:0}79.231%{opacity:0}80.385%{opacity:1}90.000%{opacity:1}91.154%{opacity:0}100.000%{opacity:0}}
+@keyframes iq28{0.000%{opacity:0;transform:translateY(10px)}74.615%{opacity:0;transform:translateY(10px)}76.154%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes iq29{0.000%{opacity:0;transform:translateY(10px)}88.462%{opacity:0;transform:translateY(10px)}90.000%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes iq30{0.000%{opacity:0}0.769%{opacity:0}3.462%{opacity:1}18.462%{opacity:1}20.000%{opacity:0}70.000%{opacity:0}71.538%{opacity:1}100.000%{opacity:1}}
+@keyframes iq31{0.000%{border-color:#C9D1DC;box-shadow:none}26.923%{border-color:#C9D1DC;box-shadow:none}27.308%{border-color:#1466DE;box-shadow:0 0 0 4px rgba(20,102,222,.2)}28.269%{border-color:#1466DE;box-shadow:0 0 0 4px rgba(20,102,222,.2)}28.654%{border-color:#C9D1DC;box-shadow:none}100.000%{border-color:#C9D1DC;box-shadow:none}}
+@keyframes iq32{0.000%{clip-path:inset(0 100% 0 0)}26.923%{clip-path:inset(0 100% 0 0)}28.077%{clip-path:inset(0 0 0 0)}100.000%{clip-path:inset(0 0 0 0)}}
+@keyframes iq33{0.000%{opacity:1}28.077%{opacity:1}29.231%{opacity:0}100.000%{opacity:0}}
+@keyframes iq34{0.000%{opacity:0}28.077%{opacity:0}29.231%{opacity:1}100.000%{opacity:1}}
+@keyframes iq35{0.000%{border-color:#C9D1DC;box-shadow:none}30.769%{border-color:#C9D1DC;box-shadow:none}31.154%{border-color:#1466DE;box-shadow:0 0 0 4px rgba(20,102,222,.2)}32.115%{border-color:#1466DE;box-shadow:0 0 0 4px rgba(20,102,222,.2)}32.500%{border-color:#C9D1DC;box-shadow:none}100.000%{border-color:#C9D1DC;box-shadow:none}}
+@keyframes iq36{0.000%{clip-path:inset(0 100% 0 0)}30.769%{clip-path:inset(0 100% 0 0)}31.923%{clip-path:inset(0 0 0 0)}100.000%{clip-path:inset(0 0 0 0)}}
+@keyframes iq37{0.000%{opacity:1}31.923%{opacity:1}33.077%{opacity:0}100.000%{opacity:0}}
+@keyframes iq38{0.000%{opacity:0}31.923%{opacity:0}33.077%{opacity:1}100.000%{opacity:1}}
+@keyframes iq39{0.000%{border-color:#C9D1DC;box-shadow:none}34.615%{border-color:#C9D1DC;box-shadow:none}35.000%{border-color:#1466DE;box-shadow:0 0 0 4px rgba(20,102,222,.2)}35.962%{border-color:#1466DE;box-shadow:0 0 0 4px rgba(20,102,222,.2)}36.346%{border-color:#C9D1DC;box-shadow:none}100.000%{border-color:#C9D1DC;box-shadow:none}}
+@keyframes iq40{0.000%{clip-path:inset(0 100% 0 0)}34.615%{clip-path:inset(0 100% 0 0)}35.769%{clip-path:inset(0 0 0 0)}100.000%{clip-path:inset(0 0 0 0)}}
+@keyframes iq41{0.000%{opacity:1}35.769%{opacity:1}36.923%{opacity:0}100.000%{opacity:0}}
+@keyframes iq42{0.000%{opacity:0}35.769%{opacity:0}36.923%{opacity:1}100.000%{opacity:1}}
+@keyframes iq43{0.000%{border-color:#C9D1DC;box-shadow:none}38.462%{border-color:#C9D1DC;box-shadow:none}38.846%{border-color:#1466DE;box-shadow:0 0 0 4px rgba(20,102,222,.2)}39.808%{border-color:#1466DE;box-shadow:0 0 0 4px rgba(20,102,222,.2)}40.192%{border-color:#C9D1DC;box-shadow:none}100.000%{border-color:#C9D1DC;box-shadow:none}}
+@keyframes iq44{0.000%{clip-path:inset(0 100% 0 0)}38.462%{clip-path:inset(0 100% 0 0)}39.615%{clip-path:inset(0 0 0 0)}100.000%{clip-path:inset(0 0 0 0)}}
+@keyframes iq45{0.000%{opacity:1}39.615%{opacity:1}40.769%{opacity:0}100.000%{opacity:0}}
+@keyframes iq46{0.000%{opacity:0}39.615%{opacity:0}40.769%{opacity:1}100.000%{opacity:1}}
+@keyframes iq47{0.000%{background:#fff;border-color:#C9D1DC;color:#1B2430}42.308%{background:#fff;border-color:#C9D1DC;color:#1B2430}43.462%{background:#E3F5EC;border-color:#1F8A5B;color:#1F8A5B}100.000%{background:#E3F5EC;border-color:#1F8A5B;color:#1F8A5B}}
+@keyframes iq48{0.000%{opacity:1}43.462%{opacity:1}44.615%{opacity:0}100.000%{opacity:0}}
+@keyframes iq49{0.000%{opacity:0}43.462%{opacity:0}44.615%{opacity:1}100.000%{opacity:1}}
+@keyframes iq50{0.000%{background:#fff;border-color:#C9D1DC;color:#1B2430}46.154%{background:#fff;border-color:#C9D1DC;color:#1B2430}47.308%{background:#E3F5EC;border-color:#1F8A5B;color:#1F8A5B}100.000%{background:#E3F5EC;border-color:#1F8A5B;color:#1F8A5B}}
+@keyframes iq51{0.000%{opacity:1}47.308%{opacity:1}48.462%{opacity:0}100.000%{opacity:0}}
+@keyframes iq52{0.000%{opacity:0}47.308%{opacity:0}48.462%{opacity:1}100.000%{opacity:1}}
+@keyframes iq53{0.000%{opacity:0;transform:translateY(10px)}23.077%{opacity:0;transform:translateY(10px)}25.000%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes iq54{0.000%{background:#E2E7EE}28.077%{background:#E2E7EE}29.231%{background:#1F8A5B}100.000%{background:#1F8A5B}}
+@keyframes iq55{0.000%{background:#E2E7EE}31.923%{background:#E2E7EE}33.077%{background:#1F8A5B}100.000%{background:#1F8A5B}}
+@keyframes iq56{0.000%{background:#E2E7EE}35.769%{background:#E2E7EE}36.923%{background:#1F8A5B}100.000%{background:#1F8A5B}}
+@keyframes iq57{0.000%{background:#E2E7EE}39.615%{background:#E2E7EE}40.769%{background:#1F8A5B}100.000%{background:#1F8A5B}}
+@keyframes iq58{0.000%{background:#E2E7EE}43.462%{background:#E2E7EE}44.615%{background:#1F8A5B}100.000%{background:#1F8A5B}}
+@keyframes iq59{0.000%{background:#E2E7EE}47.308%{background:#E2E7EE}48.462%{background:#1F8A5B}100.000%{background:#1F8A5B}}
+@keyframes iq60{0.000%{opacity:1}28.077%{opacity:1}29.231%{opacity:0}100.000%{opacity:0}}
+@keyframes iq61{0.000%{opacity:0}28.077%{opacity:0}29.231%{opacity:1}31.923%{opacity:1}33.077%{opacity:0}100.000%{opacity:0}}
+@keyframes iq62{0.000%{opacity:0}31.923%{opacity:0}33.077%{opacity:1}35.769%{opacity:1}36.923%{opacity:0}100.000%{opacity:0}}
+@keyframes iq63{0.000%{opacity:0}35.769%{opacity:0}36.923%{opacity:1}39.615%{opacity:1}40.769%{opacity:0}100.000%{opacity:0}}
+@keyframes iq64{0.000%{opacity:0}39.615%{opacity:0}40.769%{opacity:1}43.462%{opacity:1}44.615%{opacity:0}100.000%{opacity:0}}
+@keyframes iq65{0.000%{opacity:0}43.462%{opacity:0}44.615%{opacity:1}47.308%{opacity:1}48.462%{opacity:0}100.000%{opacity:0}}
+@keyframes iq66{0.000%{opacity:0}47.308%{opacity:0}48.462%{opacity:1}100.000%{opacity:1}}
+@keyframes iq67{0.000%{opacity:0;transform:translateY(8px)}50.769%{opacity:0;transform:translateY(8px)}52.308%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes iq68{0.000%{opacity:1}50.769%{opacity:1}51.923%{opacity:0}100.000%{opacity:0}}
+@keyframes iq69{0.000%{opacity:0}50.769%{opacity:0}51.923%{opacity:1}100.000%{opacity:1}}
+@keyframes iq70{0.000%{opacity:1}50.769%{opacity:1}51.923%{opacity:0}100.000%{opacity:0}}
+@keyframes iq71{0.000%{opacity:0}50.769%{opacity:0}51.923%{opacity:1}100.000%{opacity:1}}
+@keyframes iq72{0.000%{opacity:1}26.923%{opacity:1}28.077%{opacity:0}100.000%{opacity:0}}
+@keyframes iq73{0.000%{opacity:0}26.923%{opacity:0}28.077%{opacity:1}55.385%{opacity:1}56.538%{opacity:0}100.000%{opacity:0}}
+@keyframes iq74{0.000%{opacity:0}55.385%{opacity:0}56.538%{opacity:1}100.000%{opacity:1}}
+@keyframes iq75{0.000%{opacity:0}55.385%{opacity:0}56.923%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes iq76{0.000%{background:#1466DE;box-shadow:0 6px 16px -6px rgba(20,102,222,.7)}53.846%{background:#1466DE;box-shadow:0 6px 16px -6px rgba(20,102,222,.7)}54.423%{background:#0A3D99;box-shadow:0 0 0 7px rgba(20,102,222,.28)}56.923%{background:#0A3D99;box-shadow:0 0 0 7px rgba(20,102,222,.28)}57.692%{background:#1466DE;box-shadow:0 6px 16px -6px rgba(20,102,222,.7)}100.000%{background:#1466DE;box-shadow:0 6px 16px -6px rgba(20,102,222,.7)}}
+@keyframes iq77{0.000%{opacity:1}58.462%{opacity:1}59.615%{opacity:0}100.000%{opacity:0}}
+@keyframes iq78{0.000%{opacity:0}58.462%{opacity:0}59.615%{opacity:1}100.000%{opacity:1}}
+@keyframes iq79{0.000%{box-shadow:none}57.692%{box-shadow:none}58.462%{box-shadow:0 0 0 5px rgba(20,102,222,.25)}61.154%{box-shadow:0 0 0 5px rgba(20,102,222,.25)}61.923%{box-shadow:none}100.000%{box-shadow:none}}
+@keyframes iq80{0.000%{box-shadow:0 2px 6px -2px rgba(20,60,140,.18)}62.308%{box-shadow:0 2px 6px -2px rgba(20,60,140,.18)}62.692%{box-shadow:0 0 0 6px rgba(20,102,222,.3)}100.000%{box-shadow:0 0 0 6px rgba(20,102,222,.3)}}
+@keyframes iq81{0.000%{opacity:0}18.462%{opacity:0}20.000%{opacity:1}70.000%{opacity:1}71.538%{opacity:0}100.000%{opacity:0}}
+@keyframes iq82{0.000%{opacity:0;transform:translateY(14px)}63.077%{opacity:0;transform:translateY(14px)}65.000%{opacity:1;transform:none}69.231%{opacity:1;transform:none}70.769%{opacity:0;transform:translateY(14px)}100.000%{opacity:0;transform:translateY(14px)}}
+@keyframes iq83{0.000%{opacity:0}79.231%{opacity:0;transform:translateY(14px)}81.154%{opacity:1;transform:none}87.308%{opacity:1;transform:none}88.846%{opacity:0;transform:translateY(8px)}100.000%{opacity:0}}
+@keyframes iq84{0.000%{opacity:0;transform:translateY(14px)}93.846%{opacity:0;transform:translateY(14px)}95.769%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+</style><div class="slidewrap"><div class="sheet" data-key="iqc"><div class="vs"><div class="iqc"><div class="card" id="iq_list" style="animation:iq30 26s linear both">
+ <div class="top"><h3>Product Inspection</h3><span class="pb pri" style=""><img src="img/btn/icon_search.png">ค้นหา</span><span class="pb" style=""><img src="img/btn/plus2.png">เลือกเอกสาร</span><span class="pb" style=""><img src="img/btn/icon_search.png">Inspection DocNum</span><span class="pb" style="color:#4A5160"><img src="img/btn/icon_undo3.png">Clear</span><span class="pb" style=""><img src="img/btn/icon_report5.png">รายงาน</span></div>
+ <hr>
+ <div class="flt">
+  <div class="fc"><label>DocType</label><div class="fv">ทั้งหมด<i>▾</i></div></div>
+  <div class="fc"><label>Customer</label><div class="fv"><i style="margin-left:auto">⌕</i></div></div>
+  <div class="fc"><label>StartDate</label><div class="fv">26/07/2026<i>▦</i></div></div>
+  <div class="fc"><label>EndDate</label><div class="fv">26/10/2026<i>▦</i></div></div>
+  <div class="fc"><label>Search</label><div class="fv ph">ค้นหาเลขที่ / สินค้า</div></div>
+ </div>
+ <div class="tabs"><span class="tab on">ทั้งหมด<span class="tn"><span class="cn"><span style="grid-area:1/1;animation:iq1 26s linear both">2</span><span style="grid-area:1/1;animation:iq2 26s linear both">3</span><span style="grid-area:1/1;animation:iq3 26s linear both">4</span></span></span></span><span class="tab">ยังไม่ตรวจ<span class="tn"><span class="cn"><span style="grid-area:1/1;animation:iq4 26s linear both">0</span><span style="grid-area:1/1;animation:iq5 26s linear both">2</span><span style="grid-area:1/1;animation:iq6 26s linear both">1</span><span style="grid-area:1/1;animation:iq7 26s linear both">0</span></span></span></span><span class="tab">ค้าง<span class="tn"><span class="cn"><span style="grid-area:1/1;animation:iq8 26s linear both">1</span></span></span></span><span class="tab">ตรวจแล้ว<span class="tn"><span class="cn"><span style="grid-area:1/1;animation:iq9 26s linear both">1</span><span style="grid-area:1/1;animation:iq10 26s linear both">2</span><span style="grid-area:1/1;animation:iq11 26s linear both">3</span></span></span></span></div>
+ <div class="tbw"><table class="lt"><colgroup><col style="width:210px"><col style="width:160px"><col style="width:220px"><col style="width:430px"><col style="width:110px"><col style="width:90px"><col style="width:190px"><col style="width:100px"><col style="width:220px"></colgroup><tr><th class="l">DocType</th><th class="l">DocNumber</th><th class="l">ItemCode</th><th class="l">ItemName</th><th class="r">Qty</th><th class="c">Unit</th><th class="c">Status</th><th class="c">ครั้งที่</th><th class="c">วันที่ตรวจ</th></tr><tr class="" style=""><td class="l">Work Order</td><td class="l">W2610-049</td><td class="l">FG-BP-1103</td><td class="l"><span class="nm">แผงพื้นห้องโดยสาร</span></td><td class="r">1,000</td><td class="c">PCS</td><td class="c"><span class="sp ok">✓ ผ่าน</span></td><td class="c">2</td><td class="c">24/10/2026 14:20</td></tr><tr class="" style=""><td class="l">Goods Receipt PO</td><td class="l">261000118</td><td class="l">RM-CRC-08</td><td class="l"><span class="nm">เหล็กแผ่นรีดเย็น 0.8 มม.</span></td><td class="r">2,400</td><td class="c">กก.</td><td class="c"><span class="sp wa">◷ 3/6</span></td><td class="c">1</td><td class="c">25/10/2026 09:05</td></tr><tr class="rA" style="animation:iq24 26s linear both;"><td class="l">Goods Receipt PO</td><td class="l">261000140</td><td class="l">RM-JSC590R-14</td><td class="l"><span class="nm">เหล็กกล้าแรงดึงสูง JSC590R 1.4 มม.</span><span class="sb">ล็อต LOT-261026-A</span></td><td class="r">1,500</td><td class="c">กก.</td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq12 26s linear both"><span class="sp nw">ใหม่</span></span><span style="grid-area:1/1;animation:iq13 26s linear both"><span class="sp ok">✓ ผ่าน</span></span></span></td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq16 26s linear both"></span><span style="grid-area:1/1;animation:iq17 26s linear both">1</span></span></td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq20 26s linear both"></span><span style="grid-area:1/1;animation:iq21 26s linear both">26/10/2026 10:42</span></span></td></tr><tr class="rB" style="animation:iq25 26s linear both"><td class="l">Goods Receipt PO</td><td class="l">261000140</td><td class="l">RM-JSC590R-14</td><td class="l"><span class="nm">เหล็กกล้าแรงดึงสูง JSC590R 1.4 มม.</span><span class="sb">ล็อต LOT-261026-B</span></td><td class="r">1,500</td><td class="c">กก.</td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq14 26s linear both"><span class="sp nw">ใหม่</span></span><span style="grid-area:1/1;animation:iq15 26s linear both"><span class="sp bd">✕ ไม่ผ่าน 2</span></span></span></td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq18 26s linear both"></span><span style="grid-area:1/1;animation:iq19 26s linear both">1</span></span></td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq22 26s linear both"></span><span style="grid-area:1/1;animation:iq23 26s linear both">26/10/2026 11:30</span></span></td></tr></table><div class="hl" style="top:226px;animation:iq26 26s linear both"></div><div class="hl" style="top:310px;animation:iq27 26s linear both"></div><div class="chip ok" style="left:0;top:428px;animation:iq28 26s linear both"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><b>ล็อต A</b> ตรวจผ่าน → ปล่อยเข้าคลัง</div><div class="chip bd" style="left:760px;top:428px;animation:iq29 26s linear both"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C43D3D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg><b>ล็อต B</b> ไม่ผ่าน 2 ข้อ → กักไว้ ยังไม่ปล่อยเข้าคลัง</div></div>
+</div><div class="card" id="iq_det" style="animation:iq81 26s linear both">
+ <div class="top"><span class="back">‹</span><h3>Product Inspection</h3><span class="pb pri" style="animation:iq76 26s linear both"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h11l3 3v15H5z"/><path d="M8 3v6h8V3M8 21v-7h8v7"/></svg>บันทึก</span><span class="pb" style="">สรุป</span><span class="pb" style="">เลือกรอบ COA</span><span class="pb" style="">แสดงช่วงควบคุม</span><span class="pb" style=""><img src="img/btn/icon_report5.png">รายงาน</span><span class="pb" style="animation:iq80 26s linear both"><img src="img/btn/icon_report5.png">รายงาน COA</span><span class="pb" style="color:#4A5160">Clear</span></div>
+ <hr>
+ <div class="body">
+  <div id="iq_left">
+   <div class="sec"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v17H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg></span>ข้อมูลใบตรวจ<span class="st"><span class="cn"><span style="grid-area:1/1;animation:iq72 26s linear both"><span class="pl nw">ใหม่</span></span><span style="grid-area:1/1;animation:iq73 26s linear both"><span class="pl wa">กำลังตรวจ</span></span><span style="grid-area:1/1;animation:iq74 26s linear both"><span class="pl ok">ตรวจเสร็จ</span></span></span><span class="lk" style="animation:iq75 26s linear both"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></span></span></div>
+   <div class="lf"><label>Item</label><div class="v">RM-JSC590R-14</div><div class="v" style="margin-top:6px">เหล็กกล้าแรงดึงสูง JSC590R 1.4 มม.</div></div>
+   <div class="lf"><label>Inspection DocNum</label><div class="v">QC-2610-0071</div></div>
+   <div class="lf2"><div class="lf"><label>Goods Receipt PO</label><div class="v">261000140</div></div><div class="lf"><label>Date</label><div class="v">26/10/2026</div></div></div>
+   <div class="lf"><label>Business Partner</label><div class="lf2" style="grid-template-columns:110px 1fr"><div class="v">V00031</div><div class="v">บจก. เหล็กแผ่นตัวอย่าง</div></div></div>
+   <div class="lf2"><div class="lf"><label>ล็อต</label><div class="v">LOT-261026-A</div></div><div class="lf"><label>Qty</label><div class="v">1,500 กก.</div></div></div>
+   <div class="sec" style="margin-top:16px"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span>ประวัติ</div>
+   <div class="hrow"><span class="hn">ครั้งที่ 1</span><span class="cn"><span style="grid-area:1/1;animation:iq70 26s linear both"><span class="hr1 pe">ยังไม่ตรวจ</span></span><span style="grid-area:1/1;animation:iq71 26s linear both"><span class="hr1 ok">✓ ผ่าน</span></span></span></div>
+   <div class="coaw" style="animation:iq79 26s linear both"><span class="cn"><span style="grid-area:1/1;animation:iq77 26s linear both"><span class="coab">เลือกเป็น COA</span></span><span style="grid-area:1/1;animation:iq78 26s linear both"><span class="coau">ใช้ใน COA</span></span></span></div>
+  </div>
+  <div id="iq_right">
+   <div class="prog"><span class="rd">ครั้งที่ 1</span><span class="pt"><span class="cn"><span style="grid-area:1/1;animation:iq60 26s linear both">ตรวจแล้ว 0/6</span><span style="grid-area:1/1;animation:iq61 26s linear both">ตรวจแล้ว 1/6</span><span style="grid-area:1/1;animation:iq62 26s linear both">ตรวจแล้ว 2/6</span><span style="grid-area:1/1;animation:iq63 26s linear both">ตรวจแล้ว 3/6</span><span style="grid-area:1/1;animation:iq64 26s linear both">ตรวจแล้ว 4/6</span><span style="grid-area:1/1;animation:iq65 26s linear both">ตรวจแล้ว 5/6</span><span style="grid-area:1/1;animation:iq66 26s linear both">ตรวจแล้ว 6/6</span></span></span></div>
+   <div class="segs"><i style="animation:iq54 26s linear both"></i><i style="animation:iq55 26s linear both"></i><i style="animation:iq56 26s linear both"></i><i style="animation:iq57 26s linear both"></i><i style="animation:iq58 26s linear both"></i><i style="animation:iq59 26s linear both"></i></div>
+   <div class="tw" style="animation:iq53 26s linear both"><table class="dt"><tr><th class="c" style="width:60px">ลำดับ</th><th class="l" style="width:120px">รหัส</th><th class="l" style="width:300px">หัวข้อตรวจ</th><th class="r" style="width:90px">ต่ำสุด</th><th class="r" style="width:100px">มาตรฐาน</th><th class="r" style="width:90px">สูงสุด</th><th class="l" style="width:224px">ครั้งนี้</th><th class="c" style="width:78px">หน่วย</th><th class="c" style="width:140px">ผล</th></tr><tr><td class="c qn">1</td><td class="cd">QC-RM-01</td><td><span class="nm">ความหนาแผ่นเหล็ก</span><span class="sb">ไมโครมิเตอร์</span></td><td class="r">1.35</td><td class="r">1.40</td><td class="r">1.45</td><td><div class="ib" style="animation:iq31 26s linear both"><span class="ty" style="animation:iq32 26s linear both">1.41</span></div></td><td class="c sb2">มม.</td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq33 26s linear both"><span class="rs nt">ยังไม่ตรวจ</span></span><span style="grid-area:1/1;animation:iq34 26s linear both"><span class="rs ok">ผ่าน</span></span></span></td></tr><tr><td class="c qn">2</td><td class="cd">QC-RM-02</td><td><span class="nm">ความต้านทานแรงดึง</span><span class="sb">เครื่องทดสอบแรงดึง</span></td><td class="r">590</td><td class="r nil">—</td><td class="r nil">—</td><td><div class="ib" style="animation:iq35 26s linear both"><span class="ty" style="animation:iq36 26s linear both">634</span></div></td><td class="c sb2">MPa</td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq37 26s linear both"><span class="rs nt">ยังไม่ตรวจ</span></span><span style="grid-area:1/1;animation:iq38 26s linear both"><span class="rs ok">ผ่าน</span></span></span></td></tr><tr><td class="c qn">3</td><td class="cd">QC-RM-03</td><td><span class="nm">ความกว้างแผ่น</span><span class="sb">เวอร์เนียร์</span></td><td class="r">1,248</td><td class="r">1,250</td><td class="r">1,252</td><td><div class="ib" style="animation:iq39 26s linear both"><span class="ty" style="animation:iq40 26s linear both">1,250</span></div></td><td class="c sb2">มม.</td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq41 26s linear both"><span class="rs nt">ยังไม่ตรวจ</span></span><span style="grid-area:1/1;animation:iq42 26s linear both"><span class="rs ok">ผ่าน</span></span></span></td></tr><tr><td class="c qn">4</td><td class="cd">QC-RM-04</td><td><span class="nm">การยืดตัว</span><span class="sb">เครื่องทดสอบแรงดึง</span></td><td class="r">21</td><td class="r nil">—</td><td class="r nil">—</td><td><div class="ib" style="animation:iq43 26s linear both"><span class="ty" style="animation:iq44 26s linear both">26</span></div></td><td class="c sb2">%</td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq45 26s linear both"><span class="rs nt">ยังไม่ตรวจ</span></span><span style="grid-area:1/1;animation:iq46 26s linear both"><span class="rs ok">ผ่าน</span></span></span></td></tr><tr><td class="c qn">5</td><td class="cd">QC-RM-05</td><td><span class="nm">สภาพผิวแผ่นเหล็ก</span><span class="sb">ตรวจด้วยสายตา</span></td><td class="r nil">—</td><td class="r nil">—</td><td class="r nil">—</td><td><div class="pf"><span class="pfb" style="animation:iq47 26s linear both">✓ ผ่าน</span><span class="pfb">✕ ไม่ผ่าน</span></div></td><td class="c sb2">—</td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq48 26s linear both"><span class="rs nt">ยังไม่ตรวจ</span></span><span style="grid-area:1/1;animation:iq49 26s linear both"><span class="rs ok">ผ่าน</span></span></span></td></tr><tr><td class="c qn">6</td><td class="cd">QC-RM-06</td><td><span class="nm">ใบรับรองจากผู้ขาย</span><span class="sb">ตรวจเอกสาร</span></td><td class="r nil">—</td><td class="r nil">—</td><td class="r nil">—</td><td><div class="pf"><span class="pfb" style="animation:iq50 26s linear both">✓ ใช่</span><span class="pfb">✕ ไม่ใช่</span></div></td><td class="c sb2">—</td><td class="c"><span class="cn"><span style="grid-area:1/1;animation:iq51 26s linear both"><span class="rs nt">ยังไม่ตรวจ</span></span><span style="grid-area:1/1;animation:iq52 26s linear both"><span class="rs ok">ผ่าน</span></span></span></td></tr></table>
+    <div class="foot" style="animation:iq67 26s linear both"><span class="rs ok big">✓ สรุปครั้งนี้ : ผ่านทุกข้อ</span><span class="sb2">ตรวจครบ 6 หัวข้อ · ค่าอยู่ในเกณฑ์ทั้งหมด</span></div></div>
+  </div>
+ </div>
+ <div id="iq_coa" style="animation:iq82 26s linear both">
+  <div class="ch"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></span>รายงาน COA<span class="used">ใช้ผลจากครั้งที่ 1</span></div>
+  <div class="meta"><div><span>Item</span>RM-JSC590R-14</div><div><span>Goods Receipt PO</span>261000140</div><div><span>ล็อต</span>LOT-261026-A</div></div>
+  <table><tr><th style="width:130px">รหัส</th><th>หัวข้อตรวจ</th><th style="width:200px;text-align:right">ผลที่วัดได้</th><th style="width:110px;text-align:center">ผล</th></tr><tr><td class="cd">QC-RM-01</td><td>ความหนาแผ่นเหล็ก</td><td class="r">1.41 มม.</td><td class="c"><span class="rs ok">ผ่าน</span></td></tr><tr><td class="cd">QC-RM-02</td><td>ความต้านทานแรงดึง</td><td class="r">634 MPa</td><td class="c"><span class="rs ok">ผ่าน</span></td></tr><tr><td class="cd">QC-RM-03</td><td>ความกว้างแผ่น</td><td class="r">1,250 มม.</td><td class="c"><span class="rs ok">ผ่าน</span></td></tr><tr><td class="cd">QC-RM-04</td><td>การยืดตัว</td><td class="r">26 %</td><td class="c"><span class="rs ok">ผ่าน</span></td></tr><tr><td class="cd">QC-RM-05</td><td>สภาพผิวแผ่นเหล็ก</td><td class="r">ผ่าน </td><td class="c"><span class="rs ok">ผ่าน</span></td></tr><tr><td class="cd">QC-RM-06</td><td>ใบรับรองจากผู้ขาย</td><td class="r">ใช่ </td><td class="c"><span class="rs ok">ผ่าน</span></td></tr></table>
+  <div class="att"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1466DE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12l-8.5 8.5a5 5 0 01-7-7L14 5a3.3 3.3 0 014.7 4.7L10 18.4a1.7 1.7 0 01-2.4-2.4L15 8.6"/></svg>ไฟล์แนบ : ใบรับรองผลทดสอบจากผู้ขาย (ตัวอย่าง).pdf<b>แนบแล้ว</b></div>
+ </div>
+</div><div id="iq_b" style="animation:iq83 26s linear both">
+  <div class="ch bd"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v17H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg></span>ผลตรวจ · ล็อต LOT-261026-B<span class="used bd">✕ ไม่ผ่าน 2 ข้อ</span></div>
+  <table><tr><th style="width:130px">รหัส</th><th>หัวข้อตรวจ</th><th style="width:230px;text-align:right">เกณฑ์</th><th style="width:210px;text-align:right">ครั้งนี้</th><th style="width:140px;text-align:center">ผล</th></tr><tr class="bd"><td class="cd">QC-RM-01</td><td>ความหนาแผ่นเหล็ก</td><td class="r sb2">1.35 – 1.45 มม.</td><td class="r"><b>1.52 มม.</b></td><td class="c"><span class="rs bd">ไม่ผ่าน</span></td></tr><tr class="bd"><td class="cd">QC-RM-02</td><td>ความต้านทานแรงดึง</td><td class="r sb2">≥ 590 MPa</td><td class="r"><b>571 MPa</b></td><td class="c"><span class="rs bd">ไม่ผ่าน</span></td></tr><tr class=""><td class="cd">QC-RM-03</td><td>ความกว้างแผ่น</td><td class="r sb2">1,248 – 1,252 มม.</td><td class="r"><b>1,250 มม.</b></td><td class="c"><span class="rs ok">ผ่าน</span></td></tr><tr class=""><td class="cd">QC-RM-04</td><td>การยืดตัว</td><td class="r sb2">≥ 21 %</td><td class="r"><b>25 %</b></td><td class="c"><span class="rs ok">ผ่าน</span></td></tr><tr class=""><td class="cd">QC-RM-05</td><td>สภาพผิวแผ่นเหล็ก</td><td class="r sb2">—</td><td class="r"><b>ผ่าน </b></td><td class="c"><span class="rs ok">ผ่าน</span></td></tr><tr class=""><td class="cd">QC-RM-06</td><td>ใบรับรองจากผู้ขาย</td><td class="r sb2">—</td><td class="r"><b>ใช่ </b></td><td class="c"><span class="rs ok">ผ่าน</span></td></tr></table>
+ </div><div id="iq_fin" style="animation:iq84 26s linear both"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>ตรวจผ่าน → ปล่อยเข้าคลัง</span><small>ล็อตที่ไม่ผ่านถูกกักไว้ ไม่ปล่อยเข้าคลัง</small></div><div id="lbl">Beside · ตรวจสอบคุณภาพวัตถุดิบขาเข้า</div></div></div></div></div>

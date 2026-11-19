@@ -1,0 +1,192 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><title>mrp · วางแผนความต้องการวัตถุดิบ MRP</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap">
+<style>html,body{margin:0;height:100%;overflow:hidden;font-family:Sarabun,sans-serif;background:#EEF3FB}
+#fit{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+
+
+
+
+
+
+.mrp,.mrp *{box-sizing:border-box}
+.mrp{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#EEF3FB;font-family:Sarabun,sans-serif;color:#14203A;overflow:hidden}
+.mrp .pg{position:absolute;left:0;top:0;width:1920px;height:1080px;opacity:0;animation:mr_in 43s linear both}
+.mrp .card{position:absolute;left:40px;top:22px;width:1840px;background:#fff;border-radius:24px;box-shadow:0 18px 50px -22px rgba(20,60,140,.4);padding:22px 40px 30px}
+.mrp .kick{font:700 16px Sarabun;color:#0A58D6;letter-spacing:.12em}
+.mrp .hd{display:flex;align-items:center;gap:14px;height:58px}
+.mrp .hd h3{margin:0;font:600 32px Sarabun;color:#2B3245;flex:1}
+.mrp .bt{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 22px;border:1.5px solid #CBD3E1;border-radius:12px;background:#fff;font:600 20px Sarabun;color:#1E2A40;box-shadow:0 2px 6px -2px rgba(20,60,140,.18)}
+.mrp .bt.ic{padding:0 13px}
+.mrp .bt.pri{background:#1466DE;border-color:#1466DE;color:#fff;box-shadow:0 4px 14px -5px rgba(20,102,222,.6)}
+.mrp .bt.run{background:#1B7F4B;border-color:#1B7F4B;color:#fff;padding:0 30px;font-weight:700;box-shadow:0 4px 14px -5px rgba(27,127,75,.6)}
+.mrp .sb2{display:flex;align-items:center;gap:16px;margin-top:12px}.mrp .sb2>b{font:700 22px Sarabun}
+.mrp .shown{font:400 19px Sarabun;color:#5B6577}.mrp .shown b{color:#14203A}
+.mrp #badges{display:inline-flex;gap:12px;border-radius:99px}
+.mrp .badge{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 18px;border-radius:99px;font:700 19px Sarabun}
+.mrp .badge.r{background:#FDECEC;color:#B42318;border:1.5px solid #F4B4AE}.mrp .badge.y{background:#FFF6DB;color:#93630A;border:1.5px solid #F2D28A}
+.mrp .badge i{font-style:normal;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;color:#fff;font-size:17px}
+.mrp .badge.r i{background:#D92D20}.mrp .badge.y i{background:#E0A100}
+.mrp .flt{display:grid;grid-template-columns:repeat(7,1fr);gap:14px;margin-top:12px;opacity:0;animation:mr_flt 43s linear both}
+.mrp .fd label{display:block;font:600 15px Sarabun;color:#5B6577;margin-bottom:3px}
+.mrp .fd .bx{position:relative;height:42px;border:1.5px solid #CBD3E1;border-radius:8px;background:#fff;display:flex;align-items:center;padding:0 12px;font:400 18px Sarabun;color:#14203A;white-space:nowrap;overflow:hidden}
+.mrp .fd .bx.ph{color:#9AA3B5}
+.mrp .fd .cr{position:absolute;right:14px;top:14px;width:9px;height:9px;border-right:2.5px solid #6B7488;border-bottom:2.5px solid #6B7488;transform:rotate(45deg)}
+.mrp .fd{border-radius:10px}
+.mrp .rng{margin-top:12px;font:400 19px Sarabun;color:#5B6577;display:flex;align-items:center;gap:12px}.mrp .rng b{color:#14203A}
+.mrp .vt{display:inline-flex;border:1.5px solid #D5DBE7;border-radius:10px;overflow:hidden;margin-left:8px}
+.mrp .vt span{padding:4px 18px;font:600 17px Sarabun;color:#4A5160}.mrp .vt span.on{background:#1466DE;color:#fff}
+.mrp #proc{display:inline-flex;align-items:center;gap:10px;margin-left:auto;font:600 19px Sarabun;color:#1466DE;opacity:0;animation:mr_proc 43s linear both}
+.mrp #proc i{width:20px;height:20px;border:3px solid #C9DCFA;border-top-color:#1466DE;border-radius:50%;display:inline-block}
+.mrp table.mt{border-collapse:separate;border-spacing:0;width:100%;margin-top:12px;font-family:Sarabun;table-layout:fixed}
+.mrp .mt th{background:linear-gradient(180deg,#1166E0,#0A58D6);color:#fff;font:600 18px Sarabun;height:62px;padding:0 8px;line-height:1.25;overflow:hidden;white-space:nowrap}
+.mrp .mt th:first-child{border-top-left-radius:14px}.mrp .mt th:last-child{border-top-right-radius:14px}
+.mrp .mt th.td{background:linear-gradient(180deg,#0C4FB8,#073F98);box-shadow:inset 0 -5px 0 #DDF956}
+.mrp .mt th small{display:block;font:400 15px Sarabun;opacity:.85}
+.mrp .mt td{height:54px;border-bottom:1.5px solid #EAEEF5;padding:0 12px;font:400 20px Sarabun;white-space:nowrap;overflow:hidden;position:relative}
+.mrp .mt td.n{text-align:right;font-variant-numeric:tabular-nums}.mrp .mt td.c{text-align:center}
+.mrp .mt tr.it td{background:#EEF4FF;font-weight:600}.mrp .mt tr.it td.nm{font-weight:400;font-size:17px;white-space:normal;line-height:1.2}
+.mrp .mt td.tdc{background-color:#F6F9FF}.mrp .mt tr.it td.tdc{background-color:#E2ECFE}
+.mrp .mt tr.sb td{height:46px;font-size:18px}.mrp .mt tr.sb td.lb{padding-left:34px}
+.mrp .mt tr.sb.inr td.lb{color:#0A58D6}.mrp .mt tr.sb.outr td.lb{color:#B42318}
+.mrp .mt tr.sb.inr td.n{color:#0A58D6;font-weight:800}.mrp .mt tr.sb.outr td.n{color:#B42318}
+.mrp .mt .pc{padding:0;text-align:center}
+.mrp .mt td.pc{font-size:18px}.mrp .mt .pc.r{text-align:right}.mrp .mt td.pc.r .pcv,.mrp .mt th.pc.r .pcv{padding-right:12px}
+.mrp .mt .pcv{opacity:0;display:inline-block;animation:mr_pcv 43s linear both}
+.mrp .mt th.pc.p1{display:table-cell}
+.mrp .tg{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:6px;background:#fff;color:#0A58D6;margin-right:4px;vertical-align:middle;position:relative}
+.mrp .tg b{grid-area:1/1;font:800 20px Sarabun;line-height:1}
+.mrp .tg .tm{opacity:0;animation:mr_tm 43s linear both}.mrp .tg .tp{animation:mr_tp 43s linear both}
+.mrp .vl,.mrp .pd{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:flex-end;padding-right:12px}
+.mrp .pd{color:#B5BCCB;font-weight:400}
+.mrp .vl{opacity:0}
+.mrp .vl.neg{color:#B42318;font-weight:800;background:#FDECEC}
+.mrp .chv{display:inline-block;width:12px;height:12px;border-right:3px solid #4A5160;border-bottom:3px solid #4A5160}
+.mrp .chv.dn{transform:rotate(45deg) translate(-2px,-2px)}.mrp .chv.rt{transform:rotate(-45deg)}
+.mrp .notes{position:relative;height:150px;margin-top:14px}
+.mrp .nt{position:absolute;left:0;top:0;display:flex;align-items:center;gap:14px;border-radius:14px;padding:12px 22px;font:600 22px Sarabun;line-height:1.3;opacity:0;box-shadow:0 14px 34px -16px rgba(20,40,90,.45)}
+.mrp .nt em{font-style:normal;font-weight:800;color:#B42318}
+.mrp .nt.short{border:2px solid #F0B429;background:#FFF9E8;animation:mr_short 43s linear both}
+.mrp .nt.cl1{border:2px solid #9BD3B4;background:#F1FAF5;animation:mr_cl1 43s linear both}
+.mrp .nt.cl2{border:2px solid #9BD3B4;background:#F1FAF5;animation:mr_cl2 43s linear both}
+.mrp .cf{display:block;width:max-content;margin-top:1px;height:22px;padding:0 10px;border-radius:99px;background:#E7F6EE;border:1.5px solid #9BD3B4;color:#1B7F4B;font:700 14px/19px Sarabun;opacity:0}
+.mrp .nt.cl2{left:auto;right:16px;top:4px;padding:2px 18px;font-size:20px;border-radius:99px}
+.mrp .cfa{animation:mr_cfa 43s linear both}.mrp .cfb{animation:mr_cfb 43s linear both}.mrp .cfc{animation:mr_cfc 43s linear both}
+.mrp .grp{position:absolute;left:0;top:0;width:100%;opacity:0;animation:mr_grp 43s linear both;border:2px solid #C9DCFA;border-radius:14px;background:#F5F9FF;padding:10px 18px 12px}
+.mrp .gh{font:700 20px Sarabun;color:#0A58D6;margin-bottom:8px}
+.mrp .gc{display:flex;gap:14px;align-items:stretch}
+.mrp .g{flex:1;background:#fff;border:1.5px solid #CBD3E1;border-radius:10px;padding:8px 14px;opacity:0;display:flex;flex-direction:column;gap:1px}
+.mrp .g b{font:800 20px Sarabun;color:#14203A}.mrp .g span{font:400 18px Sarabun;color:#2B3245}.mrp .g small{font:600 16px Sarabun;color:#1B7F4B}
+.mrp .g7{animation:mr_g7 43s linear both}.mrp .g14{animation:mr_g14 43s linear both}.mrp .g21{animation:mr_g21 43s linear both}
+.mrp .go{align-self:center;display:flex;align-items:center;gap:10px;height:52px;padding:0 22px;border-radius:12px;background:#1466DE;color:#fff;font:700 21px Sarabun;opacity:0;animation:mr_go 43s linear both;box-shadow:0 4px 14px -5px rgba(20,102,222,.6)}
+.mrp .go i{font-style:normal;font-size:26px}
+.mrp #toast{position:absolute;right:64px;top:800px;display:flex;align-items:center;gap:14px;background:#fff;border:1.5px solid #9BD3B4;border-left:8px solid #1B7F4B;border-radius:14px;padding:14px 24px;box-shadow:0 18px 40px -16px rgba(20,60,40,.45);font:600 21px Sarabun;opacity:0;z-index:55;animation:mr_toast 43s linear both}
+.mrp #toast small{display:block;font:400 18px Sarabun;color:#4A5160}
+.mrp #lbl{position:absolute;left:30px;bottom:30px;background:#0E4CA8;color:#fff;border-radius:99px;padding:5px 18px;font:700 22px Sarabun;z-index:56}
+.mrp #badges{animation:mr_badge 43s linear both}.mrp #run{animation:mr_run 43s linear both}
+.mrp #negc::after,.mrp #hlo::after,.mrp #hli::after,.mrp #hlp::after,.mrp #f_date::after,.mrp #f_ven::after,.mrp #f_wo::after,.mrp #f_so::after{content:'';position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none;border-radius:4px}
+.mrp #negc::after{animation:mr_neg 43s linear both}
+.mrp #hlo::after{animation:mr_hlo 43s linear both}.mrp #hli::after{animation:mr_hli 43s linear both}.mrp #hlp::after{animation:mr_hlp 43s linear both}
+.mrp .fd{position:relative}
+.mrp #f_date::after,.mrp #f_ven::after,.mrp #f_wo::after,.mrp #f_so::after{animation:mr_fh 43s linear both;border-radius:10px;left:-5px;right:-5px;top:-4px;bottom:-4px}
+.mrp .bd{position:absolute;left:0;top:0;width:1920px;height:1080px;background:rgba(20,32,58,.5);opacity:0;z-index:40}
+.mrp .dg{position:absolute;background:#fff;border-radius:10px;box-shadow:0 30px 80px -20px rgba(10,20,50,.6);opacity:0;z-index:42;overflow:hidden}
+.mrp .dh{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1.5px solid #E3E8F2;font:400 22px Sarabun;color:#14203A}
+.mrp .dh b{font-weight:800}.mrp .dh i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;font-style:normal}
+.mrp .db{padding:20px 24px 26px}
+.mrp .sl{text-align:center;font:700 20px Sarabun;color:#2B3245;margin-bottom:8px}
+.mrp .dt{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;font-family:Sarabun}
+.mrp .dt th{background:#0A58D6;color:#fff;font:600 18px Sarabun;height:46px;padding:0 12px}
+.mrp .dt td{height:46px;padding:0 12px;border-bottom:1.5px solid #E3E8F2;font:400 19px Sarabun;white-space:nowrap;font-variant-numeric:tabular-nums}
+.mrp .dt tr.ft td{background:#EEF4FF;font-weight:800;border-bottom:none}
+.mrp #pob{animation:mr_bdo 43s linear both}.mrp #pib{animation:mr_bdi 43s linear both}.mrp #pop{animation:mr_bdp 43s linear both}
+.mrp #pobb{animation:mr_bbo 43s linear both}.mrp #pibb{animation:mr_bbi 43s linear both}.mrp #popb{animation:mr_bbp 43s linear both}
+.mrp #cp1{width:42px;animation:mr_cp1 43s linear both}
+.mrp #cp2{width:0px;animation:mr_cp2 43s linear both}
+.mrp #cp3{width:0px;animation:mr_cp3 43s linear both}
+.mrp #cp4{width:0px;animation:mr_cp4 43s linear both}
+.mrp .pd.c0{animation:mr_p0 43s linear both}.mrp .vl.c0{animation:mr_v0 43s linear both}
+.mrp .pd.c1{animation:mr_p1 43s linear both}.mrp .vl.c1{animation:mr_v1 43s linear both}
+.mrp .pd.c2{animation:mr_p2 43s linear both}.mrp .vl.c2{animation:mr_v2 43s linear both}
+.mrp .pd.c3{animation:mr_p3 43s linear both}.mrp .vl.c3{animation:mr_v3 43s linear both}
+.mrp .pd.c4{animation:mr_p4 43s linear both}.mrp .vl.c4{animation:mr_v4 43s linear both}
+.mrp .pd.c5{animation:mr_p5 43s linear both}.mrp .vl.c5{animation:mr_v5 43s linear both}
+@keyframes mr_in{0.000%{opacity:0}0.465%{opacity:0}2.093%{opacity:1}100.000%{opacity:1}}
+@keyframes mr_flt{0.000%{opacity:0;transform:translateY(-8px)}3.721%{opacity:0;transform:translateY(-8px)}4.651%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes mr_fh{0.000%{box-shadow:0 0 0 0 rgba(20,102,222,0)}6.977%{box-shadow:0 0 0 0 rgba(20,102,222,0)}7.674%{box-shadow:0 0 0 4px rgba(20,102,222,.9)}12.558%{box-shadow:0 0 0 4px rgba(20,102,222,.9)}13.488%{box-shadow:0 0 0 0 rgba(20,102,222,0)}100.000%{box-shadow:0 0 0 0 rgba(20,102,222,0)}}
+@keyframes mr_pcv{0.000%{opacity:0}10.465%{opacity:0}11.628%{opacity:1}100.000%{opacity:1}}
+@keyframes mr_tp{0.000%{opacity:1}9.767%{opacity:1}10.233%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_tm{0.000%{opacity:0}9.767%{opacity:0}10.233%{opacity:1}100.000%{opacity:1}}
+@keyframes mr_cp1{0.000%{width:42px}9.767%{width:42px}11.395%{width:96px}100.000%{width:96px}}
+@keyframes mr_cp2{0.000%{width:0px}9.767%{width:0px}11.395%{width:100px}100.000%{width:100px}}
+@keyframes mr_cp3{0.000%{width:0px}9.767%{width:0px}11.395%{width:80px}100.000%{width:80px}}
+@keyframes mr_cp4{0.000%{width:0px}9.767%{width:0px}11.395%{width:115px}100.000%{width:115px}}
+@keyframes mr_badge{0.000%{box-shadow:0 0 0 0 rgba(217,45,32,0)}25.116%{box-shadow:0 0 0 0 rgba(217,45,32,0)}26.047%{box-shadow:0 0 0 5px rgba(217,45,32,.85)}100.000%{box-shadow:0 0 0 5px rgba(217,45,32,.85)}}
+@keyframes mr_run{0.000%{transform:none;box-shadow:0 4px 14px -5px rgba(27,127,75,.6)}14.419%{transform:none;box-shadow:0 4px 14px -5px rgba(27,127,75,.6)}14.767%{transform:scale(.94);box-shadow:0 0 0 6px rgba(27,127,75,.35)}15.581%{transform:none;box-shadow:0 0 0 0 rgba(27,127,75,0)}100.000%{transform:none;box-shadow:0 0 0 0 rgba(27,127,75,0)}}
+@keyframes mr_proc{0.000%{opacity:0}14.884%{opacity:0}15.814%{opacity:1;transform:none}23.256%{opacity:1;transform:none}24.186%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_p0{0.000%{opacity:1}16.744%{opacity:1}17.442%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_v0{0.000%{opacity:0}16.977%{opacity:0}17.674%{opacity:1}100.000%{opacity:1}}
+@keyframes mr_p1{0.000%{opacity:1}17.791%{opacity:1}18.488%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_v1{0.000%{opacity:0}18.023%{opacity:0}18.721%{opacity:1}100.000%{opacity:1}}
+@keyframes mr_p2{0.000%{opacity:1}18.837%{opacity:1}19.535%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_v2{0.000%{opacity:0}19.070%{opacity:0}19.767%{opacity:1}100.000%{opacity:1}}
+@keyframes mr_p3{0.000%{opacity:1}19.884%{opacity:1}20.581%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_v3{0.000%{opacity:0}20.116%{opacity:0}20.814%{opacity:1}100.000%{opacity:1}}
+@keyframes mr_p4{0.000%{opacity:1}20.930%{opacity:1}21.628%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_v4{0.000%{opacity:0}21.163%{opacity:0}21.860%{opacity:1}100.000%{opacity:1}}
+@keyframes mr_p5{0.000%{opacity:1}21.977%{opacity:1}22.674%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_v5{0.000%{opacity:0}22.209%{opacity:0}22.907%{opacity:1}100.000%{opacity:1}}
+@keyframes mr_neg{0.000%{box-shadow:inset 0 0 0 0 rgba(217,45,32,0)}27.907%{box-shadow:inset 0 0 0 0 rgba(217,45,32,0)}28.605%{box-shadow:inset 0 0 0 5px rgba(217,45,32,1)}100.000%{box-shadow:inset 0 0 0 5px rgba(217,45,32,1)}}
+@keyframes mr_hlo{0.000%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}31.163%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}31.860%{box-shadow:inset 0 0 0 5px rgba(20,102,222,1);background:rgba(20,102,222,.12)}40.465%{box-shadow:inset 0 0 0 5px rgba(20,102,222,1);background:rgba(20,102,222,.12)}41.395%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}100.000%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}}
+@keyframes mr_bdo{0.000%{opacity:0;transform:translateY(12px)}33.488%{opacity:0;transform:translateY(12px)}34.419%{opacity:1;transform:none}40.465%{opacity:1;transform:none}41.395%{opacity:0;transform:translateY(12px)}100.000%{opacity:0;transform:translateY(12px)}}
+@keyframes mr_bbo{0.000%{opacity:0}33.488%{opacity:0}34.419%{opacity:1;transform:none}40.465%{opacity:1;transform:none}41.395%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_hli{0.000%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}42.791%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}43.488%{box-shadow:inset 0 0 0 5px rgba(20,102,222,1);background:rgba(20,102,222,.12)}52.093%{box-shadow:inset 0 0 0 5px rgba(20,102,222,1);background:rgba(20,102,222,.12)}53.023%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}100.000%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}}
+@keyframes mr_bdi{0.000%{opacity:0;transform:translateY(12px)}45.116%{opacity:0;transform:translateY(12px)}46.047%{opacity:1;transform:none}52.093%{opacity:1;transform:none}53.023%{opacity:0;transform:translateY(12px)}100.000%{opacity:0;transform:translateY(12px)}}
+@keyframes mr_bbi{0.000%{opacity:0}45.116%{opacity:0}46.047%{opacity:1;transform:none}52.093%{opacity:1;transform:none}53.023%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_hlp{0.000%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}54.419%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}55.116%{box-shadow:inset 0 0 0 5px rgba(20,102,222,1);background:rgba(20,102,222,.12)}63.721%{box-shadow:inset 0 0 0 5px rgba(20,102,222,1);background:rgba(20,102,222,.12)}64.651%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}100.000%{box-shadow:inset 0 0 0 0 rgba(20,102,222,0);background:rgba(20,102,222,0)}}
+@keyframes mr_bdp{0.000%{opacity:0;transform:translateY(12px)}56.744%{opacity:0;transform:translateY(12px)}57.674%{opacity:1;transform:none}63.721%{opacity:1;transform:none}64.651%{opacity:0;transform:translateY(12px)}100.000%{opacity:0;transform:translateY(12px)}}
+@keyframes mr_bbp{0.000%{opacity:0}56.744%{opacity:0}57.674%{opacity:1;transform:none}63.721%{opacity:1;transform:none}64.651%{opacity:0}100.000%{opacity:0}}
+@keyframes mr_short{0.000%{opacity:0;transform:translateY(10px)}27.907%{opacity:0;transform:translateY(10px)}28.837%{opacity:1;transform:none}65.116%{opacity:1;transform:none}66.047%{opacity:0;transform:translateY(10px)}100.000%{opacity:0;transform:translateY(10px)}}
+@keyframes mr_cfa{0.000%{opacity:0;transform:scale(.8)}65.581%{opacity:0;transform:scale(.8)}66.512%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes mr_cfb{0.000%{opacity:0;transform:scale(.8)}67.907%{opacity:0;transform:scale(.8)}68.837%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes mr_cfc{0.000%{opacity:0;transform:scale(.8)}70.233%{opacity:0;transform:scale(.8)}71.163%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes mr_cl1{0.000%{opacity:0;transform:translateY(10px)}73.023%{opacity:0;transform:translateY(10px)}73.953%{opacity:1;transform:none}76.047%{opacity:1;transform:none}76.977%{opacity:0;transform:translateY(10px)}100.000%{opacity:0;transform:translateY(10px)}}
+@keyframes mr_grp{0.000%{opacity:0;transform:translateY(10px)}76.279%{opacity:0;transform:translateY(10px)}77.209%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes mr_g7{0.000%{opacity:0;transform:translateY(8px)}76.279%{opacity:0;transform:translateY(8px)}77.209%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes mr_g14{0.000%{opacity:0;transform:translateY(8px)}78.605%{opacity:0;transform:translateY(8px)}79.535%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes mr_g21{0.000%{opacity:0;transform:translateY(8px)}80.930%{opacity:0;transform:translateY(8px)}81.860%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes mr_go{0.000%{opacity:0;transform:translateX(-12px)}84.186%{opacity:0;transform:translateX(-12px)}85.116%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes mr_cl2{0.000%{opacity:0;transform:translateY(10px)}87.442%{opacity:0;transform:translateY(10px)}88.372%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+</style></head><body>
+<div id="fit"><div class="mrp"><div class="pg"><div class="card">
+ <div class="kick">PLANNING · MRP</div>
+ <div class="hd"><h3>Material Requirements Planning</h3>
+  <span class="bt" id="mkpr0"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>Search</span>
+  <span class="bt run" id="run"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l14 8-14 8z" fill="#fff"/></svg>RUN</span>
+  <span class="bt"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 010 11H11"/></svg>Clear</span>
+  <span class="bt ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9 9 0 00-6.4 2.6L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></span></div>
+ <div class="sb2"><b>Material Requirement Planning (MRP) วัตถุดิบ · 3 รายการ</b>
+  <span id="badges"><span class="badge r"><i>1</i>ขาด / ติดลบ</span><span class="badge y"><i>2</i>ต่ำกว่า Safety</span></span>
+  <span style="flex:1"></span><span class="shown">แสดง <b>3</b> จาก 3 รายการ</span></div>
+ <div class="flt" id="flt"><div class="fd"><label>ItemType</label><div class="bx">วัตถุดิบ<i class="cr"></i></div></div><div class="fd"><label>ItemGroup</label><div class="bx">เหล็กและโลหะ<i class="cr"></i></div></div><div class="fd"><label>Item</label><div class="bx">เลือกแล้ว 3 รายการ</div></div><div class="fd" id="f_date"><label>Date</label><div class="bx">05-10-2026 – 15-11-2026</div></div><div class="fd" id="f_ven"><label>ผู้ขาย</label><div class="bx">ทั้งหมด<i class="cr"></i></div></div><div class="fd" id="f_wo"><label>Work Order</label><div class="bx ph">พิมพ์เลขเอกสาร</div></div><div class="fd" id="f_so"><label>Sale Order</label><div class="bx ph">พิมพ์เลขเอกสาร</div></div></div>
+ <div class="rng">ช่วงที่แสดง <b>5 Oct 2026 – 15 Nov 2026</b> · 6 คอลัมน์ · 42 วัน · วันนี้ 22/10 (W43)
+  <span class="vt"><span>วัน</span><span class="on">สัปดาห์</span><span>เดือน</span></span>
+  <span id="proc"><i></i>กำลังประมวลผล MRP...</span></div>
+ <table class="mt"><colgroup><col style="width:48px"><col style="width:170px"><col><col style="width:110px"><col id="cp1"><col id="cp2"><col id="cp3"><col id="cp4"><col style="width:128px"><col style="width:128px"><col style="width:128px"><col style="width:128px"><col style="width:128px"><col style="width:128px"></colgroup><tr><th>+</th><th style="text-align:left">ItemCode</th><th style="text-align:left">ItemName</th><th style="text-align:right">Opening</th><th class="pc p1"><span class="tg" id="tg"><b class="tp">+</b><b class="tm">−</b></span><span class="pcv">Unit</span></th><th class="pc r"><span class="pcv">สต็อกสำรอง</span></th><th class="pc r"><span class="pcv">LT (วัน)</span></th><th class="pc"><span class="pcv">Exp. ใกล้สุด</span></th><th class="">W41<small>5/10–11/10</small></th><th class="">W42<small>12/10–18/10</small></th><th class="td">W43<small>19/10–25/10</small></th><th class="">W44<small>26/10–1/11</small></th><th class="">W45<small>2/11–8/11</small></th><th class="">W46<small>9/11–15/11</small></th></tr><tr class="it"><td class="c"><i class="chv dn"></i></td><td>RM-JSC270C-08<span class="cf cfa">✓ ยืนยันแล้ว</span></td><td class="nm">เหล็กแผ่นรีดเย็น JSC270C 0.8 มม. (KG)</td><td class="n">12,500</td><td class="pc"><span class="pcv">KG</span></td><td class="pc r"><span class="pcv">3,000</span></td><td class="pc r"><span class="pcv">14</span></td><td class="pc"><span class="pcv">12-03-2027</span></td><td class="n"><span class="pd c0">–</span><span class="vl c0">9,300</span></td><td class="n"><span class="pd c1">–</span><span class="vl c1">5,200</span></td><td class="n tdc"><span class="pd c2">–</span><span class="vl c2">9,400</span></td><td class="n"><span class="pd c3">–</span><span class="vl c3">4,900</span></td><td class="n"><span class="pd c4">–</span><span class="vl c4">9,000</span></td><td class="n"><span class="pd c5">–</span><span class="vl c5">4,800</span></td></tr><tr class="sb inr"><td></td><td class="lb" colspan="2">Projected Inbound Inventory</td><td></td><td class="pc"></td><td class="pc"></td><td class="pc"></td><td class="pc"></td><td class="n"></td><td class="n"></td><td class="n tdc" id="hli"><span class="vl c2">▲ 8,000</span></td><td class="n"></td><td class="n"><span class="vl c4">▲ 8,000</span></td><td class="n"></td></tr><tr class="sb outr"><td></td><td class="lb" colspan="2">Projected Outbound Inventory</td><td></td><td class="pc"></td><td class="pc"></td><td class="pc"></td><td class="pc"></td><td class="n"><span class="vl c0">-3,200</span></td><td class="n"><span class="vl c1">-4,100</span></td><td class="n tdc"><span class="vl c2">-3,800</span></td><td class="n"><span class="vl c3">-4,500</span></td><td class="n"><span class="vl c4">-3,900</span></td><td class="n"><span class="vl c5">-4,200</span></td></tr><tr class="it" id="shortrow"><td class="c"><i class="chv dn"></i></td><td>RM-JSC590R-14<span class="cf cfb">✓ ยืนยันแล้ว</span></td><td class="nm">เหล็กกล้าแรงดึงสูง JSC590R 1.4 มม. (KG)</td><td class="n" id="hlp">2,400</td><td class="pc"><span class="pcv">KG</span></td><td class="pc r"><span class="pcv">2,000</span></td><td class="pc r"><span class="pcv">21</span></td><td class="pc"><span class="pcv">15-12-2026</span></td><td class="n"><span class="pd c0">–</span><span class="vl c0">1,500</span></td><td class="n"><span class="pd c1">–</span><span class="vl c1">400</span></td><td class="n tdc" id="negc"><span class="pd c2">–</span><span class="vl c2 neg">-600</span></td><td class="n"><span class="pd c3">–</span><span class="vl c3 neg">-2,050</span></td><td class="n"><span class="pd c4">–</span><span class="vl c4 neg">-3,000</span></td><td class="n"><span class="pd c5">–</span><span class="vl c5 neg">-4,050</span></td></tr><tr class="sb inr"><td></td><td class="lb" colspan="2">Projected Inbound Inventory</td><td></td><td class="pc"></td><td class="pc"></td><td class="pc"></td><td class="pc"></td><td class="n"></td><td class="n"></td><td class="n tdc"></td><td class="n"></td><td class="n"></td><td class="n"></td></tr><tr class="sb outr"><td></td><td class="lb" colspan="2">Projected Outbound Inventory</td><td></td><td class="pc"></td><td class="pc"></td><td class="pc"></td><td class="pc"></td><td class="n"><span class="vl c0">-900</span></td><td class="n"><span class="vl c1">-1,100</span></td><td class="n tdc" id="hlo"><span class="vl c2">-1,000</span></td><td class="n"><span class="vl c3">-1,450</span></td><td class="n"><span class="vl c4">-950</span></td><td class="n"><span class="vl c5">-1,050</span></td></tr><tr class="it"><td class="c"><i class="chv rt"></i></td><td>RM-WN-M8<span class="cf cfc">✓ ยืนยันแล้ว</span></td><td class="nm">น็อตเชื่อม WN-M8 (PCS)</td><td class="n">25,000</td><td class="pc"><span class="pcv">PCS</span></td><td class="pc r"><span class="pcv">5,000</span></td><td class="pc r"><span class="pcv">7</span></td><td class="pc"><span class="pcv">–</span></td><td class="n"><span class="pd c0">–</span><span class="vl c0">21,800</span></td><td class="n"><span class="pd c1">–</span><span class="vl c1">18,500</span></td><td class="n tdc"><span class="pd c2">–</span><span class="vl c2">15,200</span></td><td class="n"><span class="pd c3">–</span><span class="vl c3">30,000</span></td><td class="n"><span class="pd c4">–</span><span class="vl c4">26,700</span></td><td class="n"><span class="pd c5">–</span><span class="vl c5">23,400</span></td></tr></table>
+ <div class="notes"><div class="nt short"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#B7791F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg><span>RM-JSC590R-14 เหล็กกล้าแรงดึงสูง <em>ติดลบ 600 กก.</em> ในสัปดาห์ W43</span></div>
+  <div class="nt cl1"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1B7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>ยืนยันความต้องการแล้ว รวมจัดกลุ่มตามระยะเวลารอคอย</span></div>
+  <div class="grp" id="grp"><div class="gh">ความต้องการซื้อที่ยืนยันแล้ว · จัดกลุ่มตามระยะเวลารอคอย</div><div class="gc">
+   <div class="g g7"><b>กลุ่มรอคอย 7 วัน</b><span>WN-M8 น็อตเชื่อม</span><small>1 รายการ</small></div>
+   <div class="g g14"><b>กลุ่มรอคอย 14 วัน</b><span>RM-JSC270C-08 เหล็กแผ่นรีดเย็น</span><small>1 รายการ</small></div>
+   <div class="g g21"><b>กลุ่มรอคอย 21 วัน</b><span>RM-JSC590R-14 เหล็กกล้าแรงดึงสูง</span><small>1 รายการ</small></div>
+   <div class="go">ส่งกลุ่มไปเปิดใบสั่งซื้อ <i>→</i></div></div></div>
+  <div class="nt cl2"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1B7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>เอากลุ่มไปเปิดใบสั่งซื้อทีเดียว</span></div>
+ </div>
+</div>
+<div class="bd" id="pobb"></div><div class="dg" id="pob" style="width:1100px;left:400px;top:200px"><div class="dh"><span><b>Projected Outbound Inventory</b> Item : RM-JSC590R-14 | เหล็กกล้าแรงดึงสูง JSC590R 1.4 มม. (KG)</span><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></i></div><div class="db"><table class="dt"><tr><th style="text-align:left;width:60px">No</th><th style="text-align:center;width:130px">DocDate</th><th style="text-align:left;width:190px">DocumentType</th><th style="text-align:left;width:190px">Document No.</th><th style="text-align:right;width:130px">InQty</th><th style="text-align:right;width:130px">OutQty</th><th style="text-align:right;width:130px">Total</th></tr><tr><td style="text-align:left">1</td><td style="text-align:center">20-10-2026</td><td style="text-align:left">Work Order</td><td style="text-align:left">W2610-052</td><td style="text-align:right">0.00</td><td style="text-align:right">300.00</td><td style="text-align:right">-300.00</td></tr><tr><td style="text-align:left">2</td><td style="text-align:center">21-10-2026</td><td style="text-align:left">Work Order</td><td style="text-align:left">W2610-057</td><td style="text-align:right">0.00</td><td style="text-align:right">300.00</td><td style="text-align:right">-300.00</td></tr><tr><td style="text-align:left">3</td><td style="text-align:center">23-10-2026</td><td style="text-align:left">Sale Order</td><td style="text-align:left">SO2610-0014</td><td style="text-align:right">0.00</td><td style="text-align:right">400.00</td><td style="text-align:right">-400.00</td></tr><tr class="ft"><td style="text-align:left"></td><td style="text-align:center"></td><td style="text-align:left"></td><td style="text-align:left">Total</td><td style="text-align:right">0.00</td><td style="text-align:right">1,000.00</td><td style="text-align:right">-1,000.00</td></tr></table></div></div><div class="bd" id="pibb"></div><div class="dg" id="pib" style="width:1100px;left:400px;top:240px"><div class="dh"><span><b>Projected Inbound Inventory</b> Item : RM-JSC270C-08 | เหล็กแผ่นรีดเย็น JSC270C 0.8 มม. (KG)</span><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></i></div><div class="db"><table class="dt"><tr><th style="text-align:left;width:60px">No</th><th style="text-align:center;width:130px">DocDate</th><th style="text-align:left;width:190px">DocumentType</th><th style="text-align:left;width:190px">Document No.</th><th style="text-align:right;width:130px">InQty</th><th style="text-align:right;width:130px">OutQty</th><th style="text-align:right;width:130px">Total</th></tr><tr><td style="text-align:left">1</td><td style="text-align:center">21-10-2026</td><td style="text-align:left">Purchase Order</td><td style="text-align:left">PO2610-0031</td><td style="text-align:right">5,000.00</td><td style="text-align:right">0.00</td><td style="text-align:right">5,000.00</td></tr><tr><td style="text-align:left">2</td><td style="text-align:center">23-10-2026</td><td style="text-align:left">Purchase Order</td><td style="text-align:left">PO2610-0034</td><td style="text-align:right">3,000.00</td><td style="text-align:right">0.00</td><td style="text-align:right">3,000.00</td></tr><tr class="ft"><td style="text-align:left"></td><td style="text-align:center"></td><td style="text-align:left"></td><td style="text-align:left">Total</td><td style="text-align:right">8,000.00</td><td style="text-align:right">0.00</td><td style="text-align:right">8,000.00</td></tr></table></div></div><div class="bd" id="popb"></div><div class="dg" id="pop" style="width:960px;left:480px;top:150px"><div class="dh"><span><b>Opening</b> Item : RM-JSC590R-14 | เหล็กกล้าแรงดึงสูง JSC590R 1.4 มม. (KG)</span><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A5160" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></i></div><div class="db"><div class="sl">Available Stock</div><table class="dt"><tr><th style="text-align:left;width:60px">No</th><th style="text-align:left;width:190px">WarehouseCode</th><th style="text-align:left;width:320px">WarehouseName</th><th style="text-align:right;width:170px">BalanceQty</th><th style="text-align:center;width:100px">Use</th></tr><tr><td style="text-align:left">1</td><td style="text-align:left">WH-RM01</td><td style="text-align:left">คลังวัตถุดิบหลัก</td><td style="text-align:right">1,800.00</td><td style="text-align:center">✓</td></tr><tr><td style="text-align:left">2</td><td style="text-align:left">WH-LN02</td><td style="text-align:left">คลังหน้าไลน์ผลิต</td><td style="text-align:right">600.00</td><td style="text-align:center">✓</td></tr><tr class="ft"><td style="text-align:left"></td><td style="text-align:left"></td><td style="text-align:left">Total</td><td style="text-align:right">2,400.00</td><td style="text-align:center"></td></tr></table><div class="sl" style="margin-top:18px">Unavailable Stock</div><table class="dt"><tr><th style="text-align:left;width:60px">No</th><th style="text-align:left;width:190px">WarehouseCode</th><th style="text-align:left;width:320px">WarehouseName</th><th style="text-align:right;width:170px">BalanceQty</th><th style="text-align:center;width:100px">Use</th></tr><tr><td style="text-align:left">1</td><td style="text-align:left">WH-QC01</td><td style="text-align:left">คลังรอตรวจคุณภาพ</td><td style="text-align:right">300.00</td><td style="text-align:center"></td></tr><tr class="ft"><td style="text-align:left"></td><td style="text-align:left"></td><td style="text-align:left">Total</td><td style="text-align:right">300.00</td><td style="text-align:center"></td></tr></table></div></div>
+<div id="lbl">Beside · วางแผนความต้องการวัตถุดิบ (MRP)</div></div></div></div>
+<script>function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080),f=document.getElementById('fit');f.style.transform='scale('+s+')';f.style.left=(innerWidth-1920*s)/2+'px';f.style.top=(innerHeight-1080*s)/2+'px'}addEventListener('resize',fit);fit()</script>
+<script>var PAGES=['n1','s2','b2','n2','b3','so','sf','sa','sd','pl','bm','mps','wo','mrp','po','buy','m4','iqc','m5','iss','m6','prd','m7','qc','trc','m8','cst','cmp','m9','dlv','dbd','sot','mar','fin'];(function(){var cur=location.pathname.split('/').pop().replace('.html',''),i=PAGES.indexOf(cur);function go(d){var j=i+d;if(j>=0&&j<PAGES.length)location.href=PAGES[j]+'.html'}
+addEventListener('keydown',function(e){if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();go(1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();go(-1)}});
+addEventListener('click',function(e){go(e.clientX<innerWidth*.2?-1:1)})})()</script>
+<script src="ctl.js"></script>
+</body></html>

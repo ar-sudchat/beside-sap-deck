@@ -1,0 +1,61 @@
+<style>
+.sheet[data-key="fin"]{height:1013px;padding:0;overflow:hidden;background:radial-gradient(circle at 82% 0%,rgba(255,255,255,.15),rgba(255,255,255,0) 38%),radial-gradient(circle at 6% 100%,rgba(221,249,86,.09),rgba(221,249,86,0) 34%),linear-gradient(135deg,#1466DE 0%,#0F55C4 55%,#0A43A0 100%);position:relative;border-radius:0}
+.sheet[data-key="fin"] .vs{position:absolute;left:0;top:0;width:1920px;height:1080px;transform:scale(.9375);transform-origin:0 0}
+
+
+
+.fin,.fin *{box-sizing:border-box}
+.fin{position:absolute;left:0;top:0;width:1920px;height:1080px;background:transparent;font-family:Sarabun,sans-serif;color:#fff;overflow:hidden}
+.fin .fin-bg{position:absolute;inset:0;background:linear-gradient(135deg,#1466DE 0%,#0F55C4 55%,#0B47A8 100%)}
+.fin .glow{position:absolute;left:1200px;top:-300px;width:1000px;height:1000px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.14),rgba(255,255,255,0) 65%)}
+.fin .hd{position:absolute;left:120px;top:70px;display:flex;align-items:center;gap:24px;opacity:0;animation:fin_hd 24s linear both}
+.fin .hd .mk{width:120px;height:120px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.fin .hd .mk img{width:104px;height:104px}
+.fin .hd b{display:block;font:800 88px/1.25 Sarabun}
+.fin .hd small{font:600 30px Sarabun;color:#DDF956;letter-spacing:2px}
+.fin .grid{position:absolute;left:120px;top:270px;width:1680px;display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
+.fin .fc{position:relative;height:200px;display:flex;align-items:center;gap:28px;padding:0 36px 0 30px;border-radius:28px;background:rgba(255,255,255,.12);border:3px solid rgba(255,255,255,.35);opacity:0}
+.fin .fi{flex:none;width:96px;height:96px;border-radius:50%;background:#DDF956;color:#0E4CA8;display:grid;place-items:center}
+.fin .ft b{display:block;font:800 42px/1.25 Sarabun}
+.fin .ft small{display:block;margin-top:6px;font:500 27px/1.35 Sarabun;color:#D5E4FF}
+.fin .fk{position:absolute;right:22px;top:12px;font:800 26px Sarabun;color:rgba(255,255,255,.55)}
+.fin #thx{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;background:linear-gradient(135deg,#1466DE 0%,#0F55C4 55%,#0B47A8 100%);opacity:0;animation:fin_thx 24s linear both}
+.fin #thx .mk2{width:170px;height:170px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.fin #thx .mk2 img{width:146px;height:146px}
+.fin #thx .t1{font:800 140px/1.25 Sarabun}
+.fin #thx .t2{color:#DDF956;font:700 40px Sarabun;letter-spacing:4px}
+.fin #lbl{position:absolute;left:40px;bottom:40px;background:#0E4CA8;border:2px solid rgba(255,255,255,.4);color:#fff;border-radius:99px;padding:5px 18px;font:700 22px Sarabun;z-index:46}
+.fin .fc1{animation:fin_c1 24s linear both}
+.fin .fc2{animation:fin_c2 24s linear both}
+.fin .fc3{animation:fin_c3 24s linear both}
+.fin .fc4{animation:fin_c4 24s linear both}
+.fin .fc5{animation:fin_c5 24s linear both}
+.fin .fc6{animation:fin_c6 24s linear both}
+@keyframes fin_hd{0.000%{opacity:0;transform:translateY(24px)}1.250%{opacity:0;transform:translateY(24px)}3.750%{opacity:1;transform:none}100.000%{opacity:1;transform:none}}
+@keyframes fin_c1{0.000%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}6.667%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}9.167%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}16.667%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}19.167%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}100.000%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}}
+@keyframes fin_c2{0.000%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}16.667%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}19.167%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}26.667%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}29.167%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}100.000%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}}
+@keyframes fin_c3{0.000%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}26.667%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}29.167%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}36.667%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}39.167%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}100.000%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}}
+@keyframes fin_c4{0.000%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}36.667%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}39.167%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}46.667%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}49.167%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}100.000%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}}
+@keyframes fin_c5{0.000%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}46.667%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}49.167%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}56.667%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}59.167%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}100.000%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}}
+@keyframes fin_c6{0.000%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}56.667%{opacity:0;transform:translateX(-60px);background:rgba(221,249,86,.22);border-color:#DDF956}59.167%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}72.500%{opacity:1;transform:none;background:rgba(221,249,86,.22);border-color:#DDF956}75.000%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}100.000%{opacity:1;transform:none;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}}
+@keyframes fin_thx{0.000%{opacity:0}72.500%{opacity:0}75.833%{opacity:1}100.000%{opacity:1}}
+</style><div class="slidewrap"><div class="sheet" data-key="fin"><div class="vs"><div class="fin"><svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="fin-i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="fin-i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2.5V7h4.5M9 12h6M9 15.5h6M9 9h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="fin-i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4M7.5 14h3M13.5 14h3M7.5 17.5h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="fin-i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14.8 8.8c-.6-.9-1.6-1.3-2.8-1.3-1.7 0-2.8.9-2.8 2.1 0 3 5.8 1.5 5.8 4.4 0 1.3-1.2 2.2-3 2.2-1.3 0-2.4-.5-3-1.5M12 5.8v1.7M12 16.7v1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="fin-i-trace" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="5" cy="18" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="19" cy="12" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.2 7l9.6 4M7.2 17l9.6-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="fin-i-ai" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.7-8 9-4.8-1.3-8-4.5-8-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg><div class="fin-bg">
+<div class="glow"></div>
+<div class="hd"><div class="mk"><img src="img/logo-180.png"></div><div><b>สิ่งที่โรงงานได้รับ</b><small>BESIDE × SAP BUSINESS ONE</small></div></div>
+<div class="grid">
+<div class="fc fc1"><span class="fi"><svg width="54" height="54"><use href="#fin-i-db"/></svg></span><div class="ft"><b>ข้อมูลเดียว ใช้ร่วมกับ SAP</b><small>ข้อมูลชุดเดียว ใช้ร่วมกันสองระบบ</small></div><span class="fk">1</span></div>
+<div class="fc fc2"><span class="fi"><svg width="54" height="54"><use href="#fin-i-doc"/></svg></span><div class="ft"><b>ลดงานเอกสารและความผิดพลาด</b><small>กรอกครั้งเดียว ตรวจได้ทุกขั้น</small></div><span class="fk">2</span></div>
+<div class="fc fc3"><span class="fi"><svg width="54" height="54"><use href="#fin-i-cal"/></svg></span><div class="ft"><b>ตอบลูกค้าได้ทันทีว่างานถึงไหน</b><small>เห็นสถานะใบสั่งผลิตและการส่งมอบ</small></div><span class="fk">3</span></div>
+<div class="fc fc4"><span class="fi"><svg width="54" height="54"><use href="#fin-i-coin"/></svg></span><div class="ft"><b>รู้ต้นทุนจริง</b><small>ต้นทุนวัสดุ แรงงาน และเครื่องจักรต่องาน</small></div><span class="fk">4</span></div>
+<div class="fc fc5"><span class="fi"><svg width="54" height="54"><use href="#fin-i-trace"/></svg></span><div class="ft"><b>สอบย้อนล็อตได้ทั้งสาย</b><small>จากสินค้าสำเร็จรูปไปถึงวัตถุดิบและผู้ขาย</small></div><span class="fk">5</span></div>
+<div class="fc fc6"><span class="fi"><svg width="54" height="54"><use href="#fin-i-ai"/></svg></span><div class="ft"><b>คุมคุณภาพตั้งแต่ของเข้า</b><small>ตรวจวัตถุดิบก่อนใช้ ผ่านหรือกักไว้ได้ทันที</small></div><span class="fk">6</span></div>
+</div>
+<div id="thx"><div class="mk2"><img src="img/logo-180.png"></div><div class="t1">ขอบคุณครับ</div><div class="t2">BESIDE · เคียงข้างทุกการผลิต</div></div>
+<div id="lbl">Beside · สรุปสิ่งที่โรงงานได้รับ</div></div></div></div></div></div>

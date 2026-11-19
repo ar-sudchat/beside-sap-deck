@@ -1,0 +1,317 @@
+{
+ "id": "beside-sap-new",
+ "name": "Beside × SAP · ออกแบบใหม่ทีละหน้า",
+ "title": "BESIDE × SAP — ออกแบบใหม่ทีละหน้า",
+ "brand": "BESIDE",
+ "lang": "th",
+ "storage_key": "beside-sap-new",
+ "downloads": null,
+ "lib_css": [
+  "lib/desktop-screen.css",
+  "lib/video.css",
+  "lib/live-demo.css",
+  "lib/mockup-embed.css",
+  "lib/contact.css"
+ ],
+ "shared_css": [],
+ "tail_extra": null,
+ "i18n_en": "i18n/en.json",
+ "slides": [
+  {
+   "key": "n1",
+   "title": "เปิดเรื่อง",
+   "sub": "",
+   "section": "ตอนที่ 1",
+   "file": "slides/n1.html",
+   "hidden": false
+  },
+  {
+   "key": "s2",
+   "title": "SAP กับ Beside · แบ่งหน้าที่ แล้วต่อยอดกัน",
+   "sub": "",
+   "section": "ตอนที่ 1",
+   "file": "slides/s2.html",
+   "hidden": false
+  },
+  {
+   "key": "ag",
+   "title": "วาระวันนี้",
+   "sub": "",
+   "section": "ตอนที่ 1",
+   "file": "slides/ag.html",
+   "hidden": true
+  },
+  {
+   "key": "b2",
+   "title": "ตัวอย่างที่เราจะตาม",
+   "sub": "",
+   "section": "ตอนที่ 1",
+   "file": "slides/b2.html",
+   "hidden": false
+  },
+  {
+   "key": "n2",
+   "title": "End-to-End Flow 10 ขั้น",
+   "sub": "",
+   "section": "ตอนที่ 2",
+   "file": "slides/n2.html",
+   "hidden": false
+  },
+  {
+   "key": "b3",
+   "title": "Flow 10 ขั้นตอน · ความต้องการสินค้า",
+   "sub": "",
+   "section": "ตอนที่ 3",
+   "file": "slides/b3.html",
+   "hidden": false
+  },
+  {
+   "key": "so",
+   "title": "ใบสั่งขาย · Sales Order จาก SAP",
+   "sub": "",
+   "section": "ขั้นที่ 1",
+   "file": "slides/so.html",
+   "hidden": false
+  },
+  {
+   "key": "sf",
+   "title": "สร้างพยากรณ์ยอดขาย · Sales Forecast",
+   "sub": "",
+   "section": "ขั้นที่ 1",
+   "file": "slides/sf.html",
+   "hidden": false
+  },
+  {
+   "key": "sa",
+   "title": "อนุมัติพยากรณ์ยอดขาย · Sales Forecast",
+   "sub": "",
+   "section": "ขั้นที่ 1",
+   "file": "slides/sa.html",
+   "hidden": false
+  },
+  {
+   "key": "sd",
+   "title": "ติดตามพยากรณ์เทียบยอดขายจริง",
+   "sub": "",
+   "section": "ขั้นที่ 1",
+   "file": "slides/sd.html",
+   "hidden": false
+  },
+  {
+   "key": "pl",
+   "title": "วางแผน",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/pl.html",
+   "hidden": false
+  },
+  {
+   "key": "bm",
+   "title": "สูตรการผลิต (Bill of Material)",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/bm.html",
+   "hidden": false
+  },
+  {
+   "key": "mps",
+   "title": "แผนการผลิตหลัก (MPS)",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/mps.html",
+   "hidden": false
+  },
+  {
+   "key": "wo",
+   "title": "ใบสั่งผลิต (Work Order)",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/wo.html",
+   "hidden": false
+  },
+  {
+   "key": "mrp",
+   "title": "วางแผนความต้องการวัตถุดิบ (MRP)",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/mrp.html",
+   "hidden": false
+  },
+  {
+   "key": "po",
+   "title": "รวมความต้องการซื้อเป็นกลุ่มและเปิดใบสั่งซื้อ",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/po.html",
+   "hidden": false
+  },
+  {
+   "key": "buy",
+   "title": "จัดซื้อและรับของ",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/buy.html",
+   "hidden": false
+  },
+  {
+   "key": "m4",
+   "title": "ขั้นที่ 4 · รับของและตรวจรับ",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/m4.html",
+   "hidden": false
+  },
+  {
+   "key": "iqc",
+   "title": "ตรวจสอบคุณภาพวัตถุดิบขาเข้า",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/iqc.html",
+   "hidden": false
+  },
+  {
+   "key": "m5",
+   "title": "ขั้นที่ 5 · เบิกและผลิต",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/m5.html",
+   "hidden": false
+  },
+  {
+   "key": "iss",
+   "title": "เบิกวัตถุดิบ",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/iss.html",
+   "hidden": false
+  },
+  {
+   "key": "m6",
+   "title": "ขั้นที่ 6 · รับผลผลิต",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/m6.html",
+   "hidden": false
+  },
+  {
+   "key": "prd",
+   "title": "บันทึกผลผลิตหน้างาน",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/prd.html",
+   "hidden": false
+  },
+  {
+   "key": "m7",
+   "title": "ขั้นที่ 7 · ตรวจคุณภาพ",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/m7.html",
+   "hidden": false
+  },
+  {
+   "key": "qc",
+   "title": "ตรวจคุณภาพ",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/qc.html",
+   "hidden": false
+  },
+  {
+   "key": "trc",
+   "title": "สอบย้อนล็อต",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/trc.html",
+   "hidden": false
+  },
+  {
+   "key": "tf",
+   "title": "โอนไปคลังรอส่ง",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/tf.html",
+   "hidden": true
+  },
+  {
+   "key": "m8",
+   "title": "ขั้นที่ 8 · ต้นทุนจริง",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/m8.html",
+   "hidden": false
+  },
+  {
+   "key": "cst",
+   "title": "ต้นทุนจริง",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/cst.html",
+   "hidden": false
+  },
+  {
+   "key": "cmp",
+   "title": "เทียบต้นทุนจริงกับมาตรฐานรายใบสั่งงาน",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/cmp.html",
+   "hidden": false
+  },
+  {
+   "key": "m9",
+   "title": "ขั้นที่ 9 · ส่งของ",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/m9.html",
+   "hidden": false
+  },
+  {
+   "key": "dlv",
+   "title": "ส่งของ",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/dlv.html",
+   "hidden": false
+  },
+  {
+   "key": "m10",
+   "title": "ขั้นที่ 10 · บัญชี",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/m10.html",
+   "hidden": true
+  },
+  {
+   "key": "dbd",
+   "title": "แดชบอร์ดทั้งโรงงาน",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/dbd.html",
+   "hidden": false
+  },
+  {
+   "key": "sot",
+   "title": "ติดตามเอกสารตามใบสั่งขาย",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/sot.html",
+   "hidden": false
+  },
+  {
+   "key": "mar",
+   "title": "วิเคราะห์กำไร (Margin Analysis)",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/mar.html",
+   "hidden": false
+  },
+  {
+   "key": "fin",
+   "title": "สรุป",
+   "sub": "",
+   "section": "ขั้นที่ 2",
+   "file": "slides/fin.html",
+   "hidden": false
+  }
+ ]
+}
